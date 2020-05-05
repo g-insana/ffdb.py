@@ -135,7 +135,7 @@ def find_compressratio():
     find how much data was compressed
     """
     gztool_call = [GZTOOL_EXE, '-l', args.gzindex]
-    result = run(gztool_call, check=True, capture_output=True) #subprocess.run
+    result = run(gztool_call, check=True, stdout=PIPE, stderr=PIPE) #subprocess.run
     if result.returncode != 0:
         eprint("    => ERROR: problem using gztool to read compressed_index {}".format(
             args.gzindex))
@@ -386,7 +386,7 @@ def check_args():
             eprint("       this will be handled automatically")
             sys.exit(22)
         if GZTOOL_EXE is None:
-            result = run(["which", "gztool"], check=True, capture_output=True) #subprocess.run
+            result = run(["which", "gztool"], check=True, stdout=PIPE, stderr=PIPE) #subprocess.run
             if result.returncode != 0:
                 eprint("    => ERROR: gztool command not found in your path.")
                 eprint("Extraction of entries from compressed file depends on it.")
