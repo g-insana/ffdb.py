@@ -113,7 +113,8 @@ def retrieve_compressed_chunk(chunkstart, chunksize, temp_dl_file, gzchunk_file)
     dd_call = ["dd", 'if=/dev/zero', "of={}".format(temp_dl_file),
                "seek={}".format(chunkstart), 'bs=1', 'count=0']
     #eprint(" |-- calling dd as '{}'".format(" ".join(dd_call)))
-    result = run(dd_call, check=True, capture_output=True) #subprocess.run
+    #result = run(dd_call, check=True, capture_output=True) #subprocess.run #py3.7only
+    result = run(dd_call, check=True, stdout=PIPE, stderr=PIPE) #subprocess.run #py3.6ok
     if result.returncode != 0:
         eprint("    => ERROR: problems with dd command used for compressed temporary file")
         eprint("    => {}".format(result.stderr.decode()))
