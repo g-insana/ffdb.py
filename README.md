@@ -32,7 +32,7 @@ distributed and employed in its entirety, without limiting its use only via `ffd
 
 ## Documentation
 
-A part from this [README](README.md), please refer to the usage page
+A part from the present [README](README.md), please refer to the usage page
 for each of the utility scripts:
 * [indexer](indexer.md)
 * [extractor](extractor.md)
@@ -45,7 +45,7 @@ for each of the utility scripts:
 The latest version of `ffdb` can be installed by typing either:
 
 ``` bash
-pip3 install ffdb
+~~pip3 install ffdb~~ (NOT YET)
 ```
   (from [Python Package Index](https://pypi.org/project/ffdb/))
 
