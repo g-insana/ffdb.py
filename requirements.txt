@@ -1,5 +1,5 @@
 ffdb
-requests>=2.23.0
+requests>=2.18.4
 sortedcontainers>=2.1.0
-tqdm>=4.36.1
+tqdm>=4.28.1
 pycrypto>=2.6.1
