@@ -16,9 +16,9 @@ Documentation of each utility script:
 ## Usage
 ```bash
 indexer.py -f FLATFILE -i 'PATTERN' [-e ENDPATTERN] >INDEXFILE
-    [-f] : flatfile to index
-    [-i] : regex pattern for the identifiers; also [-j], see examples below
-    [-e] : pattern for end of entry. defaults to "^-$"
+#   [-f] : flatfile to index
+#   [-i] : regex pattern for the identifiers; also [-j], see examples below
+#   [-e] : pattern for end of entry. defaults to "^-$"
 ```
 
 ## Notes:
@@ -44,6 +44,7 @@ indexer.py -f FLATFILE -i 'PATTERN' [-e ENDPATTERN] >INDEXFILE
 ```
 
 # Full Usage:
+```
   -f INPUT_FILENAME, --file INPUT_FILENAME
                         Filename of flatfile to be processed
   -i PATTERNS [PATTERNS ...], --id PATTERNS [PATTERNS ...]
@@ -81,6 +82,7 @@ indexer.py -f FLATFILE -i 'PATTERN' [-e ENDPATTERN] >INDEXFILE
                         sorted index
   -n, --nopos           do not compute positions, just print matching
                         identifiers
+```
 
 ## Copyright
 
