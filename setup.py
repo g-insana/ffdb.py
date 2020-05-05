@@ -11,6 +11,7 @@ setuptools.setup(
     description="ffdb",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    scripts=["scripts/indexer.py", "scripts/extractor.py", "scripts/remover.py", "scripts/merger"],
     url="https://github.com/g-insana/ffdb.py",
     license="AGPL",
     py_modules=["ffdb"],
