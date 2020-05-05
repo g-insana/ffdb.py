@@ -3,15 +3,13 @@
 Create a positional index for any flatfile, optionally compressing or
 encrypting its entries
 
-Documentation for the whole `ffdb` package:
-* [GitHub page](https://github.com/g-insana/ffdb.py/)
+Documentation for the whole `ffdb` package: [README](README.md)
 
 Documentation of each utility script:
-* [indexer](indexer.md)
-* [extractor](extractor.md)
-* [remover](extractor.md)
-* [merger](merger.md)
-
+[indexer](indexer.md)
+[extractor](extractor.md)
+[remover](extractor.md)
+[merger](merger.md)
 
 ## Usage
 ```bash

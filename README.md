@@ -32,9 +32,8 @@ distributed and employed in its entirety, without limiting its use only via `ffd
 
 ## Documentation
 
-* [GitHub page](https://github.com/g-insana/ffdb.py/)
-
-Check the usage page for each of the utility scripts:
+A part from this [README](README.md), please refer to the usage page
+for each of the utility scripts:
 * [indexer](indexer.md)
 * [extractor](extractor.md)
 * [remover](extractor.md)
