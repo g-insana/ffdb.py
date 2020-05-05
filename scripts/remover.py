@@ -353,7 +353,7 @@ def update_index_after_deletions(index_filename, outfile,
     with open(index_filename, 'r', 1) as indexfh: #using line buffering
         with open(outfile, 'w') as outfh:
             for line in indexfh:
-                columns = line.split(FIELDSEPARATOR)
+                columns = line.rstrip().split(FIELDSEPARATOR)
                 position = columns[1] #2nd column of index file is position
                 if index_type in ("+", "."): #entry sizes and iv stored
                     posmatch = REESIVN.match(position)
@@ -372,13 +372,13 @@ def update_index_after_deletions(index_filename, outfile,
 
                 offset = find_shift_offset(position, sorted_positions, position2offset)
                 if offset > 0:
-                    columns[1] = "{}{}{}\n".format(int_to_b64(position - offset),
-                                                   index_type,
-                                                   remaining)
+                    columns[1] = "{}{}{}".format(int_to_b64(position - offset),
+                                                 index_type,
+                                                 remaining)
                 else:
                     unshifted_count += 1
                 bufcounter += 1
-                buffered += FIELDSEPARATOR.join(columns)
+                buffered += FIELDSEPARATOR.join(columns) + "\n"
             all_indexes_count += bufcounter
             outfh.write(buffered) #last block
             shifted_count = all_indexes_count - unshifted_count
