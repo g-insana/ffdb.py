@@ -3,9 +3,10 @@
 Create a positional index for any flatfile, optionally compressing or
 encrypting its entries
 
-The whole `ffdb` package:
+Documentation for the whole `ffdb` package:
 * [GitHub page](https://github.com/g-insana/ffdb.py/)
-The utility scripts:
+
+Documentation of each utility script:
 * [indexer](indexer.md)
 * [extractor](extractor.md)
 * [remover](extractor.md)
@@ -15,12 +16,11 @@ The utility scripts:
 ## Usage
 ```bash
 indexer.py -f FLATFILE -i 'PATTERN' [-e ENDPATTERN] >INDEXFILE
-```
     [-f] : flatfile to index
     [-i] : regex pattern for the identifiers; also [-j], see examples below
     [-e] : pattern for end of entry. defaults to "^-$"
-    see 'indexer.py -h' for tweaks and optional modes
-    
+```
+
 ## Notes:
   * If compression or encryption is requested, an output flatfile will
          be created, and the resulting index will refer to it.
