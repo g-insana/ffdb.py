@@ -2,3 +2,4 @@ ffdb
 requests>=2.23.0
 sortedcontainers>=2.1.0
 tqdm>=4.36.1
+pycrypto>=2.6.1

@@ -23,7 +23,8 @@ setuptools.setup(
     ],
     install_requires=[
         "sortedcontainers",
-        "requests"
+        "requests",
+        "pycrypto"
     ],
     python_requires=">=3.5",
 )

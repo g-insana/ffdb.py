@@ -36,7 +36,7 @@ distributed and employed in its entirety, without limiting its use only via `ffd
 
 ## Download and installation
 
-`ffdb` is pure python code. It has no platform-specific dependencies and should thus work on all platforms. It requires the packages `requests` and `sortedcontainers`.
+`ffdb` is pure python code. It has no platform-specific dependencies and should thus work on all platforms. It requires the packages `requests` `pycrypto` and `sortedcontainers`.
 The latest version of `ffdb` can be installed by typing either:
 
 ``` bash
@@ -50,13 +50,8 @@ pip3 install git+git://github.com/g-insana/ffdb.py.git
 ```
   (from [GitHub](https://github.com/g-insana/ffdb.py/)).
 
-To download the utility scripts clone the repository and copy them from the scripts/ directory to wherever you'd like to use them:
-
-``` bash
-git clone https://github.com/g-insana/ffdb.py.git
-```
-
-Alternatively, simply directly download those you need:
+The utility scripts should get installed for you by pip.
+Alternatively, you can directly download those you need:
 
 ``` bash
 curl -LO https://github.com/g-insana/ffdb.py/raw/master/scripts/indexer.py
