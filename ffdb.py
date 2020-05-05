@@ -80,6 +80,8 @@ def calculate_blocksize(filename, number_of_chunks):
     from number of chunk/splits desired and a file's filesize
     """
     filesize = os.path.getsize(filename)
+    if filesize == 0:
+        raise RuntimeError("File '{}' is empty".format(filename))
     blocksize = int(ceil(filesize / number_of_chunks))
     number_of_chunks = int(ceil(filesize / blocksize))
     return blocksize
