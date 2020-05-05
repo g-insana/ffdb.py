@@ -34,6 +34,12 @@ distributed and employed in its entirety, without limiting its use only via `ffd
 
 * [GitHub page](https://github.com/g-insana/ffdb.py/)
 
+Check the usage page for each of the utility scripts:
+* [indexer](indexer.md)
+* [extractor](extractor.md)
+* [remover](extractor.md)
+* [merger](merger.md)
+
 ## Download and installation
 
 `ffdb` is pure python code. It has no platform-specific dependencies and should thus work on all platforms. It requires the packages `requests` and `sortedcontainers`.
