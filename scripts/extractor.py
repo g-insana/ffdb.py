@@ -351,6 +351,8 @@ def check_args():
     if args.xsanity and not has_checksum:
         eprint("    => ERROR: sanity check requested (-x) but index does not contain checksums!")
         sys.exit(1)
+    if args.xsanity and args.verbose:
+        eprint(" |-- entry checksums will be verified")
     if index_type in (".", "+"):
         args.decrypt = True
         if args.verbose:
