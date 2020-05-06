@@ -40,7 +40,7 @@ distributed and employed in its entirety, without limiting its use only via `ffd
 The latest version of `ffdb` can be installed by typing either:
 
 ``` bash
-pip3 install ffdb
+pip3 install -U ffdb
 ```
   (from [Python Package Index](https://pypi.org/project/ffdb/))
 
