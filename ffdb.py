@@ -32,7 +32,6 @@ SALT = b'5ed3a4284d6a9c1e4e4f6b4729b254be'
 FIELDSEPARATOR = "\t"
 
 #customize the temporary directory used:
-TEMPDIR = "/hps/nobackup/production/uniprot/temp"
 TEMPDIR = "/tmp"
 
 #customize the progress bar (for multithread verbose progress)
