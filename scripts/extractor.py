@@ -274,7 +274,6 @@ def check_args():
     args = parser.parse_args()
 
     randnum = str(randint(1000, 9999))
-    randnum = "6394" #DEBUG TMP
 
     args.progressbar = False
     if args.verbose:
