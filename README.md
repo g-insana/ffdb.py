@@ -106,6 +106,8 @@ $ merger.py -f mydb -i mydb.idx -e newentries -n newentries.idx -d #(mydb will i
 $ remover.py -f addressbook -i addressbook.idx -l disagreed_with_me.list
 ```
 
+## Guided example
+
 ## Copyright
 
 `ffdb` is licensed under the [GNU Affero General Public License](https://choosealicense.com/licenses/agpl-3.0/).
