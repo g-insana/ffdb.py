@@ -1,0 +1,3052 @@
+ID   Q8HYU5_CANLF            Unreviewed;       192 AA.
+AC   Q8HYU5;
+DT   01-MAR-2003, integrated into UniProtKB/TrEMBL.
+DT   01-MAR-2003, sequence version 1.
+DT   26-FEB-2020, entry version 90.
+DE   SubName: Full=Apoptosis regulator Bax {ECO:0000313|EMBL:AMK38057.1};
+DE   SubName: Full=Bax {ECO:0000313|EMBL:BAC53619.1};
+GN   Name=BAX {ECO:0000313|EMBL:AMK38057.1};
+OS   Canis lupus familiaris (Dog) (Canis familiaris).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis.
+OX   NCBI_TaxID=9615 {ECO:0000313|EMBL:BAC53619.1};
+RN   [1] {ECO:0000313|EMBL:BAC53619.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Yazawa M., Masuda K., Ohno K., Tsujimoto H.;
+RT   "Isolation of canine bax cDNA.";
+RL   Submitted (FEB-2002) to the EMBL/GenBank/DDBJ databases.
+RN   [2] {ECO:0000313|EMBL:AMK38057.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=SCJ3182016 {ECO:0000313|EMBL:AMK38057.1};
+RC   TISSUE=Mammary gland tumour tissue {ECO:0000313|EMBL:AMK38057.1};
+RA   Babu N.S., Beckwith C.J., Beseler K.G., Brison A., Carone J.V.,
+RA   Caskin T.P., Diamond M., Durham M.E., Foxe J.M., Go M., Henderson B.A.,
+RA   Jones I.B., McGettigan J.A., Micheletti S.J., Nasrallah M.E., Ortiz D.,
+RA   Piller C.R., Privatt S.R., Schneider S.L., Sharp S., Smith T.C.,
+RA   Stanton J.D., Ullery H.E., Wilson R.J., Serrano M.G., Buck G., Lee V.,
+RA   Wang Y., Carvalho R., Voegtly L., Shi R., Duckworth R., Johnson A.,
+RA   Loviza R., Walstead R., Shah Z., Kiflezghi M., Wade K., Ball S.L.,
+RA   Bradley K.W., Asai D.J., Bowman C.A., Russell D.A., Pope W.H.,
+RA   Jacobs-Sera D., Hendrix R.W., Hatfull G.F.;
+RL   Submitted (AUG-2015) to the EMBL/GenBank/DDBJ databases.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; KT693115; AMK38057.1; -; mRNA.
+DR   EMBL; AB080230; BAC53619.1; -; mRNA.
+DR   RefSeq; NP_001003011.1; NM_001003011.1.
+DR   SMR; Q8HYU5; -.
+DR   GeneID; 403523; -.
+DR   KEGG; cfa:403523; -.
+DR   CTD; 581; -.
+DR   eggNOG; ENOG410IWQJ; Eukaryota.
+DR   eggNOG; ENOG4112738; LUCA.
+DR   KO; K02159; -.
+DR   OrthoDB; 1218929at2759; -.
+DR   GO; GO:0097145; C:BAK complex; IEA:Ensembl.
+DR   GO; GO:0097144; C:BAX complex; ISS:UniProtKB.
+DR   GO; GO:0097136; C:Bcl-2 family protein complex; ISS:UniProtKB.
+DR   GO; GO:0005623; C:cell; IEA:GOC.
+DR   GO; GO:0071944; C:cell periphery; IEA:Ensembl.
+DR   GO; GO:0005829; C:cytosol; ISS:UniProtKB.
+DR   GO; GO:0005783; C:endoplasmic reticulum; ISS:HGNC-UCL.
+DR   GO; GO:0005789; C:endoplasmic reticulum membrane; ISS:UniProtKB.
+DR   GO; GO:0005741; C:mitochondrial outer membrane; IEA:Ensembl.
+DR   GO; GO:0005757; C:mitochondrial permeability transition pore complex; ISS:UniProtKB.
+DR   GO; GO:0005739; C:mitochondrion; ISS:UniProtKB.
+DR   GO; GO:0005635; C:nuclear envelope; IEA:Ensembl.
+DR   GO; GO:0005634; C:nucleus; ISS:UniProtKB.
+DR   GO; GO:0046930; C:pore complex; ISS:UniProtKB.
+DR   GO; GO:0051434; F:BH3 domain binding; ISS:UniProtKB.
+DR   GO; GO:0015267; F:channel activity; ISS:UniProtKB.
+DR   GO; GO:0051087; F:chaperone binding; IEA:Ensembl.
+DR   GO; GO:0030544; F:Hsp70 protein binding; IEA:Ensembl.
+DR   GO; GO:0008289; F:lipid binding; ISS:UniProtKB.
+DR   GO; GO:0046982; F:protein heterodimerization activity; IEA:Ensembl.
+DR   GO; GO:0042803; F:protein homodimerization activity; ISS:HGNC.
+DR   GO; GO:0006919; P:activation of cysteine-type endopeptidase activity involved in apoptotic process; ISS:UniProtKB.
+DR   GO; GO:0008635; P:activation of cysteine-type endopeptidase activity involved in apoptotic process by cytochrome c; ISS:UniProtKB.
+DR   GO; GO:0097296; P:activation of cysteine-type endopeptidase activity involved in apoptotic signaling pathway; IEA:Ensembl.
+DR   GO; GO:0008637; P:apoptotic mitochondrial changes; ISS:UniProtKB.
+DR   GO; GO:1902262; P:apoptotic process involved in blood vessel morphogenesis; IEA:Ensembl.
+DR   GO; GO:1902263; P:apoptotic process involved in embryonic digit morphogenesis; IEA:Ensembl.
+DR   GO; GO:0097190; P:apoptotic signaling pathway; ISS:UniProtKB.
+DR   GO; GO:0001783; P:B cell apoptotic process; ISS:UniProtKB.
+DR   GO; GO:0001782; P:B cell homeostasis; IEA:Ensembl.
+DR   GO; GO:0002358; P:B cell homeostatic proliferation; IEA:Ensembl.
+DR   GO; GO:0002352; P:B cell negative selection; IEA:Ensembl.
+DR   GO; GO:1990117; P:B cell receptor apoptotic signaling pathway; IEA:Ensembl.
+DR   GO; GO:0001974; P:blood vessel remodeling; IEA:Ensembl.
+DR   GO; GO:0071310; P:cellular response to organic substance; IEA:Ensembl.
+DR   GO; GO:0034644; P:cellular response to UV; IEA:Ensembl.
+DR   GO; GO:0021987; P:cerebral cortex development; IEA:Ensembl.
+DR   GO; GO:0045136; P:development of secondary sexual characteristics; IEA:Ensembl.
+DR   GO; GO:0035234; P:ectopic germ cell programmed cell death; IEA:Ensembl.
+DR   GO; GO:0010248; P:establishment or maintenance of transmembrane electrochemical gradient; ISS:UniProtKB.
+DR   GO; GO:0097192; P:extrinsic apoptotic signaling pathway in absence of ligand; IEA:Ensembl.
+DR   GO; GO:0008625; P:extrinsic apoptotic signaling pathway via death domain receptors; IEA:Ensembl.
+DR   GO; GO:0009566; P:fertilization; IEA:Ensembl.
+DR   GO; GO:0007281; P:germ cell development; IEA:Ensembl.
+DR   GO; GO:0006687; P:glycosphingolipid metabolic process; IEA:Ensembl.
+DR   GO; GO:0048873; P:homeostasis of number of cells within a tissue; IEA:Ensembl.
+DR   GO; GO:0021854; P:hypothalamus development; IEA:Ensembl.
+DR   GO; GO:0097193; P:intrinsic apoptotic signaling pathway; ISS:UniProtKB.
+DR   GO; GO:0072332; P:intrinsic apoptotic signaling pathway by p53 class mediator; IEA:Ensembl.
+DR   GO; GO:0008630; P:intrinsic apoptotic signaling pathway in response to DNA damage; IEA:Ensembl.
+DR   GO; GO:0070059; P:intrinsic apoptotic signaling pathway in response to endoplasmic reticulum stress; ISS:UniProtKB.
+DR   GO; GO:0001822; P:kidney development; IEA:Ensembl.
+DR   GO; GO:0043653; P:mitochondrial fragmentation involved in apoptotic process; ISS:UniProtKB.
+DR   GO; GO:0008053; P:mitochondrial fusion; ISS:UniProtKB.
+DR   GO; GO:0070584; P:mitochondrion morphogenesis; IEA:Ensembl.
+DR   GO; GO:0002262; P:myeloid cell homeostasis; IEA:Ensembl.
+DR   GO; GO:2001234; P:negative regulation of apoptotic signaling pathway; IEA:Ensembl.
+DR   GO; GO:0032471; P:negative regulation of endoplasmic reticulum calcium ion concentration; IEA:Ensembl.
+DR   GO; GO:0048147; P:negative regulation of fibroblast proliferation; IEA:Ensembl.
+DR   GO; GO:0010917; P:negative regulation of mitochondrial membrane potential; IEA:Ensembl.
+DR   GO; GO:0043524; P:negative regulation of neuron apoptotic process; IEA:Ensembl.
+DR   GO; GO:0033137; P:negative regulation of peptidyl-serine phosphorylation; IEA:Ensembl.
+DR   GO; GO:0032091; P:negative regulation of protein binding; ISS:UniProtKB.
+DR   GO; GO:0051402; P:neuron apoptotic process; IEA:Ensembl.
+DR   GO; GO:0001764; P:neuron migration; IEA:Ensembl.
+DR   GO; GO:0042475; P:odontogenesis of dentin-containing tooth; IEA:Ensembl.
+DR   GO; GO:0001541; P:ovarian follicle development; IEA:Ensembl.
+DR   GO; GO:1902512; P:positive regulation of apoptotic DNA fragmentation; IEA:Ensembl.
+DR   GO; GO:0043065; P:positive regulation of apoptotic process; ISS:UniProtKB.
+DR   GO; GO:0060058; P:positive regulation of apoptotic process involved in mammary gland involution; IEA:Ensembl.
+DR   GO; GO:0002904; P:positive regulation of B cell apoptotic process; IEA:Ensembl.
+DR   GO; GO:0048087; P:positive regulation of developmental pigmentation; IEA:Ensembl.
+DR   GO; GO:1900103; P:positive regulation of endoplasmic reticulum unfolded protein response; ISS:UniProtKB.
+DR   GO; GO:2001244; P:positive regulation of intrinsic apoptotic signaling pathway; ISS:UniProtKB.
+DR   GO; GO:0043525; P:positive regulation of neuron apoptotic process; ISS:UniProtKB.
+DR   GO; GO:0031334; P:positive regulation of protein-containing complex assembly; ISS:UniProtKB.
+DR   GO; GO:0090200; P:positive regulation of release of cytochrome c from mitochondria; ISS:UniProtKB.
+DR   GO; GO:0051281; P:positive regulation of release of sequestered calcium ion into cytosol; IEA:Ensembl.
+DR   GO; GO:0048597; P:post-embryonic camera-type eye morphogenesis; IEA:Ensembl.
+DR   GO; GO:0001844; P:protein insertion into mitochondrial membrane involved in apoptotic signaling pathway; IEA:Ensembl.
+DR   GO; GO:0051726; P:regulation of cell cycle; IEA:Ensembl.
+DR   GO; GO:0033599; P:regulation of mammary gland epithelial cell proliferation; IEA:Ensembl.
+DR   GO; GO:1902445; P:regulation of mitochondrial membrane permeability involved in programmed necrotic cell death; IEA:Ensembl.
+DR   GO; GO:0051881; P:regulation of mitochondrial membrane potential; ISS:UniProtKB.
+DR   GO; GO:0006808; P:regulation of nitrogen utilization; IEA:Ensembl.
+DR   GO; GO:0001836; P:release of cytochrome c from mitochondria; ISS:UniProtKB.
+DR   GO; GO:0032976; P:release of matrix enzymes from mitochondria; ISS:UniProtKB.
+DR   GO; GO:0048678; P:response to axon injury; IEA:Ensembl.
+DR   GO; GO:0010332; P:response to gamma radiation; IEA:Ensembl.
+DR   GO; GO:0009651; P:response to salt stress; IEA:Ensembl.
+DR   GO; GO:0009636; P:response to toxic substance; ISS:UniProtKB.
+DR   GO; GO:0060041; P:retina development in camera-type eye; IEA:Ensembl.
+DR   GO; GO:0046666; P:retinal cell programmed cell death; IEA:Ensembl.
+DR   GO; GO:0060011; P:Sertoli cell proliferation; IEA:Ensembl.
+DR   GO; GO:0048515; P:spermatid differentiation; IEA:Ensembl.
+DR   GO; GO:0001777; P:T cell homeostatic proliferation; IEA:Ensembl.
+DR   GO; GO:0070242; P:thymocyte apoptotic process; IEA:Ensembl.
+DR   GO; GO:0060068; P:vagina development; IEA:Ensembl.
+DR   Gene3D; 1.10.437.10; -; 1.
+DR   InterPro; IPR026304; BAX.
+DR   InterPro; IPR002475; Bcl2-like.
+DR   InterPro; IPR020717; Bcl2_BH1_motif_CS.
+DR   InterPro; IPR020726; Bcl2_BH2_motif_CS.
+DR   InterPro; IPR020728; Bcl2_BH3_motif_CS.
+DR   InterPro; IPR036834; Blc2-like_sf.
+DR   InterPro; IPR026298; Blc2_fam.
+DR   PANTHER; PTHR11256; PTHR11256; 1.
+DR   PANTHER; PTHR11256:SF42; PTHR11256:SF42; 1.
+DR   Pfam; PF00452; Bcl-2; 1.
+DR   PRINTS; PR01862; BCL2FAMILY.
+DR   SUPFAM; SSF56854; SSF56854; 1.
+DR   PROSITE; PS50062; BCL2_FAMILY; 1.
+DR   PROSITE; PS01080; BH1; 1.
+DR   PROSITE; PS01258; BH2; 1.
+DR   PROSITE; PS01259; BH3; 1.
+PE   2: Evidence at transcript level;
+KW   Membrane {ECO:0000256|SAM:Phobius};
+KW   Transmembrane {ECO:0000256|SAM:Phobius};
+KW   Transmembrane helix {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM        170..188
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+SQ   SEQUENCE   192 AA;  21300 MW;  7D3C326DDE62A87E CRC64;
+     MDGSGEQPRG GGPTSSEQIM KTGALLLQGF IQDRAGRMGG ETPELPLEQV PQDASTKKLS
+     ECLKRIGDEL DSNMELQRMI AAVDTDSPRE VFFRVAAEMF SDGNFNWGRV VALFYFASKL
+     VLKALCTKVP ELIRTIMGWT LDFLRERLLG WIQDQGGWDG LLSYFGTPTW QTVTIFVAGV
+     LTASLTIWKK MG
+//
+ID   A0A172RQ22_CANLF        Unreviewed;       514 AA.
+AC   A0A172RQ22;
+DT   07-SEP-2016, integrated into UniProtKB/TrEMBL.
+DT   07-SEP-2016, sequence version 1.
+DT   22-APR-2020, entry version 16.
+DE   RecName: Full=Cytochrome c oxidase subunit 1 {ECO:0000256|RuleBase:RU000369};
+DE            EC=1.9.3.1 {ECO:0000256|RuleBase:RU000369};
+GN   Name=COX1 {ECO:0000313|EMBL:ANE18796.1};
+OS   Canis lupus familiaris (Dog) (Canis familiaris).
+OG   Mitochondrion {ECO:0000313|EMBL:ANE18796.1}.
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis.
+OX   NCBI_TaxID=9615 {ECO:0000313|EMBL:ANE18796.1};
+RN   [1] {ECO:0000313|EMBL:ANE18796.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=472T {ECO:0000313|EMBL:ANE15266.1}, and
+RC   809T {ECO:0000313|EMBL:ANE18796.1};
+RX   PubMed=27185408;
+RA   Strakova A., Ni Leathlobhair M., Wang G.D., Yin T.T., Airikkala-Otter I.,
+RA   Allen J.L., Allum K.M., Bansse-Issa L., Bisson J.L.,
+RA   Castillo Domracheva A., de Castro K.F., Corrigan A.M., Cran H.R.,
+RA   Crawford J.T., Cutter S.M., Delgadillo Keenan L., Donelan E.M.,
+RA   Faramade I.A., Flores Reynoso E., Fotopoulou E., Fruean S.N.,
+RA   Gallardo-Arrieta F., Glebova O., Hafelin Manrique R.F., Henriques J.J.,
+RA   Ignatenko N., Koenig D., Lanza-Perea M., Lobetti R., Lopez Quintana A.M.,
+RA   Losfelt T., Marino G., Martincorena I., Martinez Castaneda S.,
+RA   Martinez-Lopez M.F., Meyer M., Nakanwagi B., De Nardi A.B., Neunzig W.,
+RA   Nixon S.J., Onsare M.M., Ortega-Pacheco A., Peleteiro M.C., Pye R.J.,
+RA   Reece J.F., Rojas Gutierrez J., Sadia H., Schmeling S.K., Shamanova O.,
+RA   Ssuna R.K., Steenland-Smit A.E., Svitich A., Thoya Ngoka I., Vitalaru B.A.,
+RA   de Vos A.P., de Vos J.P., Walkinton O., Wedge D.C., Wehrle-Martinez A.S.,
+RA   van der Wel M.G., Widdowson S.A., Murchison E.P.;
+RT   "Mitochondrial genetic diversity, selection and recombination in a canine
+RT   transmissible cancer.";
+RL   Elife 5:E14552-E14552(2016).
+CC   -!- FUNCTION: Component of the cytochrome c oxidase, the last enzyme in the
+CC       mitochondrial electron transport chain which drives oxidative
+CC       phosphorylation. The respiratory chain contains 3 multisubunit
+CC       complexes succinate dehydrogenase (complex II, CII), ubiquinol-
+CC       cytochrome c oxidoreductase (cytochrome b-c1 complex, complex III,
+CC       CIII) and cytochrome c oxidase (complex IV, CIV), that cooperate to
+CC       transfer electrons derived from NADH and succinate to molecular oxygen,
+CC       creating an electrochemical gradient over the inner membrane that
+CC       drives transmembrane transport and the ATP synthase. Cytochrome c
+CC       oxidase is the component of the respiratory chain that catalyzes the
+CC       reduction of oxygen to water. Electrons originating from reduced
+CC       cytochrome c in the intermembrane space (IMS) are transferred via the
+CC       dinuclear copper A center (CU(A)) of subunit 2 and heme A of subunit 1
+CC       to the active site in subunit 1, a binuclear center (BNC) formed by
+CC       heme A3 and copper B (CU(B)). The BNC reduces molecular oxygen to 2
+CC       water molecules using 4 electrons from cytochrome c in the IMS and 4
+CC       protons from the mitochondrial matrix. {ECO:0000256|RuleBase:RU000369}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=4 [Fe(II)cytochrome c] + 4 H(+) + O2 = 4 [Fe(III)cytochrome c]
+CC         + 2 H2O; Xref=Rhea:RHEA:11436, Rhea:RHEA-COMP:10350, Rhea:RHEA-
+CC         COMP:14399, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:15379,
+CC         ChEBI:CHEBI:29033, ChEBI:CHEBI:29034;
+CC         Evidence={ECO:0000256|RuleBase:RU000369,
+CC         ECO:0000256|SAAS:SAAS01116619};
+CC   -!- COFACTOR:
+CC       Name=heme; Xref=ChEBI:CHEBI:30413;
+CC         Evidence={ECO:0000256|SAAS:SAAS01246731};
+CC   -!- PATHWAY: Energy metabolism; oxidative phosphorylation.
+CC       {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00887552}.
+CC   -!- SUBCELLULAR LOCATION: Mitochondrion inner membrane
+CC       {ECO:0000256|RuleBase:RU000369}; Multi-pass membrane protein
+CC       {ECO:0000256|RuleBase:RU000369}.
+CC   -!- SIMILARITY: Belongs to the heme-copper respiratory oxidase family.
+CC       {ECO:0000256|RuleBase:RU000369}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; KU290711; ANE15266.1; -; Genomic_DNA.
+DR   EMBL; KU290983; ANE18796.1; -; Genomic_DNA.
+DR   UniPathway; UPA00705; -.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005743; C:mitochondrial inner membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0045277; C:respiratory chain complex IV; IEA:InterPro.
+DR   GO; GO:0004129; F:cytochrome-c oxidase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0020037; F:heme binding; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009060; P:aerobic respiration; IEA:InterPro.
+DR   GO; GO:0006119; P:oxidative phosphorylation; IEA:UniProtKB-UniPathway.
+DR   CDD; cd01663; Cyt_c_Oxidase_I; 1.
+DR   Gene3D; 1.20.210.10; -; 1.
+DR   InterPro; IPR023616; Cyt_c_oxase-like_su1_dom.
+DR   InterPro; IPR036927; Cyt_c_oxase-like_su1_sf.
+DR   InterPro; IPR000883; Cyt_C_Oxase_1.
+DR   InterPro; IPR023615; Cyt_c_Oxase_su1_BS.
+DR   InterPro; IPR033944; Cyt_c_oxase_su1_dom.
+DR   PANTHER; PTHR10422; PTHR10422; 1.
+DR   Pfam; PF00115; COX1; 1.
+DR   PRINTS; PR01165; CYCOXIDASEI.
+DR   SUPFAM; SSF81442; SSF81442; 1.
+DR   PROSITE; PS50855; COX1; 1.
+DR   PROSITE; PS00077; COX1_CUB; 1.
+PE   3: Inferred from homology;
+KW   Copper {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00887236};
+KW   Electron transport {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711106};
+KW   Heme {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711161};
+KW   Iron {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711161};
+KW   Membrane {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711122,
+KW   ECO:0000256|SAM:Phobius};
+KW   Metal-binding {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711161};
+KW   Mitochondrion {ECO:0000256|RuleBase:RU000369};
+KW   Mitochondrion inner membrane {ECO:0000256|RuleBase:RU000369};
+KW   Oxidoreductase {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711097};
+KW   Respiratory chain {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711106};
+KW   Transmembrane {ECO:0000256|SAAS:SAAS00711122, ECO:0000256|SAM:Phobius};
+KW   Transmembrane helix {ECO:0000256|SAAS:SAAS00711122,
+KW   ECO:0000256|SAM:Phobius};
+KW   Transport {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711106}.
+FT   TRANSMEM        18..37
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        57..83
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        104..128
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        148..171
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        183..210
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        243..261
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        268..291
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        303..325
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        337..359
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        379..400
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        412..433
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        453..473
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   DOMAIN          1..514
+FT                   /note="COX1"
+FT                   /evidence="ECO:0000259|PROSITE:PS50855"
+SQ   SEQUENCE   514 AA;  57087 MW;  21B476FEFC44353D CRC64;
+     MFINRWLFST NHKDIGTLYL LFGAWAGMVG TALSLLIRAE LGQPGTLLGD DQIYNVIVTA
+     HAFVMIFFMV MPVMIGGFGN WLVPLMIGAP DMAFPRMNNM SFWLLPPSFL LLLASSMMEA
+     GTGTGWTVYP PLAGNLAHAG ASVDLTIFSL HLAGVSSILG AINFITTIIN MKPPAMSQYQ
+     TPLFVWSVLI TAVLLLLSLP VLAAGITMLL TDRNLNTTFF DPAGGGDPIL YQHLFWFFGH
+     PEVYILILPG FGMISHIVTY YSGKKEPFGY MGMVWAMMSI GFLGFIVWAH HMFTVGMDVD
+     TRAYFTSATM IIAIPTGVKV FSWLATLHGG NIKWSPAMLW ALGFIFLFTV GGLTGIVLAN
+     SSLDIVLHDT YYVVAHFHYV LSMGAVFAIM GGFAHWFPLF SGYTLNDTWA KIHFTIMFVG
+     VNMTFFPQHF LGLSGMPRRY SDYPDAYTTW NTVSSMGSFI SLTAVMLMIF MIWEAFASKR
+     EVAMVELTTT NIEWLHGCPP PYHTFEEPTY VIQK
+//
+ID   Q9GJU7_CANLF            Unreviewed;       507 AA.
+AC   Q9GJU7;
+DT   01-MAR-2001, integrated into UniProtKB/TrEMBL.
+DT   01-MAR-2001, sequence version 1.
+DT   26-FEB-2020, entry version 87.
+DE   SubName: Full=Heparan sulfate sulfamidase {ECO:0000313|EMBL:AAG17207.1};
+DE            EC=3.10.1.1 {ECO:0000313|EMBL:AAG17207.1};
+GN   Name=SGSH {ECO:0000313|EMBL:AAG17207.1};
+OS   Canis lupus familiaris (Dog) (Canis familiaris).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis.
+OX   NCBI_TaxID=9615 {ECO:0000313|EMBL:AAG17207.1};
+RN   [1] {ECO:0000313|EMBL:AAG17207.1}
+RP   NUCLEOTIDE SEQUENCE.
+RX   PubMed=10950929; DOI=10.1006/geno.2000.6275;
+RA   Aronovich E.L., Carmichael K.P., Morizono H., Koutlas I.G., Deanching M.,
+RA   Hoganson G., Fischer A., Whitley C.B.;
+RT   "Canine heparan sulfate sulfamidase and the molecular pathology underlying
+RT   Sanfilippo syndrome type A in Dachshunds.";
+RL   Genomics 68:80-84(2000).
+CC   -!- PTM: The conversion to 3-oxoalanine (also known as C-formylglycine,
+CC       FGly), of a serine or cysteine residue in prokaryotes and of a cysteine
+CC       residue in eukaryotes, is critical for catalytic activity.
+CC       {ECO:0000256|PIRSR:PIRSR600917-51}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AF217203; AAG17206.1; -; mRNA.
+DR   EMBL; AF217204; AAG17207.1; -; Genomic_DNA.
+DR   RefSeq; NP_001003114.1; NM_001003114.1.
+DR   GeneID; 403707; -.
+DR   KEGG; cfa:403707; -.
+DR   CTD; 6448; -.
+DR   eggNOG; KOG3867; Eukaryota.
+DR   eggNOG; COG3119; LUCA.
+DR   KO; K01565; -.
+DR   OrthoDB; 464888at2759; -.
+DR   GO; GO:0005764; C:lysosome; IEA:Ensembl.
+DR   GO; GO:0016250; F:N-sulfoglucosamine sulfohydrolase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0008484; F:sulfuric ester hydrolase activity; IEA:Ensembl.
+DR   GO; GO:0006027; P:glycosaminoglycan catabolic process; IEA:Ensembl.
+DR   GO; GO:0030200; P:heparan sulfate proteoglycan catabolic process; IEA:Ensembl.
+DR   Gene3D; 3.40.720.10; -; 1.
+DR   InterPro; IPR017850; Alkaline_phosphatase_core_sf.
+DR   InterPro; IPR032506; DUF4976.
+DR   InterPro; IPR024607; Sulfatase_CS.
+DR   InterPro; IPR000917; Sulfatase_N.
+DR   Pfam; PF16347; DUF4976; 1.
+DR   Pfam; PF00884; Sulfatase; 1.
+DR   SUPFAM; SSF53649; SSF53649; 1.
+DR   PROSITE; PS00523; SULFATASE_1; 1.
+DR   PROSITE; PS00149; SULFATASE_2; 1.
+PE   2: Evidence at transcript level;
+KW   Hydrolase {ECO:0000313|EMBL:AAG17207.1}; Signal {ECO:0000256|SAM:SignalP}.
+FT   SIGNAL          1..25
+FT                   /evidence="ECO:0000256|SAM:SignalP"
+FT   CHAIN           26..507
+FT                   /evidence="ECO:0000256|SAM:SignalP"
+FT                   /id="PRO_5010148176"
+FT   DOMAIN          28..332
+FT                   /note="Sulfatase"
+FT                   /evidence="ECO:0000259|Pfam:PF00884"
+FT   DOMAIN          423..480
+FT                   /note="DUF4976"
+FT                   /evidence="ECO:0000259|Pfam:PF16347"
+FT   MOD_RES         75
+FT                   /note="3-oxoalanine (Cys)"
+FT                   /evidence="ECO:0000256|PIRSR:PIRSR600917-51"
+SQ   SEQUENCE   507 AA;  57180 MW;  257858D15ECFA6CA CRC64;
+     MRRRGRACGL LLLLLALGLC RPLGARPRNV LLIVADDGGF ESGAYNNTAI STPHLDALAR
+     RSLVFRNAFT TVSSCSPSRA SLLTGLPQHQ NGMYGLHQDV HHFNSFDGVR SLPLLLGRAG
+     VRTGIIGKKH VGPESVYPFE FAHTEENSSV LQVGRNITRI KLLVRKFLQT QDDRPFFLYV
+     AFHDPHRCGH SQPQFGTFCE KFGNGESGMG RIPDWTPQTY DPLDVLVPYF VPDTPAARAD
+     LAAQYTTIGR MDQGVGLVLQ ELRGAGVLND TLVIFTSDNG IPFPSGRTNL YWPGTAEPLL
+     ISSPEHRKRW GQVSEAYVSL LDLTPTILDW FSIPYPSYAI FGSKTVQLTG RSLLPALEAE
+     PLWSTVFGSQ SHHEVTMAYP MRSVHHQGFC LVHNLNFKMP FPIDQDFYVS PTFQDLLNRT
+     VAGHPTGWYK DLRHYYYRER WELYDRSQDP HETRNLAADP YYAPVLELLQ TQLAKWQWET
+     HDPWVCAPDG VLEEKLSPQC RPLHNEL
+//
+ID   A0A172R4I4_CANLF        Unreviewed;       606 AA.
+AC   A0A172R4I4;
+DT   07-SEP-2016, integrated into UniProtKB/TrEMBL.
+DT   07-SEP-2016, sequence version 1.
+DT   26-FEB-2020, entry version 11.
+DE   RecName: Full=NADH-ubiquinone oxidoreductase chain 5 {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00061106};
+DE            EC=7.1.1.2 {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS01106874};
+GN   Name=ND5 {ECO:0000313|EMBL:ANE11586.1};
+OS   Canis lupus familiaris (Dog) (Canis familiaris).
+OG   Mitochondrion {ECO:0000313|EMBL:ANE11586.1}.
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis.
+OX   NCBI_TaxID=9615 {ECO:0000313|EMBL:ANE11586.1};
+RN   [1] {ECO:0000313|EMBL:ANE11586.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=12T {ECO:0000313|EMBL:ANE11586.1}, and
+RC   13T {ECO:0000313|EMBL:ANE11742.1};
+RX   PubMed=27185408;
+RA   Strakova A., Ni Leathlobhair M., Wang G.D., Yin T.T., Airikkala-Otter I.,
+RA   Allen J.L., Allum K.M., Bansse-Issa L., Bisson J.L.,
+RA   Castillo Domracheva A., de Castro K.F., Corrigan A.M., Cran H.R.,
+RA   Crawford J.T., Cutter S.M., Delgadillo Keenan L., Donelan E.M.,
+RA   Faramade I.A., Flores Reynoso E., Fotopoulou E., Fruean S.N.,
+RA   Gallardo-Arrieta F., Glebova O., Hafelin Manrique R.F., Henriques J.J.,
+RA   Ignatenko N., Koenig D., Lanza-Perea M., Lobetti R., Lopez Quintana A.M.,
+RA   Losfelt T., Marino G., Martincorena I., Martinez Castaneda S.,
+RA   Martinez-Lopez M.F., Meyer M., Nakanwagi B., De Nardi A.B., Neunzig W.,
+RA   Nixon S.J., Onsare M.M., Ortega-Pacheco A., Peleteiro M.C., Pye R.J.,
+RA   Reece J.F., Rojas Gutierrez J., Sadia H., Schmeling S.K., Shamanova O.,
+RA   Ssuna R.K., Steenland-Smit A.E., Svitich A., Thoya Ngoka I., Vitalaru B.A.,
+RA   de Vos A.P., de Vos J.P., Walkinton O., Wedge D.C., Wehrle-Martinez A.S.,
+RA   van der Wel M.G., Widdowson S.A., Murchison E.P.;
+RT   "Mitochondrial genetic diversity, selection and recombination in a canine
+RT   transmissible cancer.";
+RL   Elife 5:E14552-E14552(2016).
+CC   -!- FUNCTION: Core subunit of the mitochondrial membrane respiratory chain
+CC       NADH dehydrogenase (Complex I) that is believed to belong to the
+CC       minimal assembly required for catalysis. Complex I functions in the
+CC       transfer of electrons from NADH to the respiratory chain. The immediate
+CC       electron acceptor for the enzyme is believed to be ubiquinone.
+CC       {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00061107}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a ubiquinone + 5 H(+)(in) + NADH = a ubiquinol + 4 H(+)(out) +
+CC         NAD(+); Xref=Rhea:RHEA:29091, Rhea:RHEA-COMP:9565, Rhea:RHEA-
+CC         COMP:9566, ChEBI:CHEBI:15378, ChEBI:CHEBI:16389, ChEBI:CHEBI:17976,
+CC         ChEBI:CHEBI:57540, ChEBI:CHEBI:57945; EC=7.1.1.2;
+CC         Evidence={ECO:0000256|RuleBase:RU003404,
+CC         ECO:0000256|SAAS:SAAS01122516};
+CC   -!- SUBCELLULAR LOCATION: Mitochondrion inner membrane
+CC       {ECO:0000256|SAAS:SAAS00061113}; Multi-pass membrane protein
+CC       {ECO:0000256|SAAS:SAAS00061113}.
+CC   -!- SIMILARITY: Belongs to the complex I subunit 5 family.
+CC       {ECO:0000256|RuleBase:RU003404}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; KU290427; ANE11586.1; -; Genomic_DNA.
+DR   EMBL; KU290439; ANE11742.1; -; Genomic_DNA.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005743; C:mitochondrial inner membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0070469; C:respirasome; IEA:UniProtKB-KW.
+DR   GO; GO:0008137; F:NADH dehydrogenase (ubiquinone) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0042773; P:ATP synthesis coupled electron transport; IEA:InterPro.
+DR   InterPro; IPR010934; NADH_DH_su5_C.
+DR   InterPro; IPR003945; NADHpl_OxRdtase_5.
+DR   InterPro; IPR001750; ND/Mrp_mem.
+DR   InterPro; IPR001516; Proton_antipo_N.
+DR   Pfam; PF06455; NADH5_C; 1.
+DR   Pfam; PF00361; Proton_antipo_M; 1.
+DR   Pfam; PF00662; Proton_antipo_N; 1.
+DR   TIGRFAMs; TIGR01974; NDH_I_L; 1.
+PE   3: Inferred from homology;
+KW   Electron transport {ECO:0000256|SAAS:SAAS00448195};
+KW   Membrane {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448105,
+KW   ECO:0000256|SAAS:SAAS00464492};
+KW   Mitochondrion {ECO:0000256|SAAS:SAAS00448105};
+KW   Mitochondrion inner membrane {ECO:0000256|SAAS:SAAS00448105};
+KW   NAD {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448053};
+KW   Respiratory chain {ECO:0000256|SAAS:SAAS00448195};
+KW   Translocase {ECO:0000256|SAAS:SAAS01106877};
+KW   Transmembrane {ECO:0000256|RuleBase:RU003404,
+KW   ECO:0000256|SAAS:SAAS00464492};
+KW   Transmembrane helix {ECO:0000256|RuleBase:RU003404,
+KW   ECO:0000256|SAAS:SAAS00464492}; Transport {ECO:0000256|SAAS:SAAS00448195};
+KW   Ubiquinone {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448240}.
+FT   TRANSMEM        6..27
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        39..58
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        84..105
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        117..134
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        140..160
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        172..191
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        245..263
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        275..294
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        362..386
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        406..432
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        453..472
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        484..502
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        586..605
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   DOMAIN          65..121
+FT                   /note="Proton_antipo_N"
+FT                   /evidence="ECO:0000259|Pfam:PF00662"
+FT   DOMAIN          134..418
+FT                   /note="Proton_antipo_M"
+FT                   /evidence="ECO:0000259|Pfam:PF00361"
+FT   DOMAIN          422..601
+FT                   /note="NADH5_C"
+FT                   /evidence="ECO:0000259|Pfam:PF06455"
+SQ   SEQUENCE   606 AA;  68376 MW;  ADCC27EB94636ED0 CRC64;
+     MNMFSSCMIT ALVILTLPII MSSTKLYKNK LYPYYVKTAT SYAFMISMIP TMMFIYSGQE
+     TIISNWHWMT IQTMKLSMSF KLDYFSMIFV PVALFVTWSI MEFSMWYMHS DPYINRFFKY
+     LLLFLITMMV LVTANNMFQL FIGWEGVGIM SFLLIGWWYG RTDANTAALQ AVLYNRIGDV
+     GFIMTMAWFL LNLNTWDLQQ IFITTNDNFN LPLLGLLLAA TGKSAQFGLH PWLPSAMEGP
+     TPASALLHSS TMVVAGVFLL IRFHPLMKHN QTIQTLTLCL GAITTLFTAI CALTQNDIKK
+     IVAFSTSSQL GLMMVTIGIN QPYLAFLHIC THAFFKAMLF MCSGSVIHSL NDEQDIRKMG
+     GLFKVLPFTT TSLIIGSLAL TGMPFLTGFY SKDLIIESAN TSNTNAWALL ITLVATSLTA
+     AYSTRIMFFA LLGQPRFSPM ILINENNPLL INSIKRLLIG SVFAGYIISH SITPTTIPQM
+     TMPHYLKMTA LAVTTLGFIL ALELNLTTQG LKFNYPSNYF KFSSLLGYYP TIMHRLTPKT
+     SLTISQKSTS MLLDSIWLEN ILPKSISYFQ MKSSTLISNQ KGLIKLYFLS FMLTMILSLL
+     ILNYHG
+//
+ID   Q49RY7_CANLF            Unreviewed;       514 AA.
+AC   Q49RY7;
+DT   13-SEP-2005, integrated into UniProtKB/TrEMBL.
+DT   13-SEP-2005, sequence version 1.
+DT   22-APR-2020, entry version 129.
+DE   RecName: Full=Cytochrome c oxidase subunit 1 {ECO:0000256|RuleBase:RU000369};
+DE            EC=1.9.3.1 {ECO:0000256|RuleBase:RU000369};
+GN   Name=COX1 {ECO:0000313|EMBL:AAT74154.1};
+GN   Synonyms=COI {ECO:0000313|EMBL:BAJ05633.1},
+GN   cox1 {ECO:0000313|EMBL:AHI52000.1};
+OS   Canis lupus familiaris (Dog) (Canis familiaris).
+OG   Mitochondrion {ECO:0000313|EMBL:AAT74154.1}.
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis.
+OX   NCBI_TaxID=9615 {ECO:0000313|EMBL:AAT74154.1};
+RN   [1] {ECO:0000313|EMBL:AAT74154.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=1 {ECO:0000313|EMBL:AAT74154.1}, and
+RC   2 {ECO:0000313|EMBL:AAT74232.1};
+RA   Shahid S.A., Xiao Y., Khan S., Feng D., Johnson G.S., Ha J.;
+RT   "Sequence Diversity of the Canine Mitochondrial Genome.";
+RL   Submitted (JUN-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [2] {ECO:0000313|EMBL:ABE47975.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=1 {ECO:0000313|EMBL:ABE47975.1}, and
+RC   2 {ECO:0000313|EMBL:ABE48144.1};
+RX   PubMed=16809672; DOI=10.1101/gr.5117706;
+RA   Bjornerfeldt S., Webster M.T., Vila C.;
+RT   "Relaxation of selective constraint on dog mitochondrial DNA following
+RT   domestication.";
+RL   Genome Res. 16:990-994(2006).
+RN   [3] {ECO:0000313|EMBL:ACE00960.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=A100_10092 {ECO:0000313|EMBL:ACE02078.1},
+RC   A102_5955 {ECO:0000313|EMBL:ACE01714.1},
+RC   A103_10002 {ECO:0000313|EMBL:ACE01519.1},
+RC   A105_10059 {ECO:0000313|EMBL:ACE01480.1},
+RC   A109_9940 {ECO:0000313|EMBL:ACE02104.1},
+RC   A10_p13 {ECO:0000313|EMBL:ACE01584.1},
+RC   A110_10096 {ECO:0000313|EMBL:ACE01311.1},
+RC   A114_10019 {ECO:0000313|EMBL:ACE01389.1},
+RC   A116_10253 {ECO:0000313|EMBL:ACE01376.1},
+RC   A117_10165 {ECO:0000313|EMBL:ACE02351.1},
+RC   A119_m288 {ECO:0000313|EMBL:ACE01467.1},
+RC   A11_10196 {ECO:0000313|EMBL:ACE02286.1},
+RC   A11_9987 {ECO:0000313|EMBL:ACE02169.1},
+RC   A11_9997 {ECO:0000313|EMBL:ACE02156.1},
+RC   A11_m54 {ECO:0000313|EMBL:ACE02221.1},
+RC   A11_Z264 {ECO:0000313|EMBL:ACE02676.1},
+RC   A125_5866 {ECO:0000313|EMBL:ACE01753.1},
+RC   A129_m289 {ECO:0000313|EMBL:ACE02650.1},
+RC   A130_10090 {ECO:0000313|EMBL:ACE01350.1},
+RC   A136_10124 {ECO:0000313|EMBL:ACE02260.1},
+RC   A141_10136 {ECO:0000313|EMBL:ACE01324.1},
+RC   A148_9918 {ECO:0000313|EMBL:ACE01792.1},
+RC   A149_10055 {ECO:0000313|EMBL:ACE01779.1},
+RC   A154_m667 {ECO:0000313|EMBL:ACE02494.1},
+RC   A158_Z369 {ECO:0000313|EMBL:ACE02468.1},
+RC   A15_5884 {ECO:0000313|EMBL:ACE02091.1},
+RC   A163_D3 {ECO:0000313|EMBL:ACE02858.1},
+RC   A16_10222 {ECO:0000313|EMBL:ACE02117.1},
+RC   A16_R108 {ECO:0000313|EMBL:ACE02130.1},
+RC   A17_10112 {ECO:0000313|EMBL:ACE02039.1},
+RC   A17_D10 {ECO:0000313|EMBL:ACE02767.1},
+RC   A18_10106 {ECO:0000313|EMBL:ACE02143.1},
+RC   A18_D7 {ECO:0000313|EMBL:ACE02806.1},
+RC   A18_m257 {ECO:0000313|EMBL:ACE02247.1},
+RC   A18_m260 {ECO:0000313|EMBL:ACE02013.1},
+RC   A18_m261 {ECO:0000313|EMBL:ACE02234.1},
+RC   A18_m49 {ECO:0000313|EMBL:ACE02182.1},
+RC   A18_Y85 {ECO:0000313|EMBL:ACE02000.1},
+RC   A19_m47 {ECO:0000313|EMBL:ACE01870.1},
+RC   A19_m51 {ECO:0000313|EMBL:ACE01831.1},
+RC   A19_m52 {ECO:0000313|EMBL:ACE01909.1},
+RC   A19_m55 {ECO:0000313|EMBL:ACE02026.1},
+RC   A1_R105 {ECO:0000313|EMBL:ACE01545.1},
+RC   A20_9947 {ECO:0000313|EMBL:ACE02065.1},
+RC   A20_Z109 {ECO:0000313|EMBL:ACE02611.1},
+RC   A21_m53 {ECO:0000313|EMBL:ACE01740.1},
+RC   A22_10087 {ECO:0000313|EMBL:ACE01857.1},
+RC   A25_m45 {ECO:0000313|EMBL:ACE01766.1},
+RC   A25_m46 {ECO:0000313|EMBL:ACE01805.1},
+RC   A26_D8 {ECO:0000313|EMBL:ACE02793.1},
+RC   A26_p39 {ECO:0000313|EMBL:ACE01727.1},
+RC   A27_m50 {ECO:0000313|EMBL:ACE02195.1},
+RC   A29_10100 {ECO:0000313|EMBL:ACE01428.1},
+RC   A29_D11 {ECO:0000313|EMBL:ACE02754.1}, A2_D9 {ECO:0000313|EMBL:ACE02780.1},
+RC   A2_m215 {ECO:0000313|EMBL:ACE01623.1},
+RC   A2_m290 {ECO:0000313|EMBL:ACE02312.1},
+RC   A30_R51 {ECO:0000313|EMBL:ACE01844.1},
+RC   A33_p11 {ECO:0000313|EMBL:ACE01935.1},
+RC   A34_R34 {ECO:0000313|EMBL:ACE01948.1},
+RC   A36_R74 {ECO:0000313|EMBL:ACE01883.1},
+RC   A38_5895 {ECO:0000313|EMBL:ACE01701.1},
+RC   A39_5929 {ECO:0000313|EMBL:ACE01571.1},
+RC   A3_5880 {ECO:0000313|EMBL:ACE01987.1},
+RC   A41_m300 {ECO:0000313|EMBL:ACE01922.1},
+RC   A43_p36 {ECO:0000313|EMBL:ACE01493.1},
+RC   A44_10003 {ECO:0000313|EMBL:ACE01506.1},
+RC   A45_m23 {ECO:0000313|EMBL:ACE01688.1},
+RC   A49_5912 {ECO:0000313|EMBL:ACE01597.1},
+RC   A55_9919 {ECO:0000313|EMBL:ACE01636.1},
+RC   A59_5703 {ECO:0000313|EMBL:ACE01649.1},
+RC   A5_Z28 {ECO:0000313|EMBL:ACE02533.1},
+RC   A64_Z134 {ECO:0000313|EMBL:ACE02481.1},
+RC   A65_5959 {ECO:0000313|EMBL:ACE01363.1},
+RC   A65_m276 {ECO:0000313|EMBL:ACE01298.1},
+RC   A73_9996 {ECO:0000313|EMBL:ACE01441.1},
+RC   A75_m286 {ECO:0000313|EMBL:ACE01415.1},
+RC   A78_M212 {ECO:0000313|EMBL:ACE02637.1},
+RC   A78_M216 {ECO:0000313|EMBL:ACE02689.1},
+RC   A89_5918 {ECO:0000313|EMBL:ACE02052.1},
+RC   A8_5899 {ECO:0000313|EMBL:ACE01285.1},
+RC   A91_10095 {ECO:0000313|EMBL:ACE01896.1},
+RC   A92_5947 {ECO:0000313|EMBL:ACE01610.1},
+RC   A94_10006 {ECO:0000313|EMBL:ACE02208.1},
+RC   A99_10028 {ECO:0000313|EMBL:ACE01818.1},
+RC   A9_10197 {ECO:0000313|EMBL:ACE02325.1},
+RC   B13_5805 {ECO:0000313|EMBL:ACE00973.1},
+RC   B1_10005 {ECO:0000313|EMBL:ACE01051.1},
+RC   B1_5810 {ECO:0000313|EMBL:ACE01064.1},
+RC   B1_5814 {ECO:0000313|EMBL:ACE01012.1},
+RC   B1_5898 {ECO:0000313|EMBL:ACE01025.1},
+RC   B1_9910 {ECO:0000313|EMBL:ACE01103.1},
+RC   B1_D12 {ECO:0000313|EMBL:ACE02741.1}, B1_D6 {ECO:0000313|EMBL:ACE02819.1},
+RC   B1_m48 {ECO:0000313|EMBL:ACE01155.1},
+RC   B1_m510 {ECO:0000313|EMBL:ACE01142.1},
+RC   B22_5913 {ECO:0000313|EMBL:ACE01077.1},
+RC   B23_5890 {ECO:0000313|EMBL:ACE01129.1},
+RC   B24_10172 {ECO:0000313|EMBL:ACE01090.1},
+RC   B28_5882 {ECO:0000313|EMBL:ACE00960.1},
+RC   B29_10175 {ECO:0000313|EMBL:ACE02273.1},
+RC   B2_PS121 {ECO:0000313|EMBL:ACE02559.1},
+RC   B2_Z254 {ECO:0000313|EMBL:ACE02520.1},
+RC   B30_5914 {ECO:0000313|EMBL:ACE00999.1},
+RC   B5_5938 {ECO:0000313|EMBL:ACE00986.1},
+RC   B6_9908 {ECO:0000313|EMBL:ACE01038.1},
+RC   B6_Z217 {ECO:0000313|EMBL:ACE02663.1}, B8_D2 {ECO:0000313|EMBL:ACE02871.1},
+RC   B9_10068 {ECO:0000313|EMBL:ACE01116.1},
+RC   C10_10216 {ECO:0000313|EMBL:ACE01246.1},
+RC   C12_10017 {ECO:0000313|EMBL:ACE02429.1},
+RC   C12_9928 {ECO:0000313|EMBL:ACE02442.1},
+RC   C15_D1 {ECO:0000313|EMBL:ACE02884.1},
+RC   C1_5800 {ECO:0000313|EMBL:ACE01233.1},
+RC   C1_m40 {ECO:0000313|EMBL:ACE01220.1},
+RC   C1_Z206 {ECO:0000313|EMBL:ACE02624.1},
+RC   C2_10069 {ECO:0000313|EMBL:ACE01259.1},
+RC   C2_JD18 {ECO:0000313|EMBL:ACE02572.1},
+RC   C2_Z107 {ECO:0000313|EMBL:ACE02546.1},
+RC   C5_9839 {ECO:0000313|EMBL:ACE02455.1},
+RC   C7_5796 {ECO:0000313|EMBL:ACE01207.1},
+RC   D1_R53 {ECO:0000313|EMBL:ACE01194.1}, D3_D4 {ECO:0000313|EMBL:ACE02715.1},
+RC   D5_m98 {ECO:0000313|EMBL:ACE01168.1}, D6_R33 {ECO:0000313|EMBL:ACE01181.1},
+RC   and D8_D14 {ECO:0000313|EMBL:ACE02845.1};
+RA   Pang J., Kluetsch C., Zou X.-J., Zhang A.-B., Luo L.-Y., Angleby H.,
+RA   Ardalan A., Ekstrom C., Skollermo A., Lundeberg J., Matsumura S.,
+RA   Leitner T., Zhang Y.-P., Savolainen P.;
+RL   Submitted (JUN-2008) to the EMBL/GenBank/DDBJ databases.
+RN   [4] {ECO:0000313|EMBL:ABY79850.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=Akita1P {ECO:0000313|EMBL:ABY79850.1},
+RC   AmericanCockerSpaniel1P {ECO:0000313|EMBL:ABY79863.1},
+RC   AustralianShepherd7P {ECO:0000313|EMBL:ABY79902.1},
+RC   AustralianTerrier1P {ECO:0000313|EMBL:ABY79876.1},
+RC   BassetHound2P {ECO:0000313|EMBL:ABY79967.1},
+RC   BassetHound3P {ECO:0000313|EMBL:ABY79980.1},
+RC   BassetHound4P {ECO:0000313|EMBL:ABY79993.1},
+RC   BichonFrise3P {ECO:0000313|EMBL:ABY79915.1},
+RC   Bolognese1P {ECO:0000313|EMBL:ABY79941.1},
+RC   Boxer6P {ECO:0000313|EMBL:ABY79954.1},
+RC   BrittanySpaniel1M {ECO:0000313|EMBL:ABY80006.1},
+RC   CairnTerrier4P {ECO:0000313|EMBL:ABY80097.1},
+RC   CardiganCorgi2P {ECO:0000313|EMBL:ABY80045.1},
+RC   CavalierKingCharlesSpaniel9P {ECO:0000313|EMBL:ABY80084.1},
+RC   Chihuahua11M {ECO:0000313|EMBL:ABY80058.1},
+RC   Chihuahua5P {ECO:0000313|EMBL:ABY80071.1},
+RC   Cockapoo1M {ECO:0000313|EMBL:ABY80019.1},
+RC   CockerSpaniel1P {ECO:0000313|EMBL:ABY80123.1},
+RC   CockerSpaniel8P {ECO:0000313|EMBL:ABY80149.1},
+RC   Corgi2P {ECO:0000313|EMBL:ABY80110.1},
+RC   Dachshund15P {ECO:0000313|EMBL:ABY80201.1},
+RC   Dachshund4P {ECO:0000313|EMBL:ABY80175.1},
+RC   DobermanPinscher5P {ECO:0000313|EMBL:ABY80162.1},
+RC   DoguedeBordeaux1P {ECO:0000313|EMBL:ABY80188.1},
+RC   EnglishMastiff3P {ECO:0000313|EMBL:ABY80227.1},
+RC   EnglishShepherd1M {ECO:0000313|EMBL:ABY80214.1},
+RC   FrenchBullDog1P {ECO:0000313|EMBL:ABY80240.1},
+RC   GermanShepherd12P {ECO:0000313|EMBL:ABY80266.1},
+RC   GreatDane2P {ECO:0000313|EMBL:ABY80253.1},
+RC   GreatPyrenees1P {ECO:0000313|EMBL:ABY80279.1},
+RC   ItalianGreyhound1P {ECO:0000313|EMBL:ABY80305.1},
+RC   JackRussell6P {ECO:0000313|EMBL:ABY80318.1},
+RC   Keeshond1P {ECO:0000313|EMBL:ABY80331.1},
+RC   Keeshond2P {ECO:0000313|EMBL:ABY80344.1},
+RC   Keeshond3P {ECO:0000313|EMBL:ABY80357.1},
+RC   Labradoodle1P {ECO:0000313|EMBL:ABY80370.1},
+RC   MiniatureDachshund3P {ECO:0000313|EMBL:ABY80383.1},
+RC   NeapolitanMastiff1P {ECO:0000313|EMBL:ABY80422.1},
+RC   NeapolitanMastiff2P {ECO:0000313|EMBL:ABY80435.1},
+RC   Newfoundland1P {ECO:0000313|EMBL:ABY80396.1},
+RC   NorwegianElkhound1P {ECO:0000313|EMBL:ABY80409.1},
+RC   PitBullTerrier1M {ECO:0000313|EMBL:ABY80474.1},
+RC   Poodle7M {ECO:0000313|EMBL:ABY80461.1},
+RC   Pug5P {ECO:0000313|EMBL:ABY80487.1},
+RC   Rottweiler1P {ECO:0000313|EMBL:ABY80500.1},
+RC   Rottweiler2P {ECO:0000313|EMBL:ABY80513.1},
+RC   Schipperke1P {ECO:0000313|EMBL:ABY80526.1},
+RC   Schnauzer4P {ECO:0000313|EMBL:ABY80552.1},
+RC   Sheltie1M {ECO:0000313|EMBL:ABY80539.1},
+RC   TibetanMastiff1P {ECO:0000313|EMBL:ABY80565.1},
+RC   TibetanSpaniel1P {ECO:0000313|EMBL:ABY80578.1},
+RC   ToyPoodle3P {ECO:0000313|EMBL:ABY80591.1},
+RC   Unknown1M {ECO:0000313|EMBL:ABY80604.1},
+RC   Unknown1P {ECO:0000313|EMBL:ABY80617.1},
+RC   Viszla2P {ECO:0000313|EMBL:ABY80630.1},
+RC   WalkerHound1P {ECO:0000313|EMBL:ABY80656.1},
+RC   WestHighlandTerrier4P {ECO:0000313|EMBL:ABY80643.1}, and
+RC   YorkieChihuahua1M {ECO:0000313|EMBL:ABY80669.1};
+RX   PubMed=19261050; DOI=10.1111/j.1556-4029.2008.00952.x;
+RA   Webb K.M., Allard M.W.;
+RT   "Mitochondrial genome DNA analysis of the domestic dog: identifying
+RT   informative SNPs outside of the control region.";
+RL   J. Forensic Sci. 54:275-288(2009).
+RN   [5] {ECO:0000313|EMBL:ACE00960.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=A100_10092 {ECO:0000313|EMBL:ACE02078.1},
+RC   A102_5955 {ECO:0000313|EMBL:ACE01714.1},
+RC   A103_10002 {ECO:0000313|EMBL:ACE01519.1},
+RC   A105_10059 {ECO:0000313|EMBL:ACE01480.1},
+RC   A109_9940 {ECO:0000313|EMBL:ACE02104.1},
+RC   A10_p13 {ECO:0000313|EMBL:ACE01584.1},
+RC   A110_10096 {ECO:0000313|EMBL:ACE01311.1},
+RC   A114_10019 {ECO:0000313|EMBL:ACE01389.1},
+RC   A116_10253 {ECO:0000313|EMBL:ACE01376.1},
+RC   A117_10165 {ECO:0000313|EMBL:ACE02351.1},
+RC   A119_m288 {ECO:0000313|EMBL:ACE01467.1},
+RC   A11_10196 {ECO:0000313|EMBL:ACE02286.1},
+RC   A11_9987 {ECO:0000313|EMBL:ACE02169.1},
+RC   A11_9997 {ECO:0000313|EMBL:ACE02156.1},
+RC   A11_m54 {ECO:0000313|EMBL:ACE02221.1},
+RC   A11_Z264 {ECO:0000313|EMBL:ACE02676.1},
+RC   A125_5866 {ECO:0000313|EMBL:ACE01753.1},
+RC   A129_m289 {ECO:0000313|EMBL:ACE02650.1},
+RC   A130_10090 {ECO:0000313|EMBL:ACE01350.1},
+RC   A136_10124 {ECO:0000313|EMBL:ACE02260.1},
+RC   A141_10136 {ECO:0000313|EMBL:ACE01324.1},
+RC   A148_9918 {ECO:0000313|EMBL:ACE01792.1},
+RC   A149_10055 {ECO:0000313|EMBL:ACE01779.1},
+RC   A154_m667 {ECO:0000313|EMBL:ACE02494.1},
+RC   A158_Z369 {ECO:0000313|EMBL:ACE02468.1},
+RC   A15_5884 {ECO:0000313|EMBL:ACE02091.1},
+RC   A163_D3 {ECO:0000313|EMBL:ACE02858.1},
+RC   A16_10222 {ECO:0000313|EMBL:ACE02117.1},
+RC   A16_R108 {ECO:0000313|EMBL:ACE02130.1},
+RC   A17_10112 {ECO:0000313|EMBL:ACE02039.1},
+RC   A17_D10 {ECO:0000313|EMBL:ACE02767.1},
+RC   A18_10106 {ECO:0000313|EMBL:ACE02143.1},
+RC   A18_D7 {ECO:0000313|EMBL:ACE02806.1},
+RC   A18_m257 {ECO:0000313|EMBL:ACE02247.1},
+RC   A18_m260 {ECO:0000313|EMBL:ACE02013.1},
+RC   A18_m261 {ECO:0000313|EMBL:ACE02234.1},
+RC   A18_m49 {ECO:0000313|EMBL:ACE02182.1},
+RC   A18_Y85 {ECO:0000313|EMBL:ACE02000.1},
+RC   A19_m47 {ECO:0000313|EMBL:ACE01870.1},
+RC   A19_m51 {ECO:0000313|EMBL:ACE01831.1},
+RC   A19_m52 {ECO:0000313|EMBL:ACE01909.1},
+RC   A19_m55 {ECO:0000313|EMBL:ACE02026.1},
+RC   A1_R105 {ECO:0000313|EMBL:ACE01545.1},
+RC   A20_9947 {ECO:0000313|EMBL:ACE02065.1},
+RC   A20_Z109 {ECO:0000313|EMBL:ACE02611.1},
+RC   A21_m53 {ECO:0000313|EMBL:ACE01740.1},
+RC   A22_10087 {ECO:0000313|EMBL:ACE01857.1},
+RC   A25_m45 {ECO:0000313|EMBL:ACE01766.1},
+RC   A25_m46 {ECO:0000313|EMBL:ACE01805.1},
+RC   A26_D8 {ECO:0000313|EMBL:ACE02793.1},
+RC   A26_p39 {ECO:0000313|EMBL:ACE01727.1},
+RC   A27_m50 {ECO:0000313|EMBL:ACE02195.1},
+RC   A29_10100 {ECO:0000313|EMBL:ACE01428.1},
+RC   A29_D11 {ECO:0000313|EMBL:ACE02754.1}, A2_D9 {ECO:0000313|EMBL:ACE02780.1},
+RC   A2_m215 {ECO:0000313|EMBL:ACE01623.1},
+RC   A2_m290 {ECO:0000313|EMBL:ACE02312.1},
+RC   A30_R51 {ECO:0000313|EMBL:ACE01844.1},
+RC   A33_p11 {ECO:0000313|EMBL:ACE01935.1},
+RC   A34_R34 {ECO:0000313|EMBL:ACE01948.1},
+RC   A36_R74 {ECO:0000313|EMBL:ACE01883.1},
+RC   A38_5895 {ECO:0000313|EMBL:ACE01701.1},
+RC   A39_5929 {ECO:0000313|EMBL:ACE01571.1},
+RC   A3_5880 {ECO:0000313|EMBL:ACE01987.1},
+RC   A41_m300 {ECO:0000313|EMBL:ACE01922.1},
+RC   A43_p36 {ECO:0000313|EMBL:ACE01493.1},
+RC   A44_10003 {ECO:0000313|EMBL:ACE01506.1},
+RC   A45_m23 {ECO:0000313|EMBL:ACE01688.1},
+RC   A49_5912 {ECO:0000313|EMBL:ACE01597.1},
+RC   A55_9919 {ECO:0000313|EMBL:ACE01636.1},
+RC   A59_5703 {ECO:0000313|EMBL:ACE01649.1},
+RC   A5_Z28 {ECO:0000313|EMBL:ACE02533.1},
+RC   A64_Z134 {ECO:0000313|EMBL:ACE02481.1},
+RC   A65_5959 {ECO:0000313|EMBL:ACE01363.1},
+RC   A65_m276 {ECO:0000313|EMBL:ACE01298.1},
+RC   A73_9996 {ECO:0000313|EMBL:ACE01441.1},
+RC   A75_m286 {ECO:0000313|EMBL:ACE01415.1},
+RC   A78_M212 {ECO:0000313|EMBL:ACE02637.1},
+RC   A78_M216 {ECO:0000313|EMBL:ACE02689.1},
+RC   A89_5918 {ECO:0000313|EMBL:ACE02052.1},
+RC   A8_5899 {ECO:0000313|EMBL:ACE01285.1},
+RC   A91_10095 {ECO:0000313|EMBL:ACE01896.1},
+RC   A92_5947 {ECO:0000313|EMBL:ACE01610.1},
+RC   A94_10006 {ECO:0000313|EMBL:ACE02208.1},
+RC   A99_10028 {ECO:0000313|EMBL:ACE01818.1},
+RC   A9_10197 {ECO:0000313|EMBL:ACE02325.1},
+RC   B13_5805 {ECO:0000313|EMBL:ACE00973.1},
+RC   B1_10005 {ECO:0000313|EMBL:ACE01051.1},
+RC   B1_5810 {ECO:0000313|EMBL:ACE01064.1},
+RC   B1_5814 {ECO:0000313|EMBL:ACE01012.1},
+RC   B1_5898 {ECO:0000313|EMBL:ACE01025.1},
+RC   B1_9910 {ECO:0000313|EMBL:ACE01103.1},
+RC   B1_D12 {ECO:0000313|EMBL:ACE02741.1}, B1_D6 {ECO:0000313|EMBL:ACE02819.1},
+RC   B1_m48 {ECO:0000313|EMBL:ACE01155.1},
+RC   B1_m510 {ECO:0000313|EMBL:ACE01142.1},
+RC   B22_5913 {ECO:0000313|EMBL:ACE01077.1},
+RC   B23_5890 {ECO:0000313|EMBL:ACE01129.1},
+RC   B24_10172 {ECO:0000313|EMBL:ACE01090.1},
+RC   B28_5882 {ECO:0000313|EMBL:ACE00960.1},
+RC   B29_10175 {ECO:0000313|EMBL:ACE02273.1},
+RC   B2_PS121 {ECO:0000313|EMBL:ACE02559.1},
+RC   B2_Z254 {ECO:0000313|EMBL:ACE02520.1},
+RC   B30_5914 {ECO:0000313|EMBL:ACE00999.1},
+RC   B5_5938 {ECO:0000313|EMBL:ACE00986.1},
+RC   B6_9908 {ECO:0000313|EMBL:ACE01038.1},
+RC   B6_Z217 {ECO:0000313|EMBL:ACE02663.1}, B8_D2 {ECO:0000313|EMBL:ACE02871.1},
+RC   B9_10068 {ECO:0000313|EMBL:ACE01116.1},
+RC   C10_10216 {ECO:0000313|EMBL:ACE01246.1},
+RC   C12_10017 {ECO:0000313|EMBL:ACE02429.1},
+RC   C12_9928 {ECO:0000313|EMBL:ACE02442.1},
+RC   C15_D1 {ECO:0000313|EMBL:ACE02884.1},
+RC   C1_5800 {ECO:0000313|EMBL:ACE01233.1},
+RC   C1_m40 {ECO:0000313|EMBL:ACE01220.1},
+RC   C1_Z206 {ECO:0000313|EMBL:ACE02624.1},
+RC   C2_10069 {ECO:0000313|EMBL:ACE01259.1},
+RC   C2_JD18 {ECO:0000313|EMBL:ACE02572.1},
+RC   C2_Z107 {ECO:0000313|EMBL:ACE02546.1},
+RC   C5_9839 {ECO:0000313|EMBL:ACE02455.1},
+RC   C7_5796 {ECO:0000313|EMBL:ACE01207.1},
+RC   D1_R53 {ECO:0000313|EMBL:ACE01194.1}, D3_D4 {ECO:0000313|EMBL:ACE02715.1},
+RC   D5_m98 {ECO:0000313|EMBL:ACE01168.1}, D6_R33 {ECO:0000313|EMBL:ACE01181.1},
+RC   and D8_D14 {ECO:0000313|EMBL:ACE02845.1};
+RX   PubMed=19723671; DOI=10.1093/molbev/msp195;
+RA   Pang J.F., Kluetsch C., Zou X.J., Zhang A.B., Luo L.Y., Angleby H.,
+RA   Ardalan A., Ekstrom C., Skollermo A., Lundeberg J., Matsumura S.,
+RA   Leitner T., Zhang Y.P., Savolainen P.;
+RT   "mtDNA data indicate a single origin for dogs south of Yangtze River, less
+RT   than 16,300 years ago, from numerous wolves.";
+RL   Mol. Biol. Evol. 26:2849-2864(2009).
+RN   [6] {ECO:0000313|EMBL:ACN91376.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=Affected1 {ECO:0000313|EMBL:ACN91376.1},
+RC   Affected2 {ECO:0000313|EMBL:ACN91389.1},
+RC   Affected3 {ECO:0000313|EMBL:ACN91402.1},
+RC   Affected4 {ECO:0000313|EMBL:ACN91415.1},
+RC   Close_relative {ECO:0000313|EMBL:ACN91428.1},
+RC   UnAffected1 {ECO:0000313|EMBL:ACN91441.1}, and
+RC   UnAffected2 {ECO:0000313|EMBL:ACN91454.1};
+RX   PubMed=19492087; DOI=10.1371/journal.pgen.1000499;
+RA   Baranowska I., Hultin Jaderlund K., Nennesmo I., Holmqvist E., Heidrich N.,
+RA   Larsson N.-G., Andersson G., Wagner G.H., Hedhammar A., Wibom R.,
+RA   Andersson L.;
+RT   "Sensory ataxic neuropathy in golden retriever dogs is caused by a deletion
+RT   in the mitochondrial tRNATyr gene.";
+RL   PLoS Genet. 5:e1000499-e1000499(2009).
+RN   [7] {ECO:0000313|EMBL:AEG23840.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Imes D.L., Sacks B.N.;
+RT   "Identification of Single Nucleotide Polymorphisms within the mtDNA Genome
+RT   of the Domestic Dog to Discriminate Individuals with Common HVI
+RT   Haplotypes.";
+RL   Submitted (FEB-2011) to the EMBL/GenBank/DDBJ databases.
+RN   [8] {ECO:0000313|EMBL:AFN01351.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=Alpine1 {ECO:0000313|EMBL:AFN01571.1},
+RC   Alpine2 {ECO:0000313|EMBL:AFN01623.1},
+RC   Alpine4 {ECO:0000313|EMBL:AFN01467.1},
+RC   Alpine5 {ECO:0000313|EMBL:AFN01454.1},
+RC   Bali Dog {ECO:0000313|EMBL:AFN01597.1},
+RC   FraserIsland {ECO:0000313|EMBL:AFN01415.1},
+RC   GibsonDeser1 {ECO:0000313|EMBL:AFN01532.1},
+RC   GibsonDesert2 {ECO:0000313|EMBL:AFN01402.1},
+RC   GibsonDesert3 {ECO:0000313|EMBL:AFN01377.1},
+RC   GibsonDesert4 {ECO:0000313|EMBL:AFN01558.1},
+RC   GibsonDesert5 {ECO:0000313|EMBL:AFN01364.1},
+RC   Kalimantan Dog {ECO:0000313|EMBL:AFN01584.1},
+RC   Kimberley1 {ECO:0000313|EMBL:AFN01506.1},
+RC   Kimberley2 {ECO:0000313|EMBL:AFN01610.1},
+RC   Kimberley3 {ECO:0000313|EMBL:AFN01480.1},
+RC   Kimberley4 {ECO:0000313|EMBL:AFN01493.1},
+RC   Kimberley5 {ECO:0000313|EMBL:AFN01519.1},
+RC   NGSD {ECO:0000313|EMBL:AFN01390.1},
+RC   SimpsonDesert1 {ECO:0000313|EMBL:AFN01428.1},
+RC   SimpsonDesert2 {ECO:0000313|EMBL:AFN01351.1},
+RC   SimpsonDesert3 {ECO:0000313|EMBL:AFN01441.1},
+RC   SimpsonDesert4 {ECO:0000313|EMBL:AFN01545.1}, and
+RC   SimpsonDesert5 {ECO:0000313|EMBL:AFN01636.1};
+RA   Cairns K.M., Wilton A.N., Ballard J.W.O.;
+RT   "Whole mitochondrial genome data suggests that dingoes immigrated into
+RT   Australia at least twice from the oceanic continent of Sahul.";
+RL   Submitted (MAY-2012) to the EMBL/GenBank/DDBJ databases.
+RN   [9] {ECO:0000313|EMBL:AHA52622.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=Argentina 1 {ECO:0000313|EMBL:AHA53245.1},
+RC   Basenji {ECO:0000313|EMBL:AHA52622.1}, Dingo {ECO:0000313|EMBL:AHA52635.1},
+RC   and USA 1 {ECO:0000313|EMBL:AHA53271.1};
+RX   PubMed=24233726;
+RA   Thalmann O., Shapiro B., Cui P., Schuenemann V.J., Sawyer S.K.,
+RA   Greenfield D.L., Germonpre M.B., Sablin M.V., Lopez-Giraldez F.,
+RA   Domingo-Roura X., Napierala H., Uerpmann H.P., Loponte D.M., Acosta A.A.,
+RA   Giemsch L., Schmitz R.W., Worthington B., Buikstra J.E., Druzhkova A.,
+RA   Graphodatsky A.S., Ovodov N.D., Wahlberg N., Freedman A.H., Schweizer R.M.,
+RA   Koepfli K.P., Leonard J.A., Meyer M., Krause J., Paabo S., Green R.E.,
+RA   Wayne R.K.;
+RT   "Complete mitochondrial genomes of ancient canids suggest a European origin
+RT   of domestic dogs.";
+RL   Science 342:871-874(2013).
+RN   [10] {ECO:0000313|EMBL:AHH81727.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Si T.;
+RL   Submitted (NOV-2013) to the EMBL/GenBank/DDBJ databases.
+RN   [11] {ECO:0000313|EMBL:AHI52000.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Li C.-H.;
+RL   Submitted (DEC-2013) to the EMBL/GenBank/DDBJ databases.
+RN   [12] {ECO:0000313|EMBL:AIC07489.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Verscheure S., Backeljau T., Desmyter S.;
+RT   "Dog mitochondrial genome sequencing to enhance dog mtDNA discrimination
+RT   power in forensic casework.";
+RL   Forensic Sci. Int. Genet. 12:60-68(2014).
+RN   [13] {ECO:0000313|EMBL:AHH81727.1}
+RP   NUCLEOTIDE SEQUENCE.
+RX   PubMed=24438283;
+RA   Jia Q.H., Liu H.B., Gu X.L., Li J.F., Liu Y.L.;
+RT   "Complete mitochondrial genome of a German Shepherd (Canis lupus familiaris
+RT   breed German Shepherd) provides insights into genome-wide sequence
+RT   variations.";
+RL   Mitochondrial DNA 0:0-0(2014).
+RN   [14] {ECO:0000313|EMBL:AHI52000.1}
+RP   NUCLEOTIDE SEQUENCE.
+RX   PubMed=24450724;
+RA   Tian J., Zhou J., Xiao M.F.;
+RT   "The complete mitochondrial genome of Belgium Malinois (Canis; Canidae).";
+RL   Mitochondrial DNA 0:0-0(2014).
+RN   [15] {ECO:0000313|EMBL:AHH81740.1}
+RP   NUCLEOTIDE SEQUENCE.
+RX   PubMed=24438253;
+RA   Hao Z., Zhang Q., Qu B.;
+RT   "The complete mitochondrial genome of the Chinese indigenous dog.";
+RL   Mitochondrial DNA 0:0-0(2014).
+RN   [16] {ECO:0000313|EMBL:BAJ05633.1}
+RP   NUCLEOTIDE SEQUENCE.
+RX   PubMed=25132126; DOI=10.1016/j.ympev.2014.08.004;
+RA   Matsumura S., Inoshima Y., Ishiguro N.;
+RT   "Reconstructing the colonization history of lost wolf lineages by the
+RT   analysis of the mitochondrial genome.";
+RL   Mol. Phylogenet. Evol. 80:105-112(2014).
+RN   [17] {ECO:0000313|EMBL:AHN13291.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=1643_TAR3 {ECO:0000313|EMBL:AHN13291.1},
+RC   1646_TAR5 {ECO:0000313|EMBL:AHN13304.1},
+RC   1662_TAR3 {ECO:0000313|EMBL:AHN13317.1},
+RC   1676_GTAR4 {ECO:0000313|EMBL:AHN13330.1}, and
+RC   1695_CAL1 {ECO:0000313|EMBL:AHN13343.1};
+RA   Adeola A.C., Fan L., Shi N.-N., Yin T.-T., Zhou Z.-Y., Wang G.-D.,
+RA   Murphy R.W., Peng M.-S., Zhang Y.-P.;
+RL   Submitted (JAN-2014) to the EMBL/GenBank/DDBJ databases.
+RN   [18] {ECO:0000313|EMBL:AHY24081.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Li L.;
+RT   "The complete mitochondrial genome of the Border Collie dog.";
+RL   Submitted (FEB-2014) to the EMBL/GenBank/DDBJ databases.
+RN   [19] {ECO:0000313|EMBL:AIX88164.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=Cf_cau1 {ECO:0000313|EMBL:AIX88164.1},
+RC   Cf_cau2 {ECO:0000313|EMBL:AIX88177.1},
+RC   Cf_cau3 {ECO:0000313|EMBL:AIX88190.1},
+RC   Cf_cau4 {ECO:0000313|EMBL:AIX88203.1},
+RC   Cf_cau6 {ECO:0000313|EMBL:AIX88216.1},
+RC   Cf_jam1 {ECO:0000313|EMBL:AIX88242.1},
+RC   Cf_jam10 {ECO:0000313|EMBL:AIX88255.1},
+RC   Cf_jam2 {ECO:0000313|EMBL:AIX88268.1},
+RC   Cf_jam4 {ECO:0000313|EMBL:AIX88281.1},
+RC   Cf_jam5 {ECO:0000313|EMBL:AIX88294.1},
+RC   Cf_jam6 {ECO:0000313|EMBL:AIX88307.1},
+RC   Cf_jam7 {ECO:0000313|EMBL:AIX88320.1},
+RC   Cf_jam8 {ECO:0000313|EMBL:AIX88333.1},
+RC   Cf_jam9 {ECO:0000313|EMBL:AIX88346.1},
+RC   Cf_L41 {ECO:0000313|EMBL:AIX88489.1}, Cf_L44 {ECO:0000313|EMBL:AIX88502.1},
+RC   Cf_L46 {ECO:0000313|EMBL:AIX88515.1}, Cf_L47 {ECO:0000313|EMBL:AIX88528.1},
+RC   Cf_L49 {ECO:0000313|EMBL:AIX88541.1}, Cf_L50 {ECO:0000313|EMBL:AIX88554.1},
+RC   Cf_L51 {ECO:0000313|EMBL:AIX88567.1}, Cf_L53 {ECO:0000313|EMBL:AIX88580.1},
+RC   Cf_L55 {ECO:0000313|EMBL:AIX88593.1}, Cf_L56 {ECO:0000313|EMBL:AIX88606.1},
+RC   Cf_L57 {ECO:0000313|EMBL:AIX88619.1}, Cf_nk1 {ECO:0000313|EMBL:AIX88632.1},
+RC   Cf_nk10 {ECO:0000313|EMBL:AIX88645.1},
+RC   Cf_nk11 {ECO:0000313|EMBL:AIX88658.1},
+RC   Cf_nk12 {ECO:0000313|EMBL:AIX88671.1},
+RC   Cf_nk14 {ECO:0000313|EMBL:AIX88684.1},
+RC   Cf_nk15 {ECO:0000313|EMBL:AIX88697.1},
+RC   Cf_nk16 {ECO:0000313|EMBL:AIX88710.1},
+RC   Cf_nk17 {ECO:0000313|EMBL:AIX88723.1},
+RC   Cf_nk2 {ECO:0000313|EMBL:AIX88736.1},
+RC   Cf_nk20 {ECO:0000313|EMBL:AIX88749.1},
+RC   Cf_nk21 {ECO:0000313|EMBL:AIX88762.1},
+RC   Cf_nk23 {ECO:0000313|EMBL:AIX88775.1},
+RC   Cf_nk3 {ECO:0000313|EMBL:AIX88788.1}, Cf_nk4 {ECO:0000313|EMBL:AIX88801.1},
+RC   Cf_nk5 {ECO:0000313|EMBL:AIX88814.1}, Cf_nk6 {ECO:0000313|EMBL:AIX88827.1},
+RC   Cf_nk7 {ECO:0000313|EMBL:AIX88840.1}, Cf_nk8 {ECO:0000313|EMBL:AIX88853.1},
+RC   Cf_nk9 {ECO:0000313|EMBL:AIX88866.1},
+RC   Cf_pl16 {ECO:0000313|EMBL:AIX88879.1},
+RC   Cf_pl19 {ECO:0000313|EMBL:AIX88892.1},
+RC   Cf_pl25 {ECO:0000313|EMBL:AIX88905.1},
+RC   Cf_pl43 {ECO:0000313|EMBL:AIX88931.1},
+RC   Cf_pl44 {ECO:0000313|EMBL:AIX88944.1},
+RC   Cf_pl49 {ECO:0000313|EMBL:AIX88957.1},
+RC   Cf_pl50 {ECO:0000313|EMBL:AIX88970.1},
+RC   Cf_pl54 {ECO:0000313|EMBL:AIX88983.1},
+RC   Cf_pl57 {ECO:0000313|EMBL:AIX88996.1},
+RC   Cf_pl6 {ECO:0000313|EMBL:AIX89009.1},
+RC   Cf_pl61 {ECO:0000313|EMBL:AIX89022.1},
+RC   Cf_pl69 {ECO:0000313|EMBL:AIX89035.1},
+RC   Cf_pl70 {ECO:0000313|EMBL:AIX89048.1},
+RC   Cf_pl8 {ECO:0000313|EMBL:AIX89061.1},
+RC   Cf_pl88 {ECO:0000313|EMBL:AIX89074.1},
+RC   Cf_pl96 {ECO:0000313|EMBL:AIX89087.1},
+RC   Cf_psy1 {ECO:0000313|EMBL:AIX89100.1},
+RC   Cf_psy2 {ECO:0000313|EMBL:AIX89113.1},
+RC   Cf_psy4 {ECO:0000313|EMBL:AIX89126.1},
+RC   Cf_s12 {ECO:0000313|EMBL:AIX89152.1}, Cf_s3 {ECO:0000313|EMBL:AIX89165.1},
+RC   Cf_s5 {ECO:0000313|EMBL:AIX89178.1}, Cf_s7 {ECO:0000313|EMBL:AIX89191.1},
+RC   Cf_s8 {ECO:0000313|EMBL:AIX89204.1},
+RC   Cf_stp62 {ECO:0000313|EMBL:AIX89217.1},
+RC   Cf_stp63 {ECO:0000313|EMBL:AIX89230.1},
+RC   Cf_stp64 {ECO:0000313|EMBL:AIX89243.1},
+RC   Cf_stp65 {ECO:0000313|EMBL:AIX89256.1},
+RC   Cf_stp69 {ECO:0000313|EMBL:AIX89269.1},
+RC   Cf_stp77 {ECO:0000313|EMBL:AIX89295.1},
+RC   Cf_stp79 {ECO:0000313|EMBL:AIX89308.1},
+RC   Cf_stp81 {ECO:0000313|EMBL:AIX89321.1},
+RC   Cf_stp82 {ECO:0000313|EMBL:AIX89334.1},
+RC   Cf_stp83 {ECO:0000313|EMBL:AIX89347.1},
+RC   Cf_stp86 {ECO:0000313|EMBL:AIX89360.1},
+RC   Cf_tdz11 {ECO:0000313|EMBL:AIX89373.1},
+RC   Cf_tdz12 {ECO:0000313|EMBL:AIX89386.1},
+RC   Cf_tdz13 {ECO:0000313|EMBL:AIX89399.1},
+RC   Cf_tdz15 {ECO:0000313|EMBL:AIX89425.1},
+RC   Cf_tdz16 {ECO:0000313|EMBL:AIX89438.1},
+RC   Cf_tdz18 {ECO:0000313|EMBL:AIX89451.1},
+RC   Cf_tdz19 {ECO:0000313|EMBL:AIX89464.1},
+RC   Cf_tdz20 {ECO:0000313|EMBL:AIX89477.1},
+RC   Cf_tdz5 {ECO:0000313|EMBL:AIX89490.1},
+RC   Cf_tdz6 {ECO:0000313|EMBL:AIX89503.1},
+RC   Cf_u11 {ECO:0000313|EMBL:AIX89516.1}, Cf_u14 {ECO:0000313|EMBL:AIX89529.1},
+RC   Cf_u16 {ECO:0000313|EMBL:AIX89542.1}, Cf_u4 {ECO:0000313|EMBL:AIX89555.1},
+RC   Cf_u6 {ECO:0000313|EMBL:AIX89568.1}, Cf_uno {ECO:0000313|EMBL:AIX89581.1},
+RC   Cf_ws11 {ECO:0000313|EMBL:AIX89607.1},
+RC   Cf_ws3 {ECO:0000313|EMBL:AIX89633.1}, Cf_ws4 {ECO:0000313|EMBL:AIX89646.1},
+RC   Cf_ws6 {ECO:0000313|EMBL:AIX89672.1}, Cf_ws7 {ECO:0000313|EMBL:AIX89685.1},
+RC   Cf_ws8 {ECO:0000313|EMBL:AIX89698.1}, Cf_ws9 {ECO:0000313|EMBL:AIX89711.1},
+RC   Kos_1 {ECO:0000313|EMBL:AIX88359.1}, Kos_10 {ECO:0000313|EMBL:AIX88372.1},
+RC   Kos_2 {ECO:0000313|EMBL:AIX88385.1}, Kos_3 {ECO:0000313|EMBL:AIX88398.1},
+RC   Kos_4 {ECO:0000313|EMBL:AIX88411.1}, Kos_5 {ECO:0000313|EMBL:AIX88424.1},
+RC   Kos_6 {ECO:0000313|EMBL:AIX88437.1}, Kos_7 {ECO:0000313|EMBL:AIX88450.1},
+RC   Kos_8 {ECO:0000313|EMBL:AIX88463.1}, and
+RC   Kos_9 {ECO:0000313|EMBL:AIX88476.1};
+RA   Duleba A., Skonieczna K., Bogdanowicz W., Grzybowski T.;
+RL   Submitted (JUN-2014) to the EMBL/GenBank/DDBJ databases.
+RN   [20] {ECO:0000313|EMBL:AKZ89492.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=MS10062 {ECO:0000313|EMBL:AKZ89544.1},
+RC   MS10065 {ECO:0000313|EMBL:AKZ89518.1},
+RC   MS10066 {ECO:0000313|EMBL:AKZ89531.1},
+RC   MS10068 {ECO:0000313|EMBL:AKZ89492.1},
+RC   MS10069 {ECO:0000313|EMBL:AKZ89505.1},
+RC   MS10070 {ECO:0000313|EMBL:AKZ89557.1},
+RC   MS10130 {ECO:0000313|EMBL:AKZ89609.1},
+RC   MS10131 {ECO:0000313|EMBL:AKZ89622.1},
+RC   MS10132 {ECO:0000313|EMBL:AKZ89583.1},
+RC   MS10133 {ECO:0000313|EMBL:AKZ89596.1},
+RC   MS10135 {ECO:0000313|EMBL:AKZ89661.1},
+RC   MS10136 {ECO:0000313|EMBL:AKZ89635.1}, and
+RC   MS10137 {ECO:0000313|EMBL:AKZ89648.1};
+RX   PubMed=26444283;
+RA   Greig K., Boocock J., Prost S., Horsburgh K.A., Jacomb C., Walter R.,
+RA   Matisoo-Smith E.;
+RT   "Complete Mitochondrial Genomes of New Zealand's First Dogs.";
+RL   PLoS ONE 10:E0138536-E0138536(2015).
+RN   [21] {ECO:0000313|EMBL:ALL52854.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Guo X., Pei J.;
+RT   "The complete mitochondrial genome of Hequ Tibetan Mastiff Canis lupus
+RT   familiaris (Carnivora: Canidae).";
+RL   Submitted (AUG-2015) to the EMBL/GenBank/DDBJ databases.
+RN   [22] {ECO:0000313|EMBL:AMM05998.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=MS10071 {ECO:0000313|EMBL:AMM06128.1},
+RC   MS10072 {ECO:0000313|EMBL:AMM06115.1},
+RC   MS10073 {ECO:0000313|EMBL:AMM06102.1},
+RC   MS10074 {ECO:0000313|EMBL:AMM06089.1},
+RC   MS10075 {ECO:0000313|EMBL:AMM06076.1},
+RC   MS10076 {ECO:0000313|EMBL:AMM06180.1},
+RC   MS10077 {ECO:0000313|EMBL:AMM06154.1},
+RC   MS10078 {ECO:0000313|EMBL:AMM06167.1},
+RC   MS10079 {ECO:0000313|EMBL:AMM06063.1},
+RC   MS10093 {ECO:0000313|EMBL:AMM06245.1},
+RC   MS10094 {ECO:0000313|EMBL:AMM06206.1},
+RC   MS10095 {ECO:0000313|EMBL:AMM06193.1},
+RC   MS10096 {ECO:0000313|EMBL:AMM06232.1},
+RC   MS10097 {ECO:0000313|EMBL:AMM06219.1},
+RC   MS10098 {ECO:0000313|EMBL:AMM06258.1},
+RC   MS10111 {ECO:0000313|EMBL:AMM05998.1},
+RC   MS10112 {ECO:0000313|EMBL:AMM06011.1},
+RC   MS10113 {ECO:0000313|EMBL:AMM06024.1},
+RC   MS10114 {ECO:0000313|EMBL:AMM06037.1},
+RC   MS10115 {ECO:0000313|EMBL:AMM06050.1}, and
+RC   MS10124 {ECO:0000313|EMBL:AMM06141.1};
+RA   Greig K., Boocock J., Jacomb C., Walter R., Matisoo-Smith L.A.;
+RT   "Dog introduction and dispersal during the colonisation of New Zealand.";
+RL   Submitted (NOV-2015) to the EMBL/GenBank/DDBJ databases.
+RN   [23] {ECO:0000313|EMBL:ANE11227.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=100H1 {ECO:0000313|EMBL:ANE11227.1},
+RC   101H {ECO:0000313|EMBL:ANE11253.1}, 101T {ECO:0000313|EMBL:ANE11266.1},
+RC   102H {ECO:0000313|EMBL:ANE11279.1}, 102T {ECO:0000313|EMBL:ANE11292.1},
+RC   103H {ECO:0000313|EMBL:ANE11305.1}, 103T {ECO:0000313|EMBL:ANE11318.1},
+RC   104T {ECO:0000313|EMBL:ANE11331.1}, 105T {ECO:0000313|EMBL:ANE11344.1},
+RC   106T {ECO:0000313|EMBL:ANE11357.1}, 107T {ECO:0000313|EMBL:ANE11370.1},
+RC   108H {ECO:0000313|EMBL:ANE11383.1}, 108T {ECO:0000313|EMBL:ANE11396.1},
+RC   109T {ECO:0000313|EMBL:ANE11409.1}, 110T {ECO:0000313|EMBL:ANE11422.1},
+RC   120H1 {ECO:0000313|EMBL:ANE11448.1}, 120T1 {ECO:0000313|EMBL:ANE11461.1},
+RC   122T {ECO:0000313|EMBL:ANE11474.1}, 123T {ECO:0000313|EMBL:ANE11487.1},
+RC   124H {ECO:0000313|EMBL:ANE11500.1}, 124T {ECO:0000313|EMBL:ANE11513.1},
+RC   125T {ECO:0000313|EMBL:ANE11526.1}, 126H {ECO:0000313|EMBL:ANE11539.1},
+RC   126T {ECO:0000313|EMBL:ANE11552.1}, 127H {ECO:0000313|EMBL:ANE11565.1},
+RC   133T {ECO:0000313|EMBL:ANE11591.1}, 134H {ECO:0000313|EMBL:ANE11604.1},
+RC   134T {ECO:0000313|EMBL:ANE11617.1}, 135H {ECO:0000313|EMBL:ANE11630.1},
+RC   137H {ECO:0000313|EMBL:ANE11682.1}, 139H {ECO:0000313|EMBL:ANE11708.1},
+RC   140H {ECO:0000313|EMBL:ANE11747.1}, 142H {ECO:0000313|EMBL:ANE11773.1},
+RC   143H {ECO:0000313|EMBL:ANE11799.1}, 146H {ECO:0000313|EMBL:ANE11825.1},
+RC   146T {ECO:0000313|EMBL:ANE11838.1}, 148H {ECO:0000313|EMBL:ANE11851.1},
+RC   148T {ECO:0000313|EMBL:ANE11864.1}, 149H {ECO:0000313|EMBL:ANE11877.1},
+RC   149T {ECO:0000313|EMBL:ANE11890.1}, 151T {ECO:0000313|EMBL:ANE11916.1},
+RC   152H {ECO:0000313|EMBL:ANE11929.1}, 152T {ECO:0000313|EMBL:ANE11942.1},
+RC   153T {ECO:0000313|EMBL:ANE11955.1}, 154H {ECO:0000313|EMBL:ANE11968.1},
+RC   154T {ECO:0000313|EMBL:ANE11981.1}, 179H {ECO:0000313|EMBL:ANE12007.1},
+RC   17T1 {ECO:0000313|EMBL:ANE12033.1}, 180H {ECO:0000313|EMBL:ANE12046.1},
+RC   18T1 {ECO:0000313|EMBL:ANE12072.1}, 196H {ECO:0000313|EMBL:ANE12085.1},
+RC   196T {ECO:0000313|EMBL:ANE12098.1}, 1T {ECO:0000313|EMBL:ANE12111.1},
+RC   209H {ECO:0000313|EMBL:ANE12124.1}, 209T {ECO:0000313|EMBL:ANE12137.1},
+RC   226T {ECO:0000313|EMBL:ANE12150.1}, 22H {ECO:0000313|EMBL:ANE12163.1},
+RC   230T {ECO:0000313|EMBL:ANE12189.1}, 231T {ECO:0000313|EMBL:ANE12202.1},
+RC   232T {ECO:0000313|EMBL:ANE12215.1}, 233T {ECO:0000313|EMBL:ANE12228.1},
+RC   234T {ECO:0000313|EMBL:ANE12241.1}, 235T {ECO:0000313|EMBL:ANE12254.1},
+RC   23H {ECO:0000313|EMBL:ANE12267.1}, 25H {ECO:0000313|EMBL:ANE12319.1},
+RC   265H {ECO:0000313|EMBL:ANE12345.1}, 266H {ECO:0000313|EMBL:ANE12371.1},
+RC   267H {ECO:0000313|EMBL:ANE12397.1}, 268H1 {ECO:0000313|EMBL:ANE12423.1},
+RC   26H {ECO:0000313|EMBL:ANE12449.1}, 270H {ECO:0000313|EMBL:ANE12475.1},
+RC   273T {ECO:0000313|EMBL:ANE12514.1}, 274H {ECO:0000313|EMBL:ANE12527.1},
+RC   274T {ECO:0000313|EMBL:ANE12540.1}, 275H {ECO:0000313|EMBL:ANE12553.1},
+RC   275T {ECO:0000313|EMBL:ANE12566.1}, 276H {ECO:0000313|EMBL:ANE12579.1},
+RC   276T {ECO:0000313|EMBL:ANE12592.1}, 277H {ECO:0000313|EMBL:ANE12605.1},
+RC   279H {ECO:0000313|EMBL:ANE12618.1}, 279T {ECO:0000313|EMBL:ANE12631.1},
+RC   281H {ECO:0000313|EMBL:ANE12657.1}, 281T {ECO:0000313|EMBL:ANE12670.1},
+RC   285H {ECO:0000313|EMBL:ANE12683.1}, 286H {ECO:0000313|EMBL:ANE12709.1},
+RC   28H {ECO:0000313|EMBL:ANE12735.1}, 29H {ECO:0000313|EMBL:ANE12761.1},
+RC   308H {ECO:0000313|EMBL:ANE12800.1}, 308T {ECO:0000313|EMBL:ANE12813.1},
+RC   309H {ECO:0000313|EMBL:ANE12826.1}, 309T {ECO:0000313|EMBL:ANE12839.1},
+RC   310H {ECO:0000313|EMBL:ANE12852.1}, 313H {ECO:0000313|EMBL:ANE12878.1},
+RC   313T {ECO:0000313|EMBL:ANE12891.1}, 315H {ECO:0000313|EMBL:ANE12904.1},
+RC   315T {ECO:0000313|EMBL:ANE12917.1}, 317H {ECO:0000313|EMBL:ANE12929.1},
+RC   317T {ECO:0000313|EMBL:ANE12942.1}, 321H6 {ECO:0000313|EMBL:ANE12955.1},
+RC   326H {ECO:0000313|EMBL:ANE13007.1}, 32T {ECO:0000313|EMBL:ANE13033.1},
+RC   335T {ECO:0000313|EMBL:ANE13046.1}, 336T {ECO:0000313|EMBL:ANE13059.1},
+RC   338H {ECO:0000313|EMBL:ANE13072.1}, 338T {ECO:0000313|EMBL:ANE13085.1},
+RC   339H {ECO:0000313|EMBL:ANE13098.1}, 339T {ECO:0000313|EMBL:ANE13111.1},
+RC   33T {ECO:0000313|EMBL:ANE13124.1}, 341H {ECO:0000313|EMBL:ANE13137.1},
+RC   341T {ECO:0000313|EMBL:ANE13150.1}, 342H {ECO:0000313|EMBL:ANE13163.1},
+RC   342T {ECO:0000313|EMBL:ANE13176.1}, 343H {ECO:0000313|EMBL:ANE13189.1},
+RC   343T {ECO:0000313|EMBL:ANE13202.1}, 344H {ECO:0000313|EMBL:ANE13215.1},
+RC   344T {ECO:0000313|EMBL:ANE13228.1}, 345H {ECO:0000313|EMBL:ANE13241.1},
+RC   345T {ECO:0000313|EMBL:ANE13254.1}, 34T {ECO:0000313|EMBL:ANE13280.1},
+RC   360H {ECO:0000313|EMBL:ANE13306.1}, 361H {ECO:0000313|EMBL:ANE13331.1},
+RC   363H {ECO:0000313|EMBL:ANE13370.1}, 363T {ECO:0000313|EMBL:ANE13383.1},
+RC   364H {ECO:0000313|EMBL:ANE13396.1}, 365H {ECO:0000313|EMBL:ANE13422.1},
+RC   365T {ECO:0000313|EMBL:ANE13435.1}, 366H {ECO:0000313|EMBL:ANE13448.1},
+RC   366T {ECO:0000313|EMBL:ANE13461.1}, 367T {ECO:0000313|EMBL:ANE13487.1},
+RC   369T {ECO:0000313|EMBL:ANE13500.1}, 375T {ECO:0000313|EMBL:ANE13552.1},
+RC   381T {ECO:0000313|EMBL:ANE13617.1}, 382H {ECO:0000313|EMBL:ANE13630.1},
+RC   382T {ECO:0000313|EMBL:ANE13643.1}, 383H {ECO:0000313|EMBL:ANE13656.1},
+RC   383T {ECO:0000313|EMBL:ANE13669.1}, 385H {ECO:0000313|EMBL:ANE13682.1},
+RC   385T {ECO:0000313|EMBL:ANE13695.1}, 386H {ECO:0000313|EMBL:ANE13708.1},
+RC   386T {ECO:0000313|EMBL:ANE13721.1}, 387T {ECO:0000313|EMBL:ANE13734.1},
+RC   388H {ECO:0000313|EMBL:ANE13747.1}, 388T {ECO:0000313|EMBL:ANE13760.1},
+RC   389H2 {ECO:0000313|EMBL:ANE13773.1}, 389T1 {ECO:0000313|EMBL:ANE13786.1},
+RC   389T2 {ECO:0000313|EMBL:ANE13799.1}, 38H {ECO:0000313|EMBL:ANE13812.1},
+RC   390T {ECO:0000313|EMBL:ANE13851.1}, 391H {ECO:0000313|EMBL:ANE13864.1},
+RC   391T {ECO:0000313|EMBL:ANE13877.1}, 393H {ECO:0000313|EMBL:ANE13890.1},
+RC   393T {ECO:0000313|EMBL:ANE13903.1}, 394T {ECO:0000313|EMBL:ANE13916.1},
+RC   396H {ECO:0000313|EMBL:ANE13929.1}, 396T {ECO:0000313|EMBL:ANE13942.1},
+RC   399H {ECO:0000313|EMBL:ANE13955.1}, 3T {ECO:0000313|EMBL:ANE14007.1},
+RC   400H {ECO:0000313|EMBL:ANE14020.1}, 400T {ECO:0000313|EMBL:ANE14033.1},
+RC   401H {ECO:0000313|EMBL:ANE14046.1}, 402T {ECO:0000313|EMBL:ANE14085.1},
+RC   404H {ECO:0000313|EMBL:ANE14098.1}, 404T {ECO:0000313|EMBL:ANE14111.1},
+RC   405T {ECO:0000313|EMBL:ANE14124.1}, 406T {ECO:0000313|EMBL:ANE14137.1},
+RC   407H {ECO:0000313|EMBL:ANE14150.1}, 407T {ECO:0000313|EMBL:ANE14163.1},
+RC   408T {ECO:0000313|EMBL:ANE14176.1}, 409H {ECO:0000313|EMBL:ANE14189.1},
+RC   409T {ECO:0000313|EMBL:ANE14202.1}, 40H {ECO:0000313|EMBL:ANE14215.1},
+RC   410H {ECO:0000313|EMBL:ANE14241.1}, 410T {ECO:0000313|EMBL:ANE14254.1},
+RC   411H {ECO:0000313|EMBL:ANE14267.1}, 411T {ECO:0000313|EMBL:ANE14280.1},
+RC   412H {ECO:0000313|EMBL:ANE14293.1}, 412T {ECO:0000313|EMBL:ANE14306.1},
+RC   413H {ECO:0000313|EMBL:ANE14319.1}, 415H {ECO:0000313|EMBL:ANE14345.1},
+RC   415T {ECO:0000313|EMBL:ANE14358.1}, 416T {ECO:0000313|EMBL:ANE14371.1},
+RC   41H {ECO:0000313|EMBL:ANE14397.1}, 421H {ECO:0000313|EMBL:ANE14436.1},
+RC   422H {ECO:0000313|EMBL:ANE14462.1}, 423H {ECO:0000313|EMBL:ANE14488.1},
+RC   425H1 {ECO:0000313|EMBL:ANE14527.1}, 431T1 {ECO:0000313|EMBL:ANE14617.1},
+RC   435T {ECO:0000313|EMBL:ANE14669.1}, 436T {ECO:0000313|EMBL:ANE14682.1},
+RC   437H {ECO:0000313|EMBL:ANE14695.1}, 438T {ECO:0000313|EMBL:ANE14721.1},
+RC   439H {ECO:0000313|EMBL:ANE14734.1}, 439T {ECO:0000313|EMBL:ANE14747.1},
+RC   43H {ECO:0000313|EMBL:ANE14759.1}, 440T {ECO:0000313|EMBL:ANE14785.1},
+RC   441H {ECO:0000313|EMBL:ANE14798.1}, 441T {ECO:0000313|EMBL:ANE14811.1},
+RC   442T {ECO:0000313|EMBL:ANE14824.1}, 443T {ECO:0000313|EMBL:ANE14850.1},
+RC   44H {ECO:0000313|EMBL:ANE14915.1}, 459H {ECO:0000313|EMBL:ANE15045.1},
+RC   45H1 {ECO:0000313|EMBL:ANE15071.1}, 462H1 {ECO:0000313|EMBL:ANE15110.1},
+RC   462T {ECO:0000313|EMBL:ANE15123.1}, 464H {ECO:0000313|EMBL:ANE15149.1},
+RC   464T {ECO:0000313|EMBL:ANE15162.1}, 467T {ECO:0000313|EMBL:ANE15201.1},
+RC   468H {ECO:0000313|EMBL:ANE15214.1}, 469H {ECO:0000313|EMBL:ANE15240.1},
+RC   47H {ECO:0000313|EMBL:ANE15279.1}, 48H {ECO:0000313|EMBL:ANE15305.1},
+RC   490H {ECO:0000313|EMBL:ANE15331.1}, 491H {ECO:0000313|EMBL:ANE15357.1},
+RC   492H2 {ECO:0000313|EMBL:ANE15383.1}, 494H {ECO:0000313|EMBL:ANE15422.1},
+RC   495T {ECO:0000313|EMBL:ANE15448.1}, 497H {ECO:0000313|EMBL:ANE15461.1},
+RC   497T {ECO:0000313|EMBL:ANE15474.1}, 498H {ECO:0000313|EMBL:ANE15487.1},
+RC   498T {ECO:0000313|EMBL:ANE15500.1}, 499H {ECO:0000313|EMBL:ANE15513.1},
+RC   499T {ECO:0000313|EMBL:ANE15526.1}, 4H {ECO:0000313|EMBL:ANE15552.1},
+RC   500H {ECO:0000313|EMBL:ANE15578.1}, 500T {ECO:0000313|EMBL:ANE15591.1},
+RC   501H {ECO:0000313|EMBL:ANE15604.1}, 501T {ECO:0000313|EMBL:ANE15617.1},
+RC   502H {ECO:0000313|EMBL:ANE15630.1}, 502T1 {ECO:0000313|EMBL:ANE15643.1},
+RC   504H {ECO:0000313|EMBL:ANE15656.1}, 504T {ECO:0000313|EMBL:ANE15669.1},
+RC   505H {ECO:0000313|EMBL:ANE15682.1}, 505T {ECO:0000313|EMBL:ANE15695.1},
+RC   507H {ECO:0000313|EMBL:ANE15734.1}, 507T {ECO:0000313|EMBL:ANE15747.1},
+RC   508T {ECO:0000313|EMBL:ANE15760.1}, 509H {ECO:0000313|EMBL:ANE15773.1},
+RC   509T {ECO:0000313|EMBL:ANE15786.1}, 511H {ECO:0000313|EMBL:ANE15812.1},
+RC   513H {ECO:0000313|EMBL:ANE15851.1}, 514H {ECO:0000313|EMBL:ANE15877.1},
+RC   515H {ECO:0000313|EMBL:ANE15903.1}, 516H1 {ECO:0000313|EMBL:ANE15929.1},
+RC   523H {ECO:0000313|EMBL:ANE15955.1}, 527H {ECO:0000313|EMBL:ANE15994.1},
+RC   52H {ECO:0000313|EMBL:ANE16020.1}, 530H1 {ECO:0000313|EMBL:ANE16046.1},
+RC   534H {ECO:0000313|EMBL:ANE16098.1}, 539H {ECO:0000313|EMBL:ANE16150.1},
+RC   540H {ECO:0000313|EMBL:ANE16176.1}, 550H {ECO:0000313|EMBL:ANE16215.1},
+RC   550T {ECO:0000313|EMBL:ANE16228.1}, 551H {ECO:0000313|EMBL:ANE16241.1},
+RC   551T {ECO:0000313|EMBL:ANE16254.1}, 555H {ECO:0000313|EMBL:ANE16267.1},
+RC   555T {ECO:0000313|EMBL:ANE16280.1}, 556H {ECO:0000313|EMBL:ANE16293.1},
+RC   558H {ECO:0000313|EMBL:ANE16319.1}, 559H {ECO:0000313|EMBL:ANE16345.1},
+RC   560H {ECO:0000313|EMBL:ANE16383.1}, 564T {ECO:0000313|EMBL:ANE16409.1},
+RC   571H {ECO:0000313|EMBL:ANE16435.1}, 572H {ECO:0000313|EMBL:ANE16461.1},
+RC   572T {ECO:0000313|EMBL:ANE16474.1}, 575H {ECO:0000313|EMBL:ANE16487.1},
+RC   582H {ECO:0000313|EMBL:ANE16526.1}, 584T {ECO:0000313|EMBL:ANE16565.1},
+RC   587T {ECO:0000313|EMBL:ANE16604.1}, 588T {ECO:0000313|EMBL:ANE16617.1},
+RC   589T {ECO:0000313|EMBL:ANE16630.1}, 590T {ECO:0000313|EMBL:ANE16642.1},
+RC   591T {ECO:0000313|EMBL:ANE16655.1}, 592T {ECO:0000313|EMBL:ANE16668.1},
+RC   594T {ECO:0000313|EMBL:ANE16681.1}, 595T1 {ECO:0000313|EMBL:ANE16694.1},
+RC   596T {ECO:0000313|EMBL:ANE16707.1}, 597T {ECO:0000313|EMBL:ANE16720.1},
+RC   598T {ECO:0000313|EMBL:ANE16732.1}, 599T {ECO:0000313|EMBL:ANE16745.1},
+RC   5T1 {ECO:0000313|EMBL:ANE16771.1}, 600T {ECO:0000313|EMBL:ANE16784.1},
+RC   601T {ECO:0000313|EMBL:ANE16797.1}, 602H {ECO:0000313|EMBL:ANE16810.1},
+RC   604T {ECO:0000313|EMBL:ANE16836.1}, 605T {ECO:0000313|EMBL:ANE16849.1},
+RC   608H {ECO:0000313|EMBL:ANE16888.1}, 609H {ECO:0000313|EMBL:ANE16914.1},
+RC   624H {ECO:0000313|EMBL:ANE17109.1}, 625H {ECO:0000313|EMBL:ANE17135.1},
+RC   627T1 {ECO:0000313|EMBL:ANE17161.1}, 628T1 {ECO:0000313|EMBL:ANE17174.1},
+RC   631T {ECO:0000313|EMBL:ANE17226.1}, 634T {ECO:0000313|EMBL:ANE17239.1},
+RC   635H {ECO:0000313|EMBL:ANE17252.1}, 639H {ECO:0000313|EMBL:ANE17304.1},
+RC   644H {ECO:0000313|EMBL:ANE17356.1}, 645H {ECO:0000313|EMBL:ANE17382.1},
+RC   646H {ECO:0000313|EMBL:ANE17408.1}, 647H {ECO:0000313|EMBL:ANE17421.1},
+RC   650H {ECO:0000313|EMBL:ANE17460.1}, 655H {ECO:0000313|EMBL:ANE17512.1},
+RC   656H {ECO:0000313|EMBL:ANE17525.1}, 660H {ECO:0000313|EMBL:ANE17551.1},
+RC   666H {ECO:0000313|EMBL:ANE17590.1}, 667H {ECO:0000313|EMBL:ANE17616.1},
+RC   680H {ECO:0000313|EMBL:ANE17642.1}, 681H {ECO:0000313|EMBL:ANE17668.1},
+RC   682T {ECO:0000313|EMBL:ANE17707.1}, 683H {ECO:0000313|EMBL:ANE17720.1},
+RC   683T {ECO:0000313|EMBL:ANE17733.1}, 691H {ECO:0000313|EMBL:ANE17824.1},
+RC   692H {ECO:0000313|EMBL:ANE17850.1}, 694H {ECO:0000313|EMBL:ANE17889.1},
+RC   703T {ECO:0000313|EMBL:ANE17928.1}, 704T1 {ECO:0000313|EMBL:ANE17941.1},
+RC   705T1 {ECO:0000313|EMBL:ANE17954.1}, 706H1 {ECO:0000313|EMBL:ANE17967.1},
+RC   706T1 {ECO:0000313|EMBL:ANE17980.1}, 710T {ECO:0000313|EMBL:ANE18006.1},
+RC   714T {ECO:0000313|EMBL:ANE18032.1}, 738H {ECO:0000313|EMBL:ANE18045.1},
+RC   738T {ECO:0000313|EMBL:ANE18058.1}, 739H {ECO:0000313|EMBL:ANE18071.1},
+RC   739T {ECO:0000313|EMBL:ANE18084.1}, 740H {ECO:0000313|EMBL:ANE18097.1},
+RC   740T {ECO:0000313|EMBL:ANE18110.1}, 759H {ECO:0000313|EMBL:ANE18160.1},
+RC   761H {ECO:0000313|EMBL:ANE18199.1}, 764H {ECO:0000313|EMBL:ANE18251.1},
+RC   774T1 {ECO:0000313|EMBL:ANE18367.1}, 782H {ECO:0000313|EMBL:ANE18406.1},
+RC   782T {ECO:0000313|EMBL:ANE18419.1}, 790H {ECO:0000313|EMBL:ANE18432.1},
+RC   791H {ECO:0000313|EMBL:ANE18458.1}, 792H {ECO:0000313|EMBL:ANE18484.1},
+RC   793H {ECO:0000313|EMBL:ANE18510.1}, 794H {ECO:0000313|EMBL:ANE18536.1},
+RC   795H {ECO:0000313|EMBL:ANE18562.1}, 798H {ECO:0000313|EMBL:ANE18601.1},
+RC   79H {ECO:0000313|EMBL:ANE18640.1}, 7T {ECO:0000313|EMBL:ANE18666.1},
+RC   802T {ECO:0000313|EMBL:ANE18705.1}, 803T {ECO:0000313|EMBL:ANE18718.1},
+RC   804T {ECO:0000313|EMBL:ANE18731.1}, 805T {ECO:0000313|EMBL:ANE18744.1},
+RC   80H1 {ECO:0000313|EMBL:ANE18809.1}, 810H1 {ECO:0000313|EMBL:ANE18835.1},
+RC   812H {ECO:0000313|EMBL:ANE18861.1}, 813H {ECO:0000313|EMBL:ANE18887.1},
+RC   814H {ECO:0000313|EMBL:ANE18913.1}, 815H {ECO:0000313|EMBL:ANE18939.1},
+RC   819H {ECO:0000313|EMBL:ANE18991.1}, 820H {ECO:0000313|EMBL:ANE19030.1},
+RC   821H {ECO:0000313|EMBL:ANE19056.1}, 823H {ECO:0000313|EMBL:ANE19095.1},
+RC   824H {ECO:0000313|EMBL:ANE19121.1}, 827T {ECO:0000313|EMBL:ANE19147.1},
+RC   828H {ECO:0000313|EMBL:ANE19160.1}, 828T {ECO:0000313|EMBL:ANE19173.1},
+RC   829H {ECO:0000313|EMBL:ANE19186.1}, 829T {ECO:0000313|EMBL:ANE19199.1},
+RC   82H1 {ECO:0000313|EMBL:ANE19212.1}, 830H {ECO:0000313|EMBL:ANE19238.1},
+RC   831H {ECO:0000313|EMBL:ANE19263.1}, 831T {ECO:0000313|EMBL:ANE19276.1},
+RC   832T {ECO:0000313|EMBL:ANE19302.1}, 835H {ECO:0000313|EMBL:ANE19341.1},
+RC   839T1 {ECO:0000313|EMBL:ANE19367.1}, 839T2 {ECO:0000313|EMBL:ANE19380.1},
+RC   847H1 {ECO:0000313|EMBL:ANE19406.1}, 847T {ECO:0000313|EMBL:ANE19419.1},
+RC   848T {ECO:0000313|EMBL:ANE19432.1}, 849H {ECO:0000313|EMBL:ANE19445.1},
+RC   849T {ECO:0000313|EMBL:ANE19458.1}, 84H1 {ECO:0000313|EMBL:ANE19471.1},
+RC   850H {ECO:0000313|EMBL:ANE19497.1}, 850T {ECO:0000313|EMBL:ANE19510.1},
+RC   851H {ECO:0000313|EMBL:ANE19523.1}, 851T {ECO:0000313|EMBL:ANE19536.1},
+RC   853H {ECO:0000313|EMBL:ANE19549.1}, 853T {ECO:0000313|EMBL:ANE19562.1},
+RC   854H {ECO:0000313|EMBL:ANE19575.1}, 854T {ECO:0000313|EMBL:ANE19588.1},
+RC   855T {ECO:0000313|EMBL:ANE19601.1}, 856T {ECO:0000313|EMBL:ANE19614.1},
+RC   857H {ECO:0000313|EMBL:ANE19627.1}, 857T {ECO:0000313|EMBL:ANE19640.1},
+RC   858H {ECO:0000313|EMBL:ANE19653.1}, 858T {ECO:0000313|EMBL:ANE19666.1},
+RC   859H {ECO:0000313|EMBL:ANE19679.1}, 859T {ECO:0000313|EMBL:ANE19692.1},
+RC   860H {ECO:0000313|EMBL:ANE19718.1}, 860T {ECO:0000313|EMBL:ANE19731.1},
+RC   861H {ECO:0000313|EMBL:ANE19744.1}, 861T {ECO:0000313|EMBL:ANE19757.1},
+RC   862T {ECO:0000313|EMBL:ANE19770.1}, 867H {ECO:0000313|EMBL:ANE19822.1},
+RC   86H1 {ECO:0000313|EMBL:ANE19874.1}, 870H1 {ECO:0000313|EMBL:ANE19900.1},
+RC   873H {ECO:0000313|EMBL:ANE19913.1}, 874H {ECO:0000313|EMBL:ANE19939.1},
+RC   875H {ECO:0000313|EMBL:ANE19965.1}, 89H {ECO:0000313|EMBL:ANE20004.1},
+RC   90H {ECO:0000313|EMBL:ANE20030.1}, 91H {ECO:0000313|EMBL:ANE20056.1},
+RC   926H {ECO:0000313|EMBL:ANE20069.1}, 927H {ECO:0000313|EMBL:ANE20082.1},
+RC   93H1 {ECO:0000313|EMBL:ANE20108.1}, 94H {ECO:0000313|EMBL:ANE20134.1},
+RC   94T {ECO:0000313|EMBL:ANE20147.1}, 95H1 {ECO:0000313|EMBL:ANE20160.1},
+RC   96H1 {ECO:0000313|EMBL:ANE20186.1}, 98H1 {ECO:0000313|EMBL:ANE20212.1}, and
+RC   99H {ECO:0000313|EMBL:ANE20238.1};
+RX   PubMed=27185408;
+RA   Strakova A., Ni Leathlobhair M., Wang G.D., Yin T.T., Airikkala-Otter I.,
+RA   Allen J.L., Allum K.M., Bansse-Issa L., Bisson J.L.,
+RA   Castillo Domracheva A., de Castro K.F., Corrigan A.M., Cran H.R.,
+RA   Crawford J.T., Cutter S.M., Delgadillo Keenan L., Donelan E.M.,
+RA   Faramade I.A., Flores Reynoso E., Fotopoulou E., Fruean S.N.,
+RA   Gallardo-Arrieta F., Glebova O., Hafelin Manrique R.F., Henriques J.J.,
+RA   Ignatenko N., Koenig D., Lanza-Perea M., Lobetti R., Lopez Quintana A.M.,
+RA   Losfelt T., Marino G., Martincorena I., Martinez Castaneda S.,
+RA   Martinez-Lopez M.F., Meyer M., Nakanwagi B., De Nardi A.B., Neunzig W.,
+RA   Nixon S.J., Onsare M.M., Ortega-Pacheco A., Peleteiro M.C., Pye R.J.,
+RA   Reece J.F., Rojas Gutierrez J., Sadia H., Schmeling S.K., Shamanova O.,
+RA   Ssuna R.K., Steenland-Smit A.E., Svitich A., Thoya Ngoka I., Vitalaru B.A.,
+RA   de Vos A.P., de Vos J.P., Walkinton O., Wedge D.C., Wehrle-Martinez A.S.,
+RA   van der Wel M.G., Widdowson S.A., Murchison E.P.;
+RT   "Mitochondrial genetic diversity, selection and recombination in a canine
+RT   transmissible cancer.";
+RL   Elife 5:E14552-E14552(2016).
+RN   [24] {ECO:0000313|EMBL:APT42153.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=CTCdog {ECO:0000313|EMBL:APT42153.1}, and
+RC   HXHdog {ECO:0000313|EMBL:APT42166.1};
+RA   Veeramah K.R., Burger J., Kidd J.M., Oetjens M.T.;
+RT   "Genomic analysis of Neolithic dogs from Central Europe.";
+RL   Submitted (JUN-2016) to the EMBL/GenBank/DDBJ databases.
+RN   [25] {ECO:0000313|EMBL:AWV82994.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=MS10016 {ECO:0000313|EMBL:AWV83098.1},
+RC   MS10330 {ECO:0000313|EMBL:AWV83032.1},
+RC   MS10334 {ECO:0000313|EMBL:AWV83059.1}, and
+RC   MS10665 {ECO:0000313|EMBL:AWV82994.1};
+RX   PubMed=29904060; DOI=10.1038/s41598-018-27363-8;
+RA   Greig K., Gosling A., Collins C.J., Boocock J., McDonald K., Addison D.J.,
+RA   Allen M.S., David B., Gibbs M., Higham C.F., Liu F., McNiven I.J.,
+RA   O'Connor S., Tsang C.H., Walter R., Matisoo-Smith E.;
+RT   "Complex history of dog (Canis familiaris) origins and translocations in
+RT   the Pacific revealed by ancient mitogenomes.";
+RL   Sci. Rep. 8:9130-9130(2018).
+RN   [26] {ECO:0000313|EMBL:AYA73195.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=BORE-BR7296 {ECO:0000313|EMBL:AYA73208.1}, and
+RC   GREY-RJB/15/02524 {ECO:0000313|EMBL:AYA73195.1};
+RA   Leme T.F., Furtado C., Dumans A.T.N., Prosdocimi F.;
+RT   "The mitochondrial genome of traditional Brazilian dog breeds.";
+RL   Submitted (MAR-2018) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Component of the cytochrome c oxidase, the last enzyme in the
+CC       mitochondrial electron transport chain which drives oxidative
+CC       phosphorylation. The respiratory chain contains 3 multisubunit
+CC       complexes succinate dehydrogenase (complex II, CII), ubiquinol-
+CC       cytochrome c oxidoreductase (cytochrome b-c1 complex, complex III,
+CC       CIII) and cytochrome c oxidase (complex IV, CIV), that cooperate to
+CC       transfer electrons derived from NADH and succinate to molecular oxygen,
+CC       creating an electrochemical gradient over the inner membrane that
+CC       drives transmembrane transport and the ATP synthase. Cytochrome c
+CC       oxidase is the component of the respiratory chain that catalyzes the
+CC       reduction of oxygen to water. Electrons originating from reduced
+CC       cytochrome c in the intermembrane space (IMS) are transferred via the
+CC       dinuclear copper A center (CU(A)) of subunit 2 and heme A of subunit 1
+CC       to the active site in subunit 1, a binuclear center (BNC) formed by
+CC       heme A3 and copper B (CU(B)). The BNC reduces molecular oxygen to 2
+CC       water molecules using 4 electrons from cytochrome c in the IMS and 4
+CC       protons from the mitochondrial matrix. {ECO:0000256|RuleBase:RU000369}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=4 [Fe(II)cytochrome c] + 4 H(+) + O2 = 4 [Fe(III)cytochrome c]
+CC         + 2 H2O; Xref=Rhea:RHEA:11436, Rhea:RHEA-COMP:10350, Rhea:RHEA-
+CC         COMP:14399, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:15379,
+CC         ChEBI:CHEBI:29033, ChEBI:CHEBI:29034;
+CC         Evidence={ECO:0000256|RuleBase:RU000369,
+CC         ECO:0000256|SAAS:SAAS01116619};
+CC   -!- COFACTOR:
+CC       Name=heme; Xref=ChEBI:CHEBI:30413;
+CC         Evidence={ECO:0000256|SAAS:SAAS01246731};
+CC   -!- PATHWAY: Energy metabolism; oxidative phosphorylation.
+CC       {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00887552}.
+CC   -!- SUBCELLULAR LOCATION: Mitochondrion inner membrane
+CC       {ECO:0000256|RuleBase:RU000369}; Multi-pass membrane protein
+CC       {ECO:0000256|RuleBase:RU000369}.
+CC   -!- SIMILARITY: Belongs to the heme-copper respiratory oxidase family.
+CC       {ECO:0000256|RuleBase:RU000369}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AY656738; AAT74141.1; -; Genomic_DNA.
+DR   EMBL; AY656739; AAT74154.1; -; Genomic_DNA.
+DR   EMBL; AY656740; AAT74167.1; -; Genomic_DNA.
+DR   EMBL; AY656741; AAT74180.1; -; Genomic_DNA.
+DR   EMBL; AY656742; AAT74193.1; -; Genomic_DNA.
+DR   EMBL; AY656743; AAT74206.1; -; Genomic_DNA.
+DR   EMBL; AY656744; AAT74219.1; -; Genomic_DNA.
+DR   EMBL; AY656745; AAT74232.1; -; Genomic_DNA.
+DR   EMBL; AY656746; AAT74245.1; -; Genomic_DNA.
+DR   EMBL; AY656747; AAT74258.1; -; Genomic_DNA.
+DR   EMBL; AY656748; AAT74271.1; -; Genomic_DNA.
+DR   EMBL; AY656749; AAT74284.1; -; Genomic_DNA.
+DR   EMBL; AY656750; AAT74297.1; -; Genomic_DNA.
+DR   EMBL; AY656751; AAT74310.1; -; Genomic_DNA.
+DR   EMBL; AY656752; AAT74323.1; -; Genomic_DNA.
+DR   EMBL; AY656753; AAT74336.1; -; Genomic_DNA.
+DR   EMBL; AY656754; AAT74349.1; -; Genomic_DNA.
+DR   EMBL; AY656755; AAT74362.1; -; Genomic_DNA.
+DR   EMBL; DQ480489; ABE47975.1; -; Genomic_DNA.
+DR   EMBL; DQ480490; ABE47988.1; -; Genomic_DNA.
+DR   EMBL; DQ480491; ABE48001.1; -; Genomic_DNA.
+DR   EMBL; DQ480492; ABE48014.1; -; Genomic_DNA.
+DR   EMBL; DQ480494; ABE48040.1; -; Genomic_DNA.
+DR   EMBL; DQ480495; ABE48053.1; -; Genomic_DNA.
+DR   EMBL; DQ480496; ABE48066.1; -; Genomic_DNA.
+DR   EMBL; DQ480497; ABE48079.1; -; Genomic_DNA.
+DR   EMBL; DQ480498; ABE48092.1; -; Genomic_DNA.
+DR   EMBL; DQ480499; ABE48105.1; -; Genomic_DNA.
+DR   EMBL; DQ480500; ABE48118.1; -; Genomic_DNA.
+DR   EMBL; DQ480502; ABE48144.1; -; Genomic_DNA.
+DR   EMBL; EU408245; ABY79850.1; -; Genomic_DNA.
+DR   EMBL; EU408246; ABY79863.1; -; Genomic_DNA.
+DR   EMBL; EU408247; ABY79876.1; -; Genomic_DNA.
+DR   EMBL; EU408249; ABY79902.1; -; Genomic_DNA.
+DR   EMBL; EU408250; ABY79915.1; -; Genomic_DNA.
+DR   EMBL; EU408252; ABY79941.1; -; Genomic_DNA.
+DR   EMBL; EU408253; ABY79954.1; -; Genomic_DNA.
+DR   EMBL; EU408254; ABY79967.1; -; Genomic_DNA.
+DR   EMBL; EU408255; ABY79980.1; -; Genomic_DNA.
+DR   EMBL; EU408256; ABY79993.1; -; Genomic_DNA.
+DR   EMBL; EU408257; ABY80006.1; -; Genomic_DNA.
+DR   EMBL; EU408258; ABY80019.1; -; Genomic_DNA.
+DR   EMBL; EU408260; ABY80045.1; -; Genomic_DNA.
+DR   EMBL; EU408261; ABY80058.1; -; Genomic_DNA.
+DR   EMBL; EU408262; ABY80071.1; -; Genomic_DNA.
+DR   EMBL; EU408263; ABY80084.1; -; Genomic_DNA.
+DR   EMBL; EU408264; ABY80097.1; -; Genomic_DNA.
+DR   EMBL; EU408265; ABY80110.1; -; Genomic_DNA.
+DR   EMBL; EU408266; ABY80123.1; -; Genomic_DNA.
+DR   EMBL; EU408268; ABY80149.1; -; Genomic_DNA.
+DR   EMBL; EU408269; ABY80162.1; -; Genomic_DNA.
+DR   EMBL; EU408270; ABY80175.1; -; Genomic_DNA.
+DR   EMBL; EU408271; ABY80188.1; -; Genomic_DNA.
+DR   EMBL; EU408272; ABY80201.1; -; Genomic_DNA.
+DR   EMBL; EU408273; ABY80214.1; -; Genomic_DNA.
+DR   EMBL; EU408274; ABY80227.1; -; Genomic_DNA.
+DR   EMBL; EU408275; ABY80240.1; -; Genomic_DNA.
+DR   EMBL; EU408276; ABY80253.1; -; Genomic_DNA.
+DR   EMBL; EU408277; ABY80266.1; -; Genomic_DNA.
+DR   EMBL; EU408278; ABY80279.1; -; Genomic_DNA.
+DR   EMBL; EU408280; ABY80305.1; -; Genomic_DNA.
+DR   EMBL; EU408281; ABY80318.1; -; Genomic_DNA.
+DR   EMBL; EU408282; ABY80331.1; -; Genomic_DNA.
+DR   EMBL; EU408283; ABY80344.1; -; Genomic_DNA.
+DR   EMBL; EU408284; ABY80357.1; -; Genomic_DNA.
+DR   EMBL; EU408285; ABY80370.1; -; Genomic_DNA.
+DR   EMBL; EU408286; ABY80383.1; -; Genomic_DNA.
+DR   EMBL; EU408287; ABY80396.1; -; Genomic_DNA.
+DR   EMBL; EU408288; ABY80409.1; -; Genomic_DNA.
+DR   EMBL; EU408289; ABY80422.1; -; Genomic_DNA.
+DR   EMBL; EU408290; ABY80435.1; -; Genomic_DNA.
+DR   EMBL; EU408292; ABY80461.1; -; Genomic_DNA.
+DR   EMBL; EU408293; ABY80474.1; -; Genomic_DNA.
+DR   EMBL; EU408294; ABY80487.1; -; Genomic_DNA.
+DR   EMBL; EU408295; ABY80500.1; -; Genomic_DNA.
+DR   EMBL; EU408296; ABY80513.1; -; Genomic_DNA.
+DR   EMBL; EU408297; ABY80526.1; -; Genomic_DNA.
+DR   EMBL; EU408298; ABY80539.1; -; Genomic_DNA.
+DR   EMBL; EU408299; ABY80552.1; -; Genomic_DNA.
+DR   EMBL; EU408300; ABY80565.1; -; Genomic_DNA.
+DR   EMBL; EU408301; ABY80578.1; -; Genomic_DNA.
+DR   EMBL; EU408302; ABY80591.1; -; Genomic_DNA.
+DR   EMBL; EU408303; ABY80604.1; -; Genomic_DNA.
+DR   EMBL; EU408304; ABY80617.1; -; Genomic_DNA.
+DR   EMBL; EU408305; ABY80630.1; -; Genomic_DNA.
+DR   EMBL; EU408306; ABY80643.1; -; Genomic_DNA.
+DR   EMBL; EU408307; ABY80656.1; -; Genomic_DNA.
+DR   EMBL; EU408308; ABY80669.1; -; Genomic_DNA.
+DR   EMBL; EU789638; ACE00960.1; -; Genomic_DNA.
+DR   EMBL; EU789639; ACE00973.1; -; Genomic_DNA.
+DR   EMBL; EU789640; ACE00986.1; -; Genomic_DNA.
+DR   EMBL; EU789641; ACE00999.1; -; Genomic_DNA.
+DR   EMBL; EU789642; ACE01012.1; -; Genomic_DNA.
+DR   EMBL; EU789643; ACE01025.1; -; Genomic_DNA.
+DR   EMBL; EU789644; ACE01038.1; -; Genomic_DNA.
+DR   EMBL; EU789645; ACE01051.1; -; Genomic_DNA.
+DR   EMBL; EU789646; ACE01064.1; -; Genomic_DNA.
+DR   EMBL; EU789647; ACE01077.1; -; Genomic_DNA.
+DR   EMBL; EU789648; ACE01090.1; -; Genomic_DNA.
+DR   EMBL; EU789649; ACE01103.1; -; Genomic_DNA.
+DR   EMBL; EU789650; ACE01116.1; -; Genomic_DNA.
+DR   EMBL; EU789651; ACE01129.1; -; Genomic_DNA.
+DR   EMBL; EU789652; ACE01142.1; -; Genomic_DNA.
+DR   EMBL; EU789653; ACE01155.1; -; Genomic_DNA.
+DR   EMBL; EU789654; ACE01168.1; -; Genomic_DNA.
+DR   EMBL; EU789655; ACE01181.1; -; Genomic_DNA.
+DR   EMBL; EU789656; ACE01194.1; -; Genomic_DNA.
+DR   EMBL; EU789657; ACE01207.1; -; Genomic_DNA.
+DR   EMBL; EU789658; ACE01220.1; -; Genomic_DNA.
+DR   EMBL; EU789659; ACE01233.1; -; Genomic_DNA.
+DR   EMBL; EU789660; ACE01246.1; -; Genomic_DNA.
+DR   EMBL; EU789661; ACE01259.1; -; Genomic_DNA.
+DR   EMBL; EU789663; ACE01285.1; -; Genomic_DNA.
+DR   EMBL; EU789664; ACE01298.1; -; Genomic_DNA.
+DR   EMBL; EU789665; ACE01311.1; -; Genomic_DNA.
+DR   EMBL; EU789666; ACE01324.1; -; Genomic_DNA.
+DR   EMBL; EU789668; ACE01350.1; -; Genomic_DNA.
+DR   EMBL; EU789669; ACE01363.1; -; Genomic_DNA.
+DR   EMBL; EU789670; ACE01376.1; -; Genomic_DNA.
+DR   EMBL; EU789671; ACE01389.1; -; Genomic_DNA.
+DR   EMBL; EU789673; ACE01415.1; -; Genomic_DNA.
+DR   EMBL; EU789674; ACE01428.1; -; Genomic_DNA.
+DR   EMBL; EU789675; ACE01441.1; -; Genomic_DNA.
+DR   EMBL; EU789677; ACE01467.1; -; Genomic_DNA.
+DR   EMBL; EU789678; ACE01480.1; -; Genomic_DNA.
+DR   EMBL; EU789679; ACE01493.1; -; Genomic_DNA.
+DR   EMBL; EU789680; ACE01506.1; -; Genomic_DNA.
+DR   EMBL; EU789681; ACE01519.1; -; Genomic_DNA.
+DR   EMBL; EU789683; ACE01545.1; -; Genomic_DNA.
+DR   EMBL; EU789685; ACE01571.1; -; Genomic_DNA.
+DR   EMBL; EU789686; ACE01584.1; -; Genomic_DNA.
+DR   EMBL; EU789687; ACE01597.1; -; Genomic_DNA.
+DR   EMBL; EU789688; ACE01610.1; -; Genomic_DNA.
+DR   EMBL; EU789689; ACE01623.1; -; Genomic_DNA.
+DR   EMBL; EU789690; ACE01636.1; -; Genomic_DNA.
+DR   EMBL; EU789691; ACE01649.1; -; Genomic_DNA.
+DR   EMBL; EU789694; ACE01688.1; -; Genomic_DNA.
+DR   EMBL; EU789695; ACE01701.1; -; Genomic_DNA.
+DR   EMBL; EU789696; ACE01714.1; -; Genomic_DNA.
+DR   EMBL; EU789697; ACE01727.1; -; Genomic_DNA.
+DR   EMBL; EU789698; ACE01740.1; -; Genomic_DNA.
+DR   EMBL; EU789699; ACE01753.1; -; Genomic_DNA.
+DR   EMBL; EU789700; ACE01766.1; -; Genomic_DNA.
+DR   EMBL; EU789701; ACE01779.1; -; Genomic_DNA.
+DR   EMBL; EU789702; ACE01792.1; -; Genomic_DNA.
+DR   EMBL; EU789703; ACE01805.1; -; Genomic_DNA.
+DR   EMBL; EU789704; ACE01818.1; -; Genomic_DNA.
+DR   EMBL; EU789705; ACE01831.1; -; Genomic_DNA.
+DR   EMBL; EU789706; ACE01844.1; -; Genomic_DNA.
+DR   EMBL; EU789707; ACE01857.1; -; Genomic_DNA.
+DR   EMBL; EU789708; ACE01870.1; -; Genomic_DNA.
+DR   EMBL; EU789709; ACE01883.1; -; Genomic_DNA.
+DR   EMBL; EU789710; ACE01896.1; -; Genomic_DNA.
+DR   EMBL; EU789711; ACE01909.1; -; Genomic_DNA.
+DR   EMBL; EU789712; ACE01922.1; -; Genomic_DNA.
+DR   EMBL; EU789713; ACE01935.1; -; Genomic_DNA.
+DR   EMBL; EU789714; ACE01948.1; -; Genomic_DNA.
+DR   EMBL; EU789717; ACE01987.1; -; Genomic_DNA.
+DR   EMBL; EU789718; ACE02000.1; -; Genomic_DNA.
+DR   EMBL; EU789719; ACE02013.1; -; Genomic_DNA.
+DR   EMBL; EU789720; ACE02026.1; -; Genomic_DNA.
+DR   EMBL; EU789721; ACE02039.1; -; Genomic_DNA.
+DR   EMBL; EU789722; ACE02052.1; -; Genomic_DNA.
+DR   EMBL; EU789723; ACE02065.1; -; Genomic_DNA.
+DR   EMBL; EU789724; ACE02078.1; -; Genomic_DNA.
+DR   EMBL; EU789725; ACE02091.1; -; Genomic_DNA.
+DR   EMBL; EU789726; ACE02104.1; -; Genomic_DNA.
+DR   EMBL; EU789727; ACE02117.1; -; Genomic_DNA.
+DR   EMBL; EU789728; ACE02130.1; -; Genomic_DNA.
+DR   EMBL; EU789729; ACE02143.1; -; Genomic_DNA.
+DR   EMBL; EU789730; ACE02156.1; -; Genomic_DNA.
+DR   EMBL; EU789731; ACE02169.1; -; Genomic_DNA.
+DR   EMBL; EU789732; ACE02182.1; -; Genomic_DNA.
+DR   EMBL; EU789733; ACE02195.1; -; Genomic_DNA.
+DR   EMBL; EU789734; ACE02208.1; -; Genomic_DNA.
+DR   EMBL; EU789735; ACE02221.1; -; Genomic_DNA.
+DR   EMBL; EU789736; ACE02234.1; -; Genomic_DNA.
+DR   EMBL; EU789737; ACE02247.1; -; Genomic_DNA.
+DR   EMBL; EU789738; ACE02260.1; -; Genomic_DNA.
+DR   EMBL; EU789739; ACE02273.1; -; Genomic_DNA.
+DR   EMBL; EU789740; ACE02286.1; -; Genomic_DNA.
+DR   EMBL; EU789742; ACE02312.1; -; Genomic_DNA.
+DR   EMBL; EU789743; ACE02325.1; -; Genomic_DNA.
+DR   EMBL; EU789745; ACE02351.1; -; Genomic_DNA.
+DR   EMBL; EU789751; ACE02429.1; -; Genomic_DNA.
+DR   EMBL; EU789752; ACE02442.1; -; Genomic_DNA.
+DR   EMBL; EU789753; ACE02455.1; -; Genomic_DNA.
+DR   EMBL; EU789754; ACE02468.1; -; Genomic_DNA.
+DR   EMBL; EU789755; ACE02481.1; -; Genomic_DNA.
+DR   EMBL; EU789756; ACE02494.1; -; Genomic_DNA.
+DR   EMBL; EU789758; ACE02520.1; -; Genomic_DNA.
+DR   EMBL; EU789759; ACE02533.1; -; Genomic_DNA.
+DR   EMBL; EU789760; ACE02546.1; -; Genomic_DNA.
+DR   EMBL; EU789761; ACE02559.1; -; Genomic_DNA.
+DR   EMBL; EU789762; ACE02572.1; -; Genomic_DNA.
+DR   EMBL; EU789765; ACE02611.1; -; Genomic_DNA.
+DR   EMBL; EU789766; ACE02624.1; -; Genomic_DNA.
+DR   EMBL; EU789767; ACE02637.1; -; Genomic_DNA.
+DR   EMBL; EU789768; ACE02650.1; -; Genomic_DNA.
+DR   EMBL; EU789769; ACE02663.1; -; Genomic_DNA.
+DR   EMBL; EU789770; ACE02676.1; -; Genomic_DNA.
+DR   EMBL; EU789771; ACE02689.1; -; Genomic_DNA.
+DR   EMBL; EU789773; ACE02715.1; -; Genomic_DNA.
+DR   EMBL; EU789775; ACE02741.1; -; Genomic_DNA.
+DR   EMBL; EU789776; ACE02754.1; -; Genomic_DNA.
+DR   EMBL; EU789777; ACE02767.1; -; Genomic_DNA.
+DR   EMBL; EU789778; ACE02780.1; -; Genomic_DNA.
+DR   EMBL; EU789779; ACE02793.1; -; Genomic_DNA.
+DR   EMBL; EU789780; ACE02806.1; -; Genomic_DNA.
+DR   EMBL; EU789781; ACE02819.1; -; Genomic_DNA.
+DR   EMBL; EU789783; ACE02845.1; -; Genomic_DNA.
+DR   EMBL; EU789784; ACE02858.1; -; Genomic_DNA.
+DR   EMBL; EU789785; ACE02871.1; -; Genomic_DNA.
+DR   EMBL; EU789786; ACE02884.1; -; Genomic_DNA.
+DR   EMBL; FJ817358; ACN91376.1; -; Genomic_DNA.
+DR   EMBL; FJ817359; ACN91389.1; -; Genomic_DNA.
+DR   EMBL; FJ817360; ACN91402.1; -; Genomic_DNA.
+DR   EMBL; FJ817361; ACN91415.1; -; Genomic_DNA.
+DR   EMBL; FJ817362; ACN91428.1; -; Genomic_DNA.
+DR   EMBL; FJ817363; ACN91441.1; -; Genomic_DNA.
+DR   EMBL; FJ817364; ACN91454.1; -; Genomic_DNA.
+DR   EMBL; JF342807; AEG23840.1; -; Genomic_DNA.
+DR   EMBL; JF342809; AEG23866.1; -; Genomic_DNA.
+DR   EMBL; JF342810; AEG23879.1; -; Genomic_DNA.
+DR   EMBL; JF342811; AEG23892.1; -; Genomic_DNA.
+DR   EMBL; JF342814; AEG23931.1; -; Genomic_DNA.
+DR   EMBL; JF342815; AEG23944.1; -; Genomic_DNA.
+DR   EMBL; JF342818; AEG23983.1; -; Genomic_DNA.
+DR   EMBL; JF342819; AEG23996.1; -; Genomic_DNA.
+DR   EMBL; JF342821; AEG24022.1; -; Genomic_DNA.
+DR   EMBL; JF342822; AEG24035.1; -; Genomic_DNA.
+DR   EMBL; JF342823; AEG24048.1; -; Genomic_DNA.
+DR   EMBL; JF342825; AEG24074.1; -; Genomic_DNA.
+DR   EMBL; JF342826; AEG24087.1; -; Genomic_DNA.
+DR   EMBL; JF342827; AEG24100.1; -; Genomic_DNA.
+DR   EMBL; JF342829; AEG24126.1; -; Genomic_DNA.
+DR   EMBL; JF342830; AEG24139.1; -; Genomic_DNA.
+DR   EMBL; JF342832; AEG24165.1; -; Genomic_DNA.
+DR   EMBL; JF342833; AEG24178.1; -; Genomic_DNA.
+DR   EMBL; JF342834; AEG24191.1; -; Genomic_DNA.
+DR   EMBL; JF342835; AEG24204.1; -; Genomic_DNA.
+DR   EMBL; JF342837; AEG24230.1; -; Genomic_DNA.
+DR   EMBL; JF342838; AEG24243.1; -; Genomic_DNA.
+DR   EMBL; JF342843; AEG24307.1; -; Genomic_DNA.
+DR   EMBL; JF342844; AEG24320.1; -; Genomic_DNA.
+DR   EMBL; JF342845; AEG24333.1; -; Genomic_DNA.
+DR   EMBL; JF342846; AEG24346.1; -; Genomic_DNA.
+DR   EMBL; JF342847; AEG24359.1; -; Genomic_DNA.
+DR   EMBL; JF342848; AEG24372.1; -; Genomic_DNA.
+DR   EMBL; JF342850; AEG24398.1; -; Genomic_DNA.
+DR   EMBL; JF342851; AEG24411.1; -; Genomic_DNA.
+DR   EMBL; JF342852; AEG24424.1; -; Genomic_DNA.
+DR   EMBL; JF342854; AEG24450.1; -; Genomic_DNA.
+DR   EMBL; JF342855; AEG24463.1; -; Genomic_DNA.
+DR   EMBL; JF342856; AEG24476.1; -; Genomic_DNA.
+DR   EMBL; JF342857; AEG24489.1; -; Genomic_DNA.
+DR   EMBL; JF342858; AEG24502.1; -; Genomic_DNA.
+DR   EMBL; JF342859; AEG24515.1; -; Genomic_DNA.
+DR   EMBL; JF342860; AEG24528.1; -; Genomic_DNA.
+DR   EMBL; JF342861; AEG24541.1; -; Genomic_DNA.
+DR   EMBL; JF342862; AEG24554.1; -; Genomic_DNA.
+DR   EMBL; JF342863; AEG24567.1; -; Genomic_DNA.
+DR   EMBL; JF342864; AEG24580.1; -; Genomic_DNA.
+DR   EMBL; JF342865; AEG24593.1; -; Genomic_DNA.
+DR   EMBL; JF342866; AEG24606.1; -; Genomic_DNA.
+DR   EMBL; JF342867; AEG24619.1; -; Genomic_DNA.
+DR   EMBL; JF342869; AEG24645.1; -; Genomic_DNA.
+DR   EMBL; JF342871; AEG24671.1; -; Genomic_DNA.
+DR   EMBL; JF342872; AEG24684.1; -; Genomic_DNA.
+DR   EMBL; JF342873; AEG24697.1; -; Genomic_DNA.
+DR   EMBL; JF342875; AEG24723.1; -; Genomic_DNA.
+DR   EMBL; JF342876; AEG24736.1; -; Genomic_DNA.
+DR   EMBL; JF342877; AEG24749.1; -; Genomic_DNA.
+DR   EMBL; JF342878; AEG24762.1; -; Genomic_DNA.
+DR   EMBL; JF342879; AEG24775.1; -; Genomic_DNA.
+DR   EMBL; JF342881; AEG24801.1; -; Genomic_DNA.
+DR   EMBL; JF342882; AEG24814.1; -; Genomic_DNA.
+DR   EMBL; JF342884; AEG24840.1; -; Genomic_DNA.
+DR   EMBL; JF342885; AEG24853.1; -; Genomic_DNA.
+DR   EMBL; JF342888; AEG24891.1; -; Genomic_DNA.
+DR   EMBL; JF342890; AEG24917.1; -; Genomic_DNA.
+DR   EMBL; JF342891; AEG24930.1; -; Genomic_DNA.
+DR   EMBL; JF342893; AEG24956.1; -; Genomic_DNA.
+DR   EMBL; JF342894; AEG24968.1; -; Genomic_DNA.
+DR   EMBL; JF342895; AEG24979.1; -; Genomic_DNA.
+DR   EMBL; JF342896; AEG24992.1; -; Genomic_DNA.
+DR   EMBL; JF342897; AEG25005.1; -; Genomic_DNA.
+DR   EMBL; JF342898; AEG25018.1; -; Genomic_DNA.
+DR   EMBL; JF342900; AEG25044.1; -; Genomic_DNA.
+DR   EMBL; JF342901; AEG25057.1; -; Genomic_DNA.
+DR   EMBL; JF342902; AEG25070.1; -; Genomic_DNA.
+DR   EMBL; JF342903; AEG25083.1; -; Genomic_DNA.
+DR   EMBL; JF342904; AEG25096.1; -; Genomic_DNA.
+DR   EMBL; JF342905; AEG25109.1; -; Genomic_DNA.
+DR   EMBL; JF342906; AEG25122.1; -; Genomic_DNA.
+DR   EMBL; JX088671; AFN01351.1; -; Genomic_DNA.
+DR   EMBL; JX088672; AFN01364.1; -; Genomic_DNA.
+DR   EMBL; JX088673; AFN01377.1; -; Genomic_DNA.
+DR   EMBL; JX088674; AFN01390.1; -; Genomic_DNA.
+DR   EMBL; JX088675; AFN01402.1; -; Genomic_DNA.
+DR   EMBL; JX088676; AFN01415.1; -; Genomic_DNA.
+DR   EMBL; JX088677; AFN01428.1; -; Genomic_DNA.
+DR   EMBL; JX088678; AFN01441.1; -; Genomic_DNA.
+DR   EMBL; JX088679; AFN01454.1; -; Genomic_DNA.
+DR   EMBL; JX088680; AFN01467.1; -; Genomic_DNA.
+DR   EMBL; JX088681; AFN01480.1; -; Genomic_DNA.
+DR   EMBL; JX088682; AFN01493.1; -; Genomic_DNA.
+DR   EMBL; JX088683; AFN01506.1; -; Genomic_DNA.
+DR   EMBL; JX088684; AFN01519.1; -; Genomic_DNA.
+DR   EMBL; JX088685; AFN01532.1; -; Genomic_DNA.
+DR   EMBL; JX088686; AFN01545.1; -; Genomic_DNA.
+DR   EMBL; JX088687; AFN01558.1; -; Genomic_DNA.
+DR   EMBL; JX088688; AFN01571.1; -; Genomic_DNA.
+DR   EMBL; JX088689; AFN01584.1; -; Genomic_DNA.
+DR   EMBL; JX088690; AFN01597.1; -; Genomic_DNA.
+DR   EMBL; JX088691; AFN01610.1; -; Genomic_DNA.
+DR   EMBL; JX088692; AFN01623.1; -; Genomic_DNA.
+DR   EMBL; JX088693; AFN01636.1; -; Genomic_DNA.
+DR   EMBL; KF661036; AHA52622.1; -; Genomic_DNA.
+DR   EMBL; KF661037; AHA52635.1; -; Genomic_DNA.
+DR   EMBL; KF661084; AHA53245.1; -; Genomic_DNA.
+DR   EMBL; KF661086; AHA53271.1; -; Genomic_DNA.
+DR   EMBL; KF907307; AHH81727.1; -; Genomic_DNA.
+DR   EMBL; KF907309; AHH81740.1; -; Genomic_DNA.
+DR   EMBL; KF926378; AHI52000.1; -; Genomic_DNA.
+DR   EMBL; KJ139384; AHN13291.1; -; Genomic_DNA.
+DR   EMBL; KJ139385; AHN13304.1; -; Genomic_DNA.
+DR   EMBL; KJ139386; AHN13317.1; -; Genomic_DNA.
+DR   EMBL; KJ139387; AHN13330.1; -; Genomic_DNA.
+DR   EMBL; KJ139388; AHN13343.1; -; Genomic_DNA.
+DR   EMBL; KJ472767; AHY24081.1; -; Genomic_DNA.
+DR   EMBL; KJ637028; AIC07489.1; -; Genomic_DNA.
+DR   EMBL; KJ637029; AIC07502.1; -; Genomic_DNA.
+DR   EMBL; KJ637030; AIC07515.1; -; Genomic_DNA.
+DR   EMBL; KJ637031; AIC07528.1; -; Genomic_DNA.
+DR   EMBL; KJ637032; AIC07541.1; -; Genomic_DNA.
+DR   EMBL; KJ637033; AIC07554.1; -; Genomic_DNA.
+DR   EMBL; KJ637034; AIC07567.1; -; Genomic_DNA.
+DR   EMBL; KJ637035; AIC07580.1; -; Genomic_DNA.
+DR   EMBL; KJ637036; AIC07593.1; -; Genomic_DNA.
+DR   EMBL; KJ637037; AIC07606.1; -; Genomic_DNA.
+DR   EMBL; KJ637038; AIC07619.1; -; Genomic_DNA.
+DR   EMBL; KJ637039; AIC07632.1; -; Genomic_DNA.
+DR   EMBL; KJ637040; AIC07645.1; -; Genomic_DNA.
+DR   EMBL; KJ637041; AIC07658.1; -; Genomic_DNA.
+DR   EMBL; KJ637042; AIC07671.1; -; Genomic_DNA.
+DR   EMBL; KJ637043; AIC07684.1; -; Genomic_DNA.
+DR   EMBL; KJ637044; AIC07697.1; -; Genomic_DNA.
+DR   EMBL; KJ637045; AIC07710.1; -; Genomic_DNA.
+DR   EMBL; KJ637046; AIC07723.1; -; Genomic_DNA.
+DR   EMBL; KJ637047; AIC07736.1; -; Genomic_DNA.
+DR   EMBL; KJ637048; AIC07749.1; -; Genomic_DNA.
+DR   EMBL; KJ637049; AIC07762.1; -; Genomic_DNA.
+DR   EMBL; KJ637050; AIC07775.1; -; Genomic_DNA.
+DR   EMBL; KJ637051; AIC07788.1; -; Genomic_DNA.
+DR   EMBL; KJ637052; AIC07801.1; -; Genomic_DNA.
+DR   EMBL; KJ637053; AIC07814.1; -; Genomic_DNA.
+DR   EMBL; KJ637054; AIC07827.1; -; Genomic_DNA.
+DR   EMBL; KJ637055; AIC07840.1; -; Genomic_DNA.
+DR   EMBL; KJ637056; AIC07853.1; -; Genomic_DNA.
+DR   EMBL; KJ637057; AIC07866.1; -; Genomic_DNA.
+DR   EMBL; KJ637058; AIC07879.1; -; Genomic_DNA.
+DR   EMBL; KJ637059; AIC07892.1; -; Genomic_DNA.
+DR   EMBL; KJ637060; AIC07905.1; -; Genomic_DNA.
+DR   EMBL; KJ637061; AIC07918.1; -; Genomic_DNA.
+DR   EMBL; KJ637062; AIC07931.1; -; Genomic_DNA.
+DR   EMBL; KJ637063; AIC07944.1; -; Genomic_DNA.
+DR   EMBL; KJ637064; AIC07957.1; -; Genomic_DNA.
+DR   EMBL; KJ637065; AIC07970.1; -; Genomic_DNA.
+DR   EMBL; KJ637066; AIC07983.1; -; Genomic_DNA.
+DR   EMBL; KJ637067; AIC07996.1; -; Genomic_DNA.
+DR   EMBL; KJ637068; AIC08009.1; -; Genomic_DNA.
+DR   EMBL; KJ637069; AIC08022.1; -; Genomic_DNA.
+DR   EMBL; KJ637070; AIC08035.1; -; Genomic_DNA.
+DR   EMBL; KJ637071; AIC08048.1; -; Genomic_DNA.
+DR   EMBL; KJ637072; AIC08061.1; -; Genomic_DNA.
+DR   EMBL; KJ637073; AIC08074.1; -; Genomic_DNA.
+DR   EMBL; KJ637074; AIC08087.1; -; Genomic_DNA.
+DR   EMBL; KJ637075; AIC08100.1; -; Genomic_DNA.
+DR   EMBL; KJ637076; AIC08113.1; -; Genomic_DNA.
+DR   EMBL; KJ637077; AIC08126.1; -; Genomic_DNA.
+DR   EMBL; KJ637078; AIC08139.1; -; Genomic_DNA.
+DR   EMBL; KJ637079; AIC08152.1; -; Genomic_DNA.
+DR   EMBL; KJ637080; AIC08165.1; -; Genomic_DNA.
+DR   EMBL; KJ637081; AIC08178.1; -; Genomic_DNA.
+DR   EMBL; KJ637082; AIC08191.1; -; Genomic_DNA.
+DR   EMBL; KJ637083; AIC08204.1; -; Genomic_DNA.
+DR   EMBL; KJ637084; AIC08217.1; -; Genomic_DNA.
+DR   EMBL; KJ637085; AIC08230.1; -; Genomic_DNA.
+DR   EMBL; KJ637086; AIC08243.1; -; Genomic_DNA.
+DR   EMBL; KJ637087; AIC08256.1; -; Genomic_DNA.
+DR   EMBL; KJ637088; AIC08269.1; -; Genomic_DNA.
+DR   EMBL; KJ637089; AIC08282.1; -; Genomic_DNA.
+DR   EMBL; KJ637090; AIC08295.1; -; Genomic_DNA.
+DR   EMBL; KJ637091; AIC08308.1; -; Genomic_DNA.
+DR   EMBL; KJ637092; AIC08321.1; -; Genomic_DNA.
+DR   EMBL; KJ637093; AIC08334.1; -; Genomic_DNA.
+DR   EMBL; KJ637094; AIC08347.1; -; Genomic_DNA.
+DR   EMBL; KJ637095; AIC08360.1; -; Genomic_DNA.
+DR   EMBL; KJ637096; AIC08373.1; -; Genomic_DNA.
+DR   EMBL; KJ637097; AIC08386.1; -; Genomic_DNA.
+DR   EMBL; KJ637100; AIC08425.1; -; Genomic_DNA.
+DR   EMBL; KJ637101; AIC08438.1; -; Genomic_DNA.
+DR   EMBL; KJ637102; AIC08451.1; -; Genomic_DNA.
+DR   EMBL; KJ637103; AIC08464.1; -; Genomic_DNA.
+DR   EMBL; KJ637104; AIC08477.1; -; Genomic_DNA.
+DR   EMBL; KJ637105; AIC08490.1; -; Genomic_DNA.
+DR   EMBL; KJ637106; AIC08503.1; -; Genomic_DNA.
+DR   EMBL; KJ637107; AIC08516.1; -; Genomic_DNA.
+DR   EMBL; KJ637108; AIC08529.1; -; Genomic_DNA.
+DR   EMBL; KJ637109; AIC08542.1; -; Genomic_DNA.
+DR   EMBL; KJ637110; AIC08555.1; -; Genomic_DNA.
+DR   EMBL; KJ637111; AIC08568.1; -; Genomic_DNA.
+DR   EMBL; KJ637112; AIC08581.1; -; Genomic_DNA.
+DR   EMBL; KJ637113; AIC08594.1; -; Genomic_DNA.
+DR   EMBL; KJ637114; AIC08607.1; -; Genomic_DNA.
+DR   EMBL; KJ637115; AIC08620.1; -; Genomic_DNA.
+DR   EMBL; KJ637116; AIC08633.1; -; Genomic_DNA.
+DR   EMBL; KJ637117; AIC08646.1; -; Genomic_DNA.
+DR   EMBL; KJ637118; AIC08659.1; -; Genomic_DNA.
+DR   EMBL; KJ637119; AIC08672.1; -; Genomic_DNA.
+DR   EMBL; KJ637120; AIC08685.1; -; Genomic_DNA.
+DR   EMBL; KJ637121; AIC08698.1; -; Genomic_DNA.
+DR   EMBL; KJ637122; AIC08711.1; -; Genomic_DNA.
+DR   EMBL; KJ637123; AIC08724.1; -; Genomic_DNA.
+DR   EMBL; KJ637124; AIC08737.1; -; Genomic_DNA.
+DR   EMBL; KJ637125; AIC08750.1; -; Genomic_DNA.
+DR   EMBL; KJ637126; AIC08763.1; -; Genomic_DNA.
+DR   EMBL; KJ637127; AIC08776.1; -; Genomic_DNA.
+DR   EMBL; KJ637128; AIC08789.1; -; Genomic_DNA.
+DR   EMBL; KJ637129; AIC08802.1; -; Genomic_DNA.
+DR   EMBL; KJ637130; AIC08815.1; -; Genomic_DNA.
+DR   EMBL; KJ637131; AIC08828.1; -; Genomic_DNA.
+DR   EMBL; KJ637132; AIC08841.1; -; Genomic_DNA.
+DR   EMBL; KJ637133; AIC08854.1; -; Genomic_DNA.
+DR   EMBL; KJ637134; AIC08867.1; -; Genomic_DNA.
+DR   EMBL; KJ637135; AIC08880.1; -; Genomic_DNA.
+DR   EMBL; KJ637139; AIC08932.1; -; Genomic_DNA.
+DR   EMBL; KJ637140; AIC08945.1; -; Genomic_DNA.
+DR   EMBL; KJ637141; AIC08958.1; -; Genomic_DNA.
+DR   EMBL; KJ637142; AIC08971.1; -; Genomic_DNA.
+DR   EMBL; KJ637143; AIC08984.1; -; Genomic_DNA.
+DR   EMBL; KJ637144; AIC08997.1; -; Genomic_DNA.
+DR   EMBL; KJ637145; AIC09010.1; -; Genomic_DNA.
+DR   EMBL; KM061475; AIX88164.1; -; Genomic_DNA.
+DR   EMBL; KM061476; AIX88177.1; -; Genomic_DNA.
+DR   EMBL; KM061477; AIX88190.1; -; Genomic_DNA.
+DR   EMBL; KM061478; AIX88203.1; -; Genomic_DNA.
+DR   EMBL; KM061479; AIX88216.1; -; Genomic_DNA.
+DR   EMBL; KM061481; AIX88242.1; -; Genomic_DNA.
+DR   EMBL; KM061482; AIX88255.1; -; Genomic_DNA.
+DR   EMBL; KM061483; AIX88268.1; -; Genomic_DNA.
+DR   EMBL; KM061484; AIX88281.1; -; Genomic_DNA.
+DR   EMBL; KM061485; AIX88294.1; -; Genomic_DNA.
+DR   EMBL; KM061486; AIX88307.1; -; Genomic_DNA.
+DR   EMBL; KM061487; AIX88320.1; -; Genomic_DNA.
+DR   EMBL; KM061488; AIX88333.1; -; Genomic_DNA.
+DR   EMBL; KM061489; AIX88346.1; -; Genomic_DNA.
+DR   EMBL; KM061490; AIX88359.1; -; Genomic_DNA.
+DR   EMBL; KM061491; AIX88372.1; -; Genomic_DNA.
+DR   EMBL; KM061492; AIX88385.1; -; Genomic_DNA.
+DR   EMBL; KM061493; AIX88398.1; -; Genomic_DNA.
+DR   EMBL; KM061494; AIX88411.1; -; Genomic_DNA.
+DR   EMBL; KM061495; AIX88424.1; -; Genomic_DNA.
+DR   EMBL; KM061496; AIX88437.1; -; Genomic_DNA.
+DR   EMBL; KM061497; AIX88450.1; -; Genomic_DNA.
+DR   EMBL; KM061498; AIX88463.1; -; Genomic_DNA.
+DR   EMBL; KM061499; AIX88476.1; -; Genomic_DNA.
+DR   EMBL; KM061500; AIX88489.1; -; Genomic_DNA.
+DR   EMBL; KM061501; AIX88502.1; -; Genomic_DNA.
+DR   EMBL; KM061502; AIX88515.1; -; Genomic_DNA.
+DR   EMBL; KM061503; AIX88528.1; -; Genomic_DNA.
+DR   EMBL; KM061504; AIX88541.1; -; Genomic_DNA.
+DR   EMBL; KM061505; AIX88554.1; -; Genomic_DNA.
+DR   EMBL; KM061506; AIX88567.1; -; Genomic_DNA.
+DR   EMBL; KM061507; AIX88580.1; -; Genomic_DNA.
+DR   EMBL; KM061508; AIX88593.1; -; Genomic_DNA.
+DR   EMBL; KM061509; AIX88606.1; -; Genomic_DNA.
+DR   EMBL; KM061510; AIX88619.1; -; Genomic_DNA.
+DR   EMBL; KM061511; AIX88632.1; -; Genomic_DNA.
+DR   EMBL; KM061512; AIX88645.1; -; Genomic_DNA.
+DR   EMBL; KM061513; AIX88658.1; -; Genomic_DNA.
+DR   EMBL; KM061514; AIX88671.1; -; Genomic_DNA.
+DR   EMBL; KM061515; AIX88684.1; -; Genomic_DNA.
+DR   EMBL; KM061516; AIX88697.1; -; Genomic_DNA.
+DR   EMBL; KM061517; AIX88710.1; -; Genomic_DNA.
+DR   EMBL; KM061518; AIX88723.1; -; Genomic_DNA.
+DR   EMBL; KM061519; AIX88736.1; -; Genomic_DNA.
+DR   EMBL; KM061520; AIX88749.1; -; Genomic_DNA.
+DR   EMBL; KM061521; AIX88762.1; -; Genomic_DNA.
+DR   EMBL; KM061522; AIX88775.1; -; Genomic_DNA.
+DR   EMBL; KM061523; AIX88788.1; -; Genomic_DNA.
+DR   EMBL; KM061524; AIX88801.1; -; Genomic_DNA.
+DR   EMBL; KM061525; AIX88814.1; -; Genomic_DNA.
+DR   EMBL; KM061526; AIX88827.1; -; Genomic_DNA.
+DR   EMBL; KM061527; AIX88840.1; -; Genomic_DNA.
+DR   EMBL; KM061528; AIX88853.1; -; Genomic_DNA.
+DR   EMBL; KM061529; AIX88866.1; -; Genomic_DNA.
+DR   EMBL; KM061530; AIX88879.1; -; Genomic_DNA.
+DR   EMBL; KM061531; AIX88892.1; -; Genomic_DNA.
+DR   EMBL; KM061532; AIX88905.1; -; Genomic_DNA.
+DR   EMBL; KM061534; AIX88931.1; -; Genomic_DNA.
+DR   EMBL; KM061535; AIX88944.1; -; Genomic_DNA.
+DR   EMBL; KM061536; AIX88957.1; -; Genomic_DNA.
+DR   EMBL; KM061537; AIX88970.1; -; Genomic_DNA.
+DR   EMBL; KM061538; AIX88983.1; -; Genomic_DNA.
+DR   EMBL; KM061539; AIX88996.1; -; Genomic_DNA.
+DR   EMBL; KM061540; AIX89009.1; -; Genomic_DNA.
+DR   EMBL; KM061541; AIX89022.1; -; Genomic_DNA.
+DR   EMBL; KM061542; AIX89035.1; -; Genomic_DNA.
+DR   EMBL; KM061543; AIX89048.1; -; Genomic_DNA.
+DR   EMBL; KM061544; AIX89061.1; -; Genomic_DNA.
+DR   EMBL; KM061545; AIX89074.1; -; Genomic_DNA.
+DR   EMBL; KM061546; AIX89087.1; -; Genomic_DNA.
+DR   EMBL; KM061547; AIX89100.1; -; Genomic_DNA.
+DR   EMBL; KM061548; AIX89113.1; -; Genomic_DNA.
+DR   EMBL; KM061549; AIX89126.1; -; Genomic_DNA.
+DR   EMBL; KM061551; AIX89152.1; -; Genomic_DNA.
+DR   EMBL; KM061552; AIX89165.1; -; Genomic_DNA.
+DR   EMBL; KM061553; AIX89178.1; -; Genomic_DNA.
+DR   EMBL; KM061554; AIX89191.1; -; Genomic_DNA.
+DR   EMBL; KM061555; AIX89204.1; -; Genomic_DNA.
+DR   EMBL; KM061556; AIX89217.1; -; Genomic_DNA.
+DR   EMBL; KM061557; AIX89230.1; -; Genomic_DNA.
+DR   EMBL; KM061558; AIX89243.1; -; Genomic_DNA.
+DR   EMBL; KM061559; AIX89256.1; -; Genomic_DNA.
+DR   EMBL; KM061560; AIX89269.1; -; Genomic_DNA.
+DR   EMBL; KM061562; AIX89295.1; -; Genomic_DNA.
+DR   EMBL; KM061563; AIX89308.1; -; Genomic_DNA.
+DR   EMBL; KM061564; AIX89321.1; -; Genomic_DNA.
+DR   EMBL; KM061565; AIX89334.1; -; Genomic_DNA.
+DR   EMBL; KM061566; AIX89347.1; -; Genomic_DNA.
+DR   EMBL; KM061567; AIX89360.1; -; Genomic_DNA.
+DR   EMBL; KM061568; AIX89373.1; -; Genomic_DNA.
+DR   EMBL; KM061569; AIX89386.1; -; Genomic_DNA.
+DR   EMBL; KM061570; AIX89399.1; -; Genomic_DNA.
+DR   EMBL; KM061572; AIX89425.1; -; Genomic_DNA.
+DR   EMBL; KM061573; AIX89438.1; -; Genomic_DNA.
+DR   EMBL; KM061574; AIX89451.1; -; Genomic_DNA.
+DR   EMBL; KM061575; AIX89464.1; -; Genomic_DNA.
+DR   EMBL; KM061576; AIX89477.1; -; Genomic_DNA.
+DR   EMBL; KM061577; AIX89490.1; -; Genomic_DNA.
+DR   EMBL; KM061578; AIX89503.1; -; Genomic_DNA.
+DR   EMBL; KM061579; AIX89516.1; -; Genomic_DNA.
+DR   EMBL; KM061580; AIX89529.1; -; Genomic_DNA.
+DR   EMBL; KM061581; AIX89542.1; -; Genomic_DNA.
+DR   EMBL; KM061582; AIX89555.1; -; Genomic_DNA.
+DR   EMBL; KM061583; AIX89568.1; -; Genomic_DNA.
+DR   EMBL; KM061584; AIX89581.1; -; Genomic_DNA.
+DR   EMBL; KM061586; AIX89607.1; -; Genomic_DNA.
+DR   EMBL; KM061588; AIX89633.1; -; Genomic_DNA.
+DR   EMBL; KM061589; AIX89646.1; -; Genomic_DNA.
+DR   EMBL; KM061591; AIX89672.1; -; Genomic_DNA.
+DR   EMBL; KM061592; AIX89685.1; -; Genomic_DNA.
+DR   EMBL; KM061593; AIX89698.1; -; Genomic_DNA.
+DR   EMBL; KM061594; AIX89711.1; -; Genomic_DNA.
+DR   EMBL; KT168369; AKZ89492.1; -; Genomic_DNA.
+DR   EMBL; KT168370; AKZ89505.1; -; Genomic_DNA.
+DR   EMBL; KT168371; AKZ89518.1; -; Genomic_DNA.
+DR   EMBL; KT168372; AKZ89531.1; -; Genomic_DNA.
+DR   EMBL; KT168373; AKZ89544.1; -; Genomic_DNA.
+DR   EMBL; KT168374; AKZ89557.1; -; Genomic_DNA.
+DR   EMBL; KT168376; AKZ89583.1; -; Genomic_DNA.
+DR   EMBL; KT168377; AKZ89596.1; -; Genomic_DNA.
+DR   EMBL; KT168378; AKZ89609.1; -; Genomic_DNA.
+DR   EMBL; KT168379; AKZ89622.1; -; Genomic_DNA.
+DR   EMBL; KT168380; AKZ89635.1; -; Genomic_DNA.
+DR   EMBL; KT168381; AKZ89648.1; -; Genomic_DNA.
+DR   EMBL; KT168382; AKZ89661.1; -; Genomic_DNA.
+DR   EMBL; KT591870; ALL52854.1; -; Genomic_DNA.
+DR   EMBL; KU215682; AMM05998.1; -; Genomic_DNA.
+DR   EMBL; KU215683; AMM06011.1; -; Genomic_DNA.
+DR   EMBL; KU215684; AMM06024.1; -; Genomic_DNA.
+DR   EMBL; KU215685; AMM06037.1; -; Genomic_DNA.
+DR   EMBL; KU215686; AMM06050.1; -; Genomic_DNA.
+DR   EMBL; KU215687; AMM06063.1; -; Genomic_DNA.
+DR   EMBL; KU215688; AMM06076.1; -; Genomic_DNA.
+DR   EMBL; KU215689; AMM06089.1; -; Genomic_DNA.
+DR   EMBL; KU215690; AMM06102.1; -; Genomic_DNA.
+DR   EMBL; KU215691; AMM06115.1; -; Genomic_DNA.
+DR   EMBL; KU215692; AMM06128.1; -; Genomic_DNA.
+DR   EMBL; KU215693; AMM06141.1; -; Genomic_DNA.
+DR   EMBL; KU215694; AMM06154.1; -; Genomic_DNA.
+DR   EMBL; KU215695; AMM06167.1; -; Genomic_DNA.
+DR   EMBL; KU215696; AMM06180.1; -; Genomic_DNA.
+DR   EMBL; KU215697; AMM06193.1; -; Genomic_DNA.
+DR   EMBL; KU215698; AMM06206.1; -; Genomic_DNA.
+DR   EMBL; KU215699; AMM06219.1; -; Genomic_DNA.
+DR   EMBL; KU215700; AMM06232.1; -; Genomic_DNA.
+DR   EMBL; KU215701; AMM06245.1; -; Genomic_DNA.
+DR   EMBL; KU215702; AMM06258.1; -; Genomic_DNA.
+DR   EMBL; KU290400; ANE11227.1; -; Genomic_DNA.
+DR   EMBL; KU290402; ANE11253.1; -; Genomic_DNA.
+DR   EMBL; KU290403; ANE11266.1; -; Genomic_DNA.
+DR   EMBL; KU290404; ANE11279.1; -; Genomic_DNA.
+DR   EMBL; KU290405; ANE11292.1; -; Genomic_DNA.
+DR   EMBL; KU290406; ANE11305.1; -; Genomic_DNA.
+DR   EMBL; KU290407; ANE11318.1; -; Genomic_DNA.
+DR   EMBL; KU290408; ANE11331.1; -; Genomic_DNA.
+DR   EMBL; KU290409; ANE11344.1; -; Genomic_DNA.
+DR   EMBL; KU290410; ANE11357.1; -; Genomic_DNA.
+DR   EMBL; KU290411; ANE11370.1; -; Genomic_DNA.
+DR   EMBL; KU290412; ANE11383.1; -; Genomic_DNA.
+DR   EMBL; KU290413; ANE11396.1; -; Genomic_DNA.
+DR   EMBL; KU290414; ANE11409.1; -; Genomic_DNA.
+DR   EMBL; KU290415; ANE11422.1; -; Genomic_DNA.
+DR   EMBL; KU290417; ANE11448.1; -; Genomic_DNA.
+DR   EMBL; KU290418; ANE11461.1; -; Genomic_DNA.
+DR   EMBL; KU290419; ANE11474.1; -; Genomic_DNA.
+DR   EMBL; KU290420; ANE11487.1; -; Genomic_DNA.
+DR   EMBL; KU290421; ANE11500.1; -; Genomic_DNA.
+DR   EMBL; KU290422; ANE11513.1; -; Genomic_DNA.
+DR   EMBL; KU290423; ANE11526.1; -; Genomic_DNA.
+DR   EMBL; KU290424; ANE11539.1; -; Genomic_DNA.
+DR   EMBL; KU290425; ANE11552.1; -; Genomic_DNA.
+DR   EMBL; KU290426; ANE11565.1; -; Genomic_DNA.
+DR   EMBL; KU290428; ANE11591.1; -; Genomic_DNA.
+DR   EMBL; KU290429; ANE11604.1; -; Genomic_DNA.
+DR   EMBL; KU290430; ANE11617.1; -; Genomic_DNA.
+DR   EMBL; KU290431; ANE11630.1; -; Genomic_DNA.
+DR   EMBL; KU290435; ANE11682.1; -; Genomic_DNA.
+DR   EMBL; KU290437; ANE11708.1; -; Genomic_DNA.
+DR   EMBL; KU290440; ANE11747.1; -; Genomic_DNA.
+DR   EMBL; KU290442; ANE11773.1; -; Genomic_DNA.
+DR   EMBL; KU290444; ANE11799.1; -; Genomic_DNA.
+DR   EMBL; KU290446; ANE11825.1; -; Genomic_DNA.
+DR   EMBL; KU290447; ANE11838.1; -; Genomic_DNA.
+DR   EMBL; KU290448; ANE11851.1; -; Genomic_DNA.
+DR   EMBL; KU290449; ANE11864.1; -; Genomic_DNA.
+DR   EMBL; KU290450; ANE11877.1; -; Genomic_DNA.
+DR   EMBL; KU290451; ANE11890.1; -; Genomic_DNA.
+DR   EMBL; KU290453; ANE11916.1; -; Genomic_DNA.
+DR   EMBL; KU290454; ANE11929.1; -; Genomic_DNA.
+DR   EMBL; KU290455; ANE11942.1; -; Genomic_DNA.
+DR   EMBL; KU290456; ANE11955.1; -; Genomic_DNA.
+DR   EMBL; KU290457; ANE11968.1; -; Genomic_DNA.
+DR   EMBL; KU290458; ANE11981.1; -; Genomic_DNA.
+DR   EMBL; KU290460; ANE12007.1; -; Genomic_DNA.
+DR   EMBL; KU290462; ANE12033.1; -; Genomic_DNA.
+DR   EMBL; KU290463; ANE12046.1; -; Genomic_DNA.
+DR   EMBL; KU290465; ANE12072.1; -; Genomic_DNA.
+DR   EMBL; KU290466; ANE12085.1; -; Genomic_DNA.
+DR   EMBL; KU290467; ANE12098.1; -; Genomic_DNA.
+DR   EMBL; KU290468; ANE12111.1; -; Genomic_DNA.
+DR   EMBL; KU290469; ANE12124.1; -; Genomic_DNA.
+DR   EMBL; KU290470; ANE12137.1; -; Genomic_DNA.
+DR   EMBL; KU290471; ANE12150.1; -; Genomic_DNA.
+DR   EMBL; KU290472; ANE12163.1; -; Genomic_DNA.
+DR   EMBL; KU290474; ANE12189.1; -; Genomic_DNA.
+DR   EMBL; KU290475; ANE12202.1; -; Genomic_DNA.
+DR   EMBL; KU290476; ANE12215.1; -; Genomic_DNA.
+DR   EMBL; KU290477; ANE12228.1; -; Genomic_DNA.
+DR   EMBL; KU290478; ANE12241.1; -; Genomic_DNA.
+DR   EMBL; KU290479; ANE12254.1; -; Genomic_DNA.
+DR   EMBL; KU290480; ANE12267.1; -; Genomic_DNA.
+DR   EMBL; KU290484; ANE12319.1; -; Genomic_DNA.
+DR   EMBL; KU290486; ANE12345.1; -; Genomic_DNA.
+DR   EMBL; KU290488; ANE12371.1; -; Genomic_DNA.
+DR   EMBL; KU290490; ANE12397.1; -; Genomic_DNA.
+DR   EMBL; KU290492; ANE12423.1; -; Genomic_DNA.
+DR   EMBL; KU290494; ANE12449.1; -; Genomic_DNA.
+DR   EMBL; KU290496; ANE12475.1; -; Genomic_DNA.
+DR   EMBL; KU290499; ANE12514.1; -; Genomic_DNA.
+DR   EMBL; KU290500; ANE12527.1; -; Genomic_DNA.
+DR   EMBL; KU290501; ANE12540.1; -; Genomic_DNA.
+DR   EMBL; KU290502; ANE12553.1; -; Genomic_DNA.
+DR   EMBL; KU290503; ANE12566.1; -; Genomic_DNA.
+DR   EMBL; KU290504; ANE12579.1; -; Genomic_DNA.
+DR   EMBL; KU290505; ANE12592.1; -; Genomic_DNA.
+DR   EMBL; KU290506; ANE12605.1; -; Genomic_DNA.
+DR   EMBL; KU290507; ANE12618.1; -; Genomic_DNA.
+DR   EMBL; KU290508; ANE12631.1; -; Genomic_DNA.
+DR   EMBL; KU290510; ANE12657.1; -; Genomic_DNA.
+DR   EMBL; KU290511; ANE12670.1; -; Genomic_DNA.
+DR   EMBL; KU290512; ANE12683.1; -; Genomic_DNA.
+DR   EMBL; KU290514; ANE12709.1; -; Genomic_DNA.
+DR   EMBL; KU290516; ANE12735.1; -; Genomic_DNA.
+DR   EMBL; KU290518; ANE12761.1; -; Genomic_DNA.
+DR   EMBL; KU290521; ANE12800.1; -; Genomic_DNA.
+DR   EMBL; KU290522; ANE12813.1; -; Genomic_DNA.
+DR   EMBL; KU290523; ANE12826.1; -; Genomic_DNA.
+DR   EMBL; KU290524; ANE12839.1; -; Genomic_DNA.
+DR   EMBL; KU290525; ANE12852.1; -; Genomic_DNA.
+DR   EMBL; KU290527; ANE12878.1; -; Genomic_DNA.
+DR   EMBL; KU290528; ANE12891.1; -; Genomic_DNA.
+DR   EMBL; KU290529; ANE12904.1; -; Genomic_DNA.
+DR   EMBL; KU290530; ANE12917.1; -; Genomic_DNA.
+DR   EMBL; KU290531; ANE12929.1; -; Genomic_DNA.
+DR   EMBL; KU290532; ANE12942.1; -; Genomic_DNA.
+DR   EMBL; KU290533; ANE12955.1; -; Genomic_DNA.
+DR   EMBL; KU290537; ANE13007.1; -; Genomic_DNA.
+DR   EMBL; KU290539; ANE13033.1; -; Genomic_DNA.
+DR   EMBL; KU290540; ANE13046.1; -; Genomic_DNA.
+DR   EMBL; KU290541; ANE13059.1; -; Genomic_DNA.
+DR   EMBL; KU290542; ANE13072.1; -; Genomic_DNA.
+DR   EMBL; KU290543; ANE13085.1; -; Genomic_DNA.
+DR   EMBL; KU290544; ANE13098.1; -; Genomic_DNA.
+DR   EMBL; KU290545; ANE13111.1; -; Genomic_DNA.
+DR   EMBL; KU290546; ANE13124.1; -; Genomic_DNA.
+DR   EMBL; KU290547; ANE13137.1; -; Genomic_DNA.
+DR   EMBL; KU290548; ANE13150.1; -; Genomic_DNA.
+DR   EMBL; KU290549; ANE13163.1; -; Genomic_DNA.
+DR   EMBL; KU290550; ANE13176.1; -; Genomic_DNA.
+DR   EMBL; KU290551; ANE13189.1; -; Genomic_DNA.
+DR   EMBL; KU290552; ANE13202.1; -; Genomic_DNA.
+DR   EMBL; KU290553; ANE13215.1; -; Genomic_DNA.
+DR   EMBL; KU290554; ANE13228.1; -; Genomic_DNA.
+DR   EMBL; KU290555; ANE13241.1; -; Genomic_DNA.
+DR   EMBL; KU290556; ANE13254.1; -; Genomic_DNA.
+DR   EMBL; KU290558; ANE13280.1; -; Genomic_DNA.
+DR   EMBL; KU290560; ANE13306.1; -; Genomic_DNA.
+DR   EMBL; KU290562; ANE13331.1; -; Genomic_DNA.
+DR   EMBL; KU290565; ANE13370.1; -; Genomic_DNA.
+DR   EMBL; KU290566; ANE13383.1; -; Genomic_DNA.
+DR   EMBL; KU290567; ANE13396.1; -; Genomic_DNA.
+DR   EMBL; KU290569; ANE13422.1; -; Genomic_DNA.
+DR   EMBL; KU290570; ANE13435.1; -; Genomic_DNA.
+DR   EMBL; KU290571; ANE13448.1; -; Genomic_DNA.
+DR   EMBL; KU290572; ANE13461.1; -; Genomic_DNA.
+DR   EMBL; KU290574; ANE13487.1; -; Genomic_DNA.
+DR   EMBL; KU290575; ANE13500.1; -; Genomic_DNA.
+DR   EMBL; KU290579; ANE13552.1; -; Genomic_DNA.
+DR   EMBL; KU290584; ANE13617.1; -; Genomic_DNA.
+DR   EMBL; KU290585; ANE13630.1; -; Genomic_DNA.
+DR   EMBL; KU290586; ANE13643.1; -; Genomic_DNA.
+DR   EMBL; KU290587; ANE13656.1; -; Genomic_DNA.
+DR   EMBL; KU290588; ANE13669.1; -; Genomic_DNA.
+DR   EMBL; KU290589; ANE13682.1; -; Genomic_DNA.
+DR   EMBL; KU290590; ANE13695.1; -; Genomic_DNA.
+DR   EMBL; KU290591; ANE13708.1; -; Genomic_DNA.
+DR   EMBL; KU290592; ANE13721.1; -; Genomic_DNA.
+DR   EMBL; KU290593; ANE13734.1; -; Genomic_DNA.
+DR   EMBL; KU290594; ANE13747.1; -; Genomic_DNA.
+DR   EMBL; KU290595; ANE13760.1; -; Genomic_DNA.
+DR   EMBL; KU290596; ANE13773.1; -; Genomic_DNA.
+DR   EMBL; KU290597; ANE13786.1; -; Genomic_DNA.
+DR   EMBL; KU290598; ANE13799.1; -; Genomic_DNA.
+DR   EMBL; KU290599; ANE13812.1; -; Genomic_DNA.
+DR   EMBL; KU290602; ANE13851.1; -; Genomic_DNA.
+DR   EMBL; KU290603; ANE13864.1; -; Genomic_DNA.
+DR   EMBL; KU290604; ANE13877.1; -; Genomic_DNA.
+DR   EMBL; KU290605; ANE13890.1; -; Genomic_DNA.
+DR   EMBL; KU290606; ANE13903.1; -; Genomic_DNA.
+DR   EMBL; KU290607; ANE13916.1; -; Genomic_DNA.
+DR   EMBL; KU290608; ANE13929.1; -; Genomic_DNA.
+DR   EMBL; KU290609; ANE13942.1; -; Genomic_DNA.
+DR   EMBL; KU290610; ANE13955.1; -; Genomic_DNA.
+DR   EMBL; KU290614; ANE14007.1; -; Genomic_DNA.
+DR   EMBL; KU290615; ANE14020.1; -; Genomic_DNA.
+DR   EMBL; KU290616; ANE14033.1; -; Genomic_DNA.
+DR   EMBL; KU290617; ANE14046.1; -; Genomic_DNA.
+DR   EMBL; KU290620; ANE14085.1; -; Genomic_DNA.
+DR   EMBL; KU290621; ANE14098.1; -; Genomic_DNA.
+DR   EMBL; KU290622; ANE14111.1; -; Genomic_DNA.
+DR   EMBL; KU290623; ANE14124.1; -; Genomic_DNA.
+DR   EMBL; KU290624; ANE14137.1; -; Genomic_DNA.
+DR   EMBL; KU290625; ANE14150.1; -; Genomic_DNA.
+DR   EMBL; KU290626; ANE14163.1; -; Genomic_DNA.
+DR   EMBL; KU290627; ANE14176.1; -; Genomic_DNA.
+DR   EMBL; KU290628; ANE14189.1; -; Genomic_DNA.
+DR   EMBL; KU290629; ANE14202.1; -; Genomic_DNA.
+DR   EMBL; KU290630; ANE14215.1; -; Genomic_DNA.
+DR   EMBL; KU290632; ANE14241.1; -; Genomic_DNA.
+DR   EMBL; KU290633; ANE14254.1; -; Genomic_DNA.
+DR   EMBL; KU290634; ANE14267.1; -; Genomic_DNA.
+DR   EMBL; KU290635; ANE14280.1; -; Genomic_DNA.
+DR   EMBL; KU290636; ANE14293.1; -; Genomic_DNA.
+DR   EMBL; KU290637; ANE14306.1; -; Genomic_DNA.
+DR   EMBL; KU290638; ANE14319.1; -; Genomic_DNA.
+DR   EMBL; KU290640; ANE14345.1; -; Genomic_DNA.
+DR   EMBL; KU290641; ANE14358.1; -; Genomic_DNA.
+DR   EMBL; KU290642; ANE14371.1; -; Genomic_DNA.
+DR   EMBL; KU290644; ANE14397.1; -; Genomic_DNA.
+DR   EMBL; KU290647; ANE14436.1; -; Genomic_DNA.
+DR   EMBL; KU290649; ANE14462.1; -; Genomic_DNA.
+DR   EMBL; KU290651; ANE14488.1; -; Genomic_DNA.
+DR   EMBL; KU290654; ANE14527.1; -; Genomic_DNA.
+DR   EMBL; KU290661; ANE14617.1; -; Genomic_DNA.
+DR   EMBL; KU290665; ANE14669.1; -; Genomic_DNA.
+DR   EMBL; KU290666; ANE14682.1; -; Genomic_DNA.
+DR   EMBL; KU290667; ANE14695.1; -; Genomic_DNA.
+DR   EMBL; KU290669; ANE14721.1; -; Genomic_DNA.
+DR   EMBL; KU290670; ANE14734.1; -; Genomic_DNA.
+DR   EMBL; KU290671; ANE14747.1; -; Genomic_DNA.
+DR   EMBL; KU290672; ANE14759.1; -; Genomic_DNA.
+DR   EMBL; KU290674; ANE14785.1; -; Genomic_DNA.
+DR   EMBL; KU290675; ANE14798.1; -; Genomic_DNA.
+DR   EMBL; KU290676; ANE14811.1; -; Genomic_DNA.
+DR   EMBL; KU290677; ANE14824.1; -; Genomic_DNA.
+DR   EMBL; KU290679; ANE14850.1; -; Genomic_DNA.
+DR   EMBL; KU290684; ANE14915.1; -; Genomic_DNA.
+DR   EMBL; KU290694; ANE15045.1; -; Genomic_DNA.
+DR   EMBL; KU290696; ANE15071.1; -; Genomic_DNA.
+DR   EMBL; KU290699; ANE15110.1; -; Genomic_DNA.
+DR   EMBL; KU290700; ANE15123.1; -; Genomic_DNA.
+DR   EMBL; KU290702; ANE15149.1; -; Genomic_DNA.
+DR   EMBL; KU290703; ANE15162.1; -; Genomic_DNA.
+DR   EMBL; KU290706; ANE15201.1; -; Genomic_DNA.
+DR   EMBL; KU290707; ANE15214.1; -; Genomic_DNA.
+DR   EMBL; KU290709; ANE15240.1; -; Genomic_DNA.
+DR   EMBL; KU290712; ANE15279.1; -; Genomic_DNA.
+DR   EMBL; KU290714; ANE15305.1; -; Genomic_DNA.
+DR   EMBL; KU290716; ANE15331.1; -; Genomic_DNA.
+DR   EMBL; KU290718; ANE15357.1; -; Genomic_DNA.
+DR   EMBL; KU290720; ANE15383.1; -; Genomic_DNA.
+DR   EMBL; KU290723; ANE15422.1; -; Genomic_DNA.
+DR   EMBL; KU290725; ANE15448.1; -; Genomic_DNA.
+DR   EMBL; KU290726; ANE15461.1; -; Genomic_DNA.
+DR   EMBL; KU290727; ANE15474.1; -; Genomic_DNA.
+DR   EMBL; KU290728; ANE15487.1; -; Genomic_DNA.
+DR   EMBL; KU290729; ANE15500.1; -; Genomic_DNA.
+DR   EMBL; KU290730; ANE15513.1; -; Genomic_DNA.
+DR   EMBL; KU290731; ANE15526.1; -; Genomic_DNA.
+DR   EMBL; KU290733; ANE15552.1; -; Genomic_DNA.
+DR   EMBL; KU290735; ANE15578.1; -; Genomic_DNA.
+DR   EMBL; KU290736; ANE15591.1; -; Genomic_DNA.
+DR   EMBL; KU290737; ANE15604.1; -; Genomic_DNA.
+DR   EMBL; KU290738; ANE15617.1; -; Genomic_DNA.
+DR   EMBL; KU290739; ANE15630.1; -; Genomic_DNA.
+DR   EMBL; KU290740; ANE15643.1; -; Genomic_DNA.
+DR   EMBL; KU290741; ANE15656.1; -; Genomic_DNA.
+DR   EMBL; KU290742; ANE15669.1; -; Genomic_DNA.
+DR   EMBL; KU290743; ANE15682.1; -; Genomic_DNA.
+DR   EMBL; KU290744; ANE15695.1; -; Genomic_DNA.
+DR   EMBL; KU290747; ANE15734.1; -; Genomic_DNA.
+DR   EMBL; KU290748; ANE15747.1; -; Genomic_DNA.
+DR   EMBL; KU290749; ANE15760.1; -; Genomic_DNA.
+DR   EMBL; KU290750; ANE15773.1; -; Genomic_DNA.
+DR   EMBL; KU290751; ANE15786.1; -; Genomic_DNA.
+DR   EMBL; KU290753; ANE15812.1; -; Genomic_DNA.
+DR   EMBL; KU290756; ANE15851.1; -; Genomic_DNA.
+DR   EMBL; KU290758; ANE15877.1; -; Genomic_DNA.
+DR   EMBL; KU290760; ANE15903.1; -; Genomic_DNA.
+DR   EMBL; KU290762; ANE15929.1; -; Genomic_DNA.
+DR   EMBL; KU290764; ANE15955.1; -; Genomic_DNA.
+DR   EMBL; KU290767; ANE15994.1; -; Genomic_DNA.
+DR   EMBL; KU290769; ANE16020.1; -; Genomic_DNA.
+DR   EMBL; KU290771; ANE16046.1; -; Genomic_DNA.
+DR   EMBL; KU290775; ANE16098.1; -; Genomic_DNA.
+DR   EMBL; KU290779; ANE16150.1; -; Genomic_DNA.
+DR   EMBL; KU290781; ANE16176.1; -; Genomic_DNA.
+DR   EMBL; KU290784; ANE16215.1; -; Genomic_DNA.
+DR   EMBL; KU290785; ANE16228.1; -; Genomic_DNA.
+DR   EMBL; KU290786; ANE16241.1; -; Genomic_DNA.
+DR   EMBL; KU290787; ANE16254.1; -; Genomic_DNA.
+DR   EMBL; KU290788; ANE16267.1; -; Genomic_DNA.
+DR   EMBL; KU290789; ANE16280.1; -; Genomic_DNA.
+DR   EMBL; KU290790; ANE16293.1; -; Genomic_DNA.
+DR   EMBL; KU290792; ANE16319.1; -; Genomic_DNA.
+DR   EMBL; KU290794; ANE16345.1; -; Genomic_DNA.
+DR   EMBL; KU290797; ANE16383.1; -; Genomic_DNA.
+DR   EMBL; KU290799; ANE16409.1; -; Genomic_DNA.
+DR   EMBL; KU290801; ANE16435.1; -; Genomic_DNA.
+DR   EMBL; KU290803; ANE16461.1; -; Genomic_DNA.
+DR   EMBL; KU290804; ANE16474.1; -; Genomic_DNA.
+DR   EMBL; KU290805; ANE16487.1; -; Genomic_DNA.
+DR   EMBL; KU290808; ANE16526.1; -; Genomic_DNA.
+DR   EMBL; KU290811; ANE16565.1; -; Genomic_DNA.
+DR   EMBL; KU290814; ANE16604.1; -; Genomic_DNA.
+DR   EMBL; KU290815; ANE16617.1; -; Genomic_DNA.
+DR   EMBL; KU290816; ANE16630.1; -; Genomic_DNA.
+DR   EMBL; KU290817; ANE16642.1; -; Genomic_DNA.
+DR   EMBL; KU290818; ANE16655.1; -; Genomic_DNA.
+DR   EMBL; KU290819; ANE16668.1; -; Genomic_DNA.
+DR   EMBL; KU290820; ANE16681.1; -; Genomic_DNA.
+DR   EMBL; KU290821; ANE16694.1; -; Genomic_DNA.
+DR   EMBL; KU290822; ANE16707.1; -; Genomic_DNA.
+DR   EMBL; KU290823; ANE16720.1; -; Genomic_DNA.
+DR   EMBL; KU290824; ANE16732.1; -; Genomic_DNA.
+DR   EMBL; KU290825; ANE16745.1; -; Genomic_DNA.
+DR   EMBL; KU290827; ANE16771.1; -; Genomic_DNA.
+DR   EMBL; KU290828; ANE16784.1; -; Genomic_DNA.
+DR   EMBL; KU290829; ANE16797.1; -; Genomic_DNA.
+DR   EMBL; KU290830; ANE16810.1; -; Genomic_DNA.
+DR   EMBL; KU290832; ANE16836.1; -; Genomic_DNA.
+DR   EMBL; KU290833; ANE16849.1; -; Genomic_DNA.
+DR   EMBL; KU290836; ANE16888.1; -; Genomic_DNA.
+DR   EMBL; KU290838; ANE16914.1; -; Genomic_DNA.
+DR   EMBL; KU290853; ANE17109.1; -; Genomic_DNA.
+DR   EMBL; KU290855; ANE17135.1; -; Genomic_DNA.
+DR   EMBL; KU290857; ANE17161.1; -; Genomic_DNA.
+DR   EMBL; KU290858; ANE17174.1; -; Genomic_DNA.
+DR   EMBL; KU290862; ANE17226.1; -; Genomic_DNA.
+DR   EMBL; KU290863; ANE17239.1; -; Genomic_DNA.
+DR   EMBL; KU290864; ANE17252.1; -; Genomic_DNA.
+DR   EMBL; KU290868; ANE17304.1; -; Genomic_DNA.
+DR   EMBL; KU290872; ANE17356.1; -; Genomic_DNA.
+DR   EMBL; KU290874; ANE17382.1; -; Genomic_DNA.
+DR   EMBL; KU290876; ANE17408.1; -; Genomic_DNA.
+DR   EMBL; KU290877; ANE17421.1; -; Genomic_DNA.
+DR   EMBL; KU290880; ANE17460.1; -; Genomic_DNA.
+DR   EMBL; KU290884; ANE17512.1; -; Genomic_DNA.
+DR   EMBL; KU290885; ANE17525.1; -; Genomic_DNA.
+DR   EMBL; KU290887; ANE17551.1; -; Genomic_DNA.
+DR   EMBL; KU290890; ANE17590.1; -; Genomic_DNA.
+DR   EMBL; KU290892; ANE17616.1; -; Genomic_DNA.
+DR   EMBL; KU290894; ANE17642.1; -; Genomic_DNA.
+DR   EMBL; KU290896; ANE17668.1; -; Genomic_DNA.
+DR   EMBL; KU290899; ANE17707.1; -; Genomic_DNA.
+DR   EMBL; KU290900; ANE17720.1; -; Genomic_DNA.
+DR   EMBL; KU290901; ANE17733.1; -; Genomic_DNA.
+DR   EMBL; KU290908; ANE17824.1; -; Genomic_DNA.
+DR   EMBL; KU290910; ANE17850.1; -; Genomic_DNA.
+DR   EMBL; KU290913; ANE17889.1; -; Genomic_DNA.
+DR   EMBL; KU290916; ANE17928.1; -; Genomic_DNA.
+DR   EMBL; KU290917; ANE17941.1; -; Genomic_DNA.
+DR   EMBL; KU290918; ANE17954.1; -; Genomic_DNA.
+DR   EMBL; KU290919; ANE17967.1; -; Genomic_DNA.
+DR   EMBL; KU290920; ANE17980.1; -; Genomic_DNA.
+DR   EMBL; KU290922; ANE18006.1; -; Genomic_DNA.
+DR   EMBL; KU290924; ANE18032.1; -; Genomic_DNA.
+DR   EMBL; KU290925; ANE18045.1; -; Genomic_DNA.
+DR   EMBL; KU290926; ANE18058.1; -; Genomic_DNA.
+DR   EMBL; KU290927; ANE18071.1; -; Genomic_DNA.
+DR   EMBL; KU290928; ANE18084.1; -; Genomic_DNA.
+DR   EMBL; KU290929; ANE18097.1; -; Genomic_DNA.
+DR   EMBL; KU290930; ANE18110.1; -; Genomic_DNA.
+DR   EMBL; KU290934; ANE18160.1; -; Genomic_DNA.
+DR   EMBL; KU290937; ANE18199.1; -; Genomic_DNA.
+DR   EMBL; KU290941; ANE18251.1; -; Genomic_DNA.
+DR   EMBL; KU290950; ANE18367.1; -; Genomic_DNA.
+DR   EMBL; KU290953; ANE18406.1; -; Genomic_DNA.
+DR   EMBL; KU290954; ANE18419.1; -; Genomic_DNA.
+DR   EMBL; KU290955; ANE18432.1; -; Genomic_DNA.
+DR   EMBL; KU290957; ANE18458.1; -; Genomic_DNA.
+DR   EMBL; KU290959; ANE18484.1; -; Genomic_DNA.
+DR   EMBL; KU290961; ANE18510.1; -; Genomic_DNA.
+DR   EMBL; KU290963; ANE18536.1; -; Genomic_DNA.
+DR   EMBL; KU290965; ANE18562.1; -; Genomic_DNA.
+DR   EMBL; KU290968; ANE18601.1; -; Genomic_DNA.
+DR   EMBL; KU290971; ANE18640.1; -; Genomic_DNA.
+DR   EMBL; KU290973; ANE18666.1; -; Genomic_DNA.
+DR   EMBL; KU290976; ANE18705.1; -; Genomic_DNA.
+DR   EMBL; KU290977; ANE18718.1; -; Genomic_DNA.
+DR   EMBL; KU290978; ANE18731.1; -; Genomic_DNA.
+DR   EMBL; KU290979; ANE18744.1; -; Genomic_DNA.
+DR   EMBL; KU290984; ANE18809.1; -; Genomic_DNA.
+DR   EMBL; KU290986; ANE18835.1; -; Genomic_DNA.
+DR   EMBL; KU290988; ANE18861.1; -; Genomic_DNA.
+DR   EMBL; KU290990; ANE18887.1; -; Genomic_DNA.
+DR   EMBL; KU290992; ANE18913.1; -; Genomic_DNA.
+DR   EMBL; KU290994; ANE18939.1; -; Genomic_DNA.
+DR   EMBL; KU290998; ANE18991.1; -; Genomic_DNA.
+DR   EMBL; KU291001; ANE19030.1; -; Genomic_DNA.
+DR   EMBL; KU291003; ANE19056.1; -; Genomic_DNA.
+DR   EMBL; KU291006; ANE19095.1; -; Genomic_DNA.
+DR   EMBL; KU291008; ANE19121.1; -; Genomic_DNA.
+DR   EMBL; KU291010; ANE19147.1; -; Genomic_DNA.
+DR   EMBL; KU291011; ANE19160.1; -; Genomic_DNA.
+DR   EMBL; KU291012; ANE19173.1; -; Genomic_DNA.
+DR   EMBL; KU291013; ANE19186.1; -; Genomic_DNA.
+DR   EMBL; KU291014; ANE19199.1; -; Genomic_DNA.
+DR   EMBL; KU291015; ANE19212.1; -; Genomic_DNA.
+DR   EMBL; KU291017; ANE19238.1; -; Genomic_DNA.
+DR   EMBL; KU291019; ANE19263.1; -; Genomic_DNA.
+DR   EMBL; KU291020; ANE19276.1; -; Genomic_DNA.
+DR   EMBL; KU291022; ANE19302.1; -; Genomic_DNA.
+DR   EMBL; KU291025; ANE19341.1; -; Genomic_DNA.
+DR   EMBL; KU291027; ANE19367.1; -; Genomic_DNA.
+DR   EMBL; KU291028; ANE19380.1; -; Genomic_DNA.
+DR   EMBL; KU291030; ANE19406.1; -; Genomic_DNA.
+DR   EMBL; KU291031; ANE19419.1; -; Genomic_DNA.
+DR   EMBL; KU291032; ANE19432.1; -; Genomic_DNA.
+DR   EMBL; KU291033; ANE19445.1; -; Genomic_DNA.
+DR   EMBL; KU291034; ANE19458.1; -; Genomic_DNA.
+DR   EMBL; KU291035; ANE19471.1; -; Genomic_DNA.
+DR   EMBL; KU291037; ANE19497.1; -; Genomic_DNA.
+DR   EMBL; KU291038; ANE19510.1; -; Genomic_DNA.
+DR   EMBL; KU291039; ANE19523.1; -; Genomic_DNA.
+DR   EMBL; KU291040; ANE19536.1; -; Genomic_DNA.
+DR   EMBL; KU291041; ANE19549.1; -; Genomic_DNA.
+DR   EMBL; KU291042; ANE19562.1; -; Genomic_DNA.
+DR   EMBL; KU291043; ANE19575.1; -; Genomic_DNA.
+DR   EMBL; KU291044; ANE19588.1; -; Genomic_DNA.
+DR   EMBL; KU291045; ANE19601.1; -; Genomic_DNA.
+DR   EMBL; KU291046; ANE19614.1; -; Genomic_DNA.
+DR   EMBL; KU291047; ANE19627.1; -; Genomic_DNA.
+DR   EMBL; KU291048; ANE19640.1; -; Genomic_DNA.
+DR   EMBL; KU291049; ANE19653.1; -; Genomic_DNA.
+DR   EMBL; KU291050; ANE19666.1; -; Genomic_DNA.
+DR   EMBL; KU291051; ANE19679.1; -; Genomic_DNA.
+DR   EMBL; KU291052; ANE19692.1; -; Genomic_DNA.
+DR   EMBL; KU291054; ANE19718.1; -; Genomic_DNA.
+DR   EMBL; KU291055; ANE19731.1; -; Genomic_DNA.
+DR   EMBL; KU291056; ANE19744.1; -; Genomic_DNA.
+DR   EMBL; KU291057; ANE19757.1; -; Genomic_DNA.
+DR   EMBL; KU291058; ANE19770.1; -; Genomic_DNA.
+DR   EMBL; KU291062; ANE19822.1; -; Genomic_DNA.
+DR   EMBL; KU291066; ANE19874.1; -; Genomic_DNA.
+DR   EMBL; KU291068; ANE19900.1; -; Genomic_DNA.
+DR   EMBL; KU291069; ANE19913.1; -; Genomic_DNA.
+DR   EMBL; KU291071; ANE19939.1; -; Genomic_DNA.
+DR   EMBL; KU291073; ANE19965.1; -; Genomic_DNA.
+DR   EMBL; KU291076; ANE20004.1; -; Genomic_DNA.
+DR   EMBL; KU291078; ANE20030.1; -; Genomic_DNA.
+DR   EMBL; KU291080; ANE20056.1; -; Genomic_DNA.
+DR   EMBL; KU291081; ANE20069.1; -; Genomic_DNA.
+DR   EMBL; KU291082; ANE20082.1; -; Genomic_DNA.
+DR   EMBL; KU291084; ANE20108.1; -; Genomic_DNA.
+DR   EMBL; KU291086; ANE20134.1; -; Genomic_DNA.
+DR   EMBL; KU291087; ANE20147.1; -; Genomic_DNA.
+DR   EMBL; KU291088; ANE20160.1; -; Genomic_DNA.
+DR   EMBL; KU291090; ANE20186.1; -; Genomic_DNA.
+DR   EMBL; KU291092; ANE20212.1; -; Genomic_DNA.
+DR   EMBL; KU291094; ANE20238.1; -; Genomic_DNA.
+DR   EMBL; KX379528; APT42153.1; -; Genomic_DNA.
+DR   EMBL; KX379529; APT42166.1; -; Genomic_DNA.
+DR   EMBL; KY798508; AWV82994.1; -; Genomic_DNA.
+DR   EMBL; KY798511; AWV83032.1; -; Genomic_DNA.
+DR   EMBL; KY798513; AWV83059.1; -; Genomic_DNA.
+DR   EMBL; KY798516; AWV83098.1; -; Genomic_DNA.
+DR   EMBL; MH105046; AYA73195.1; -; Genomic_DNA.
+DR   EMBL; MH105047; AYA73208.1; -; Genomic_DNA.
+DR   EMBL; AB499816; BAJ05633.1; -; Genomic_DNA.
+DR   EMBL; AB499817; BAJ05646.1; -; Genomic_DNA.
+DR   RefSeq; NP_008473.4; NC_002008.4.
+DR   GeneID; 804478; -.
+DR   KEGG; cfa:804478; -.
+DR   CTD; 4512; -.
+DR   eggNOG; KOG4769; Eukaryota.
+DR   eggNOG; COG0843; LUCA.
+DR   HOGENOM; CLU_011899_7_3_1; -.
+DR   KO; K02256; -.
+DR   OMA; MSFWLLP; -.
+DR   OrthoDB; 728231at2759; -.
+DR   UniPathway; UPA00705; -.
+DR   Bgee; ENSCAFG00000022723; Expressed in adult mammalian kidney and 2 other tissues.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005750; C:mitochondrial respiratory chain complex III; IEA:Ensembl.
+DR   GO; GO:0005751; C:mitochondrial respiratory chain complex IV; IEA:Ensembl.
+DR   GO; GO:0004129; F:cytochrome-c oxidase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0020037; F:heme binding; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009060; P:aerobic respiration; IEA:InterPro.
+DR   GO; GO:0006119; P:oxidative phosphorylation; IEA:UniProtKB-UniPathway.
+DR   CDD; cd01663; Cyt_c_Oxidase_I; 1.
+DR   Gene3D; 1.20.210.10; -; 1.
+DR   InterPro; IPR023616; Cyt_c_oxase-like_su1_dom.
+DR   InterPro; IPR036927; Cyt_c_oxase-like_su1_sf.
+DR   InterPro; IPR000883; Cyt_C_Oxase_1.
+DR   InterPro; IPR023615; Cyt_c_Oxase_su1_BS.
+DR   InterPro; IPR033944; Cyt_c_oxase_su1_dom.
+DR   PANTHER; PTHR10422; PTHR10422; 1.
+DR   Pfam; PF00115; COX1; 1.
+DR   PRINTS; PR01165; CYCOXIDASEI.
+DR   SUPFAM; SSF81442; SSF81442; 1.
+DR   PROSITE; PS50855; COX1; 1.
+DR   PROSITE; PS00077; COX1_CUB; 1.
+PE   3: Inferred from homology;
+KW   Copper {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00887236};
+KW   Electron transport {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711106};
+KW   Heme {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711161};
+KW   Iron {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711161};
+KW   Membrane {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711122,
+KW   ECO:0000256|SAM:Phobius};
+KW   Metal-binding {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711161};
+KW   Mitochondrion {ECO:0000256|RuleBase:RU000369};
+KW   Mitochondrion inner membrane {ECO:0000256|RuleBase:RU000369};
+KW   Oxidoreductase {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711097};
+KW   Respiratory chain {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711106};
+KW   Transmembrane {ECO:0000256|SAAS:SAAS00711122, ECO:0000256|SAM:Phobius};
+KW   Transmembrane helix {ECO:0000256|SAAS:SAAS00711122,
+KW   ECO:0000256|SAM:Phobius};
+KW   Transport {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711106}.
+FT   TRANSMEM        18..37
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        57..83
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        104..128
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        148..171
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        183..210
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        243..261
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        268..291
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        303..325
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        337..359
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        379..400
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        412..433
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        453..473
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   DOMAIN          1..514
+FT                   /note="COX1"
+FT                   /evidence="ECO:0000259|PROSITE:PS50855"
+SQ   SEQUENCE   514 AA;  57039 MW;  44D2B3E8E04CBF6F CRC64;
+     MFINRWLFST NHKDIGTLYL LFGAWAGMVG TALSLLIRAE LGQPGTLLGD DQIYNVIVTA
+     HAFVMIFFMV MPIMIGGFGN WLVPLMIGAP DMAFPRMNNM SFWLLPPSFL LLLASSMVEA
+     GAGTGWTVYP PLAGNLAHAG ASVDLTIFSL HLAGVSSILG AINFITTIIN MKPPAMSQYQ
+     TPLFVWSVLI TAVLLLLSLP VLAAGITMLL TDRNLNTTFF DPAGGGDPIL YQHLFWFFGH
+     PEVYILILPG FGMISHIVTY YSGKKEPFGY MGMVWAMMSI GFLGFIVWAH HMFTVGMDVD
+     TRAYFTSATM IIAIPTGVKV FSWLATLHGG NIKWSPAMLW ALGFIFLFTV GGLTGIVLAN
+     SSLDIVLHDT YYVVAHFHYV LSMGAVFAIM GGFAHWFPLF SGYTLNDTWA KIHFTIMFVG
+     VNMTFFPQHF LGLSGMPRRY SDYPDAYTTW NTVSSMGSFI SLTAVMLMIF MIWEAFASKR
+     EVAMVELTTT NIEWLHGCPP PYHTFEEPTY VIQK
+//
+ID   A0A0C4UQF2_CANLF        Unreviewed;       606 AA.
+AC   A0A0C4UQF2;
+DT   29-APR-2015, integrated into UniProtKB/TrEMBL.
+DT   29-APR-2015, sequence version 1.
+DT   26-FEB-2020, entry version 23.
+DE   RecName: Full=NADH-ubiquinone oxidoreductase chain 5 {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00061106};
+DE            EC=7.1.1.2 {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS01106874};
+GN   Name=ND5 {ECO:0000313|EMBL:AIX89251.1};
+OS   Canis lupus familiaris (Dog) (Canis familiaris).
+OG   Mitochondrion {ECO:0000313|EMBL:AIX89251.1}.
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis.
+OX   NCBI_TaxID=9615 {ECO:0000313|EMBL:AIX89251.1};
+RN   [1] {ECO:0000313|EMBL:AIX89251.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=Cf_pl19 {ECO:0000313|EMBL:AIX88900.1}, and
+RC   Cf_stp64 {ECO:0000313|EMBL:AIX89251.1};
+RA   Duleba A., Skonieczna K., Bogdanowicz W., Grzybowski T.;
+RL   Submitted (JUN-2014) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Core subunit of the mitochondrial membrane respiratory chain
+CC       NADH dehydrogenase (Complex I) that is believed to belong to the
+CC       minimal assembly required for catalysis. Complex I functions in the
+CC       transfer of electrons from NADH to the respiratory chain. The immediate
+CC       electron acceptor for the enzyme is believed to be ubiquinone.
+CC       {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00061107}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a ubiquinone + 5 H(+)(in) + NADH = a ubiquinol + 4 H(+)(out) +
+CC         NAD(+); Xref=Rhea:RHEA:29091, Rhea:RHEA-COMP:9565, Rhea:RHEA-
+CC         COMP:9566, ChEBI:CHEBI:15378, ChEBI:CHEBI:16389, ChEBI:CHEBI:17976,
+CC         ChEBI:CHEBI:57540, ChEBI:CHEBI:57945; EC=7.1.1.2;
+CC         Evidence={ECO:0000256|RuleBase:RU003404,
+CC         ECO:0000256|SAAS:SAAS01122516};
+CC   -!- SUBCELLULAR LOCATION: Mitochondrion inner membrane
+CC       {ECO:0000256|SAAS:SAAS00061113}; Multi-pass membrane protein
+CC       {ECO:0000256|SAAS:SAAS00061113}.
+CC   -!- SIMILARITY: Belongs to the complex I subunit 5 family.
+CC       {ECO:0000256|RuleBase:RU003404}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; KM061531; AIX88900.1; -; Genomic_DNA.
+DR   EMBL; KM061558; AIX89251.1; -; Genomic_DNA.
+DR   eggNOG; KOG4668; Eukaryota.
+DR   eggNOG; COG1009; LUCA.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005743; C:mitochondrial inner membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0070469; C:respirasome; IEA:UniProtKB-KW.
+DR   GO; GO:0008137; F:NADH dehydrogenase (ubiquinone) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0042773; P:ATP synthesis coupled electron transport; IEA:InterPro.
+DR   InterPro; IPR010934; NADH_DH_su5_C.
+DR   InterPro; IPR003945; NADHpl_OxRdtase_5.
+DR   InterPro; IPR001750; ND/Mrp_mem.
+DR   InterPro; IPR001516; Proton_antipo_N.
+DR   Pfam; PF06455; NADH5_C; 1.
+DR   Pfam; PF00361; Proton_antipo_M; 1.
+DR   Pfam; PF00662; Proton_antipo_N; 1.
+DR   TIGRFAMs; TIGR01974; NDH_I_L; 1.
+PE   3: Inferred from homology;
+KW   Electron transport {ECO:0000256|SAAS:SAAS00448195};
+KW   Membrane {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448105,
+KW   ECO:0000256|SAAS:SAAS00464492};
+KW   Mitochondrion {ECO:0000256|SAAS:SAAS00448105};
+KW   Mitochondrion inner membrane {ECO:0000256|SAAS:SAAS00448105};
+KW   NAD {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448053};
+KW   Respiratory chain {ECO:0000256|SAAS:SAAS00448195};
+KW   Translocase {ECO:0000256|SAAS:SAAS01106877};
+KW   Transmembrane {ECO:0000256|RuleBase:RU003404,
+KW   ECO:0000256|SAAS:SAAS00464492};
+KW   Transmembrane helix {ECO:0000256|RuleBase:RU003404,
+KW   ECO:0000256|SAAS:SAAS00464492}; Transport {ECO:0000256|SAAS:SAAS00448195};
+KW   Ubiquinone {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448240}.
+FT   TRANSMEM        6..27
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        39..58
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        84..105
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        117..134
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        140..160
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        172..191
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        245..263
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        275..294
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        362..386
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        406..432
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        453..472
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        484..502
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        586..605
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   DOMAIN          65..121
+FT                   /note="Proton_antipo_N"
+FT                   /evidence="ECO:0000259|Pfam:PF00662"
+FT   DOMAIN          134..418
+FT                   /note="Proton_antipo_M"
+FT                   /evidence="ECO:0000259|Pfam:PF00361"
+FT   DOMAIN          422..601
+FT                   /note="NADH5_C"
+FT                   /evidence="ECO:0000259|Pfam:PF06455"
+SQ   SEQUENCE   606 AA;  68359 MW;  847195EB16EBC1B5 CRC64;
+     MNMFSSCMIT ALVILTLPII MSSTKLYKNK LYPYYVKTAT SYAFMISMIP TMMFIYSGQE
+     TIISNWHWMT IQTMKLSMSF KLDYFSMIFV PVALFVTWSI MEFSMWYMHS DPYINRFFKY
+     LLLFLITMMV LVTANNMFQL FIGWEGVGIM SFLLIGWWYG RTDANTAALQ AVLYNRIGDV
+     GFIMTMAWFP LNLNTWDLQQ IFITTNDNFN LPLLGLLLAA TGKSAQFGLH PWLPSAMEGP
+     TPVSALLHSS TMVVAGVFLL IRFHPLMEHN QTIQTLTLCL GAITTLFTAI CALTQNDIKK
+     IVAFSTSSQL GLMMVTIGIN QPYLAFLHIC THAFFKAMLF MCSGSVIHSL NDEQDIRKMG
+     GLFKVLPFTT TSLIIGSLAL TGMPFLTGFY SKDLIIESAN TSNTNAWALL ITLVATSLTA
+     AYSTRIMFFA LLGQPRFSPM ILINENNPLL INSIKRLLIG SVFAGYIISH SITPTTIPQM
+     TMPHYLKMTA LAVTTLGFIL ALELNLTTQG LKFNYPSNYF KFSSLLGYYP TIMHRLTPKT
+     SLTISQKSAS MLLDSIWLEN ILPKSISYFQ MKSSTLISNQ KGLIKLYFLS FMLTMILSLL
+     ILNYHG
+//
+ID   C4MUA4_CANLF            Unreviewed;       514 AA.
+AC   C4MUA4;
+DT   07-JUL-2009, integrated into UniProtKB/TrEMBL.
+DT   07-JUL-2009, sequence version 1.
+DT   22-APR-2020, entry version 52.
+DE   RecName: Full=Cytochrome c oxidase subunit 1 {ECO:0000256|RuleBase:RU000369};
+DE            EC=1.9.3.1 {ECO:0000256|RuleBase:RU000369};
+GN   Name=COX1 {ECO:0000313|EMBL:ACE01961.1};
+OS   Canis lupus familiaris (Dog) (Canis familiaris).
+OG   Mitochondrion {ECO:0000313|EMBL:ACE01961.1}.
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis.
+OX   NCBI_TaxID=9615 {ECO:0000313|EMBL:ACE01961.1};
+RN   [1] {ECO:0000313|EMBL:ACE01961.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=A51_10079 {ECO:0000313|EMBL:ACE01961.1},
+RC   A93_10083 {ECO:0000313|EMBL:ACE01974.1}, and
+RC   A9_10075 {ECO:0000313|EMBL:ACE02338.1};
+RA   Pang J., Kluetsch C., Zou X.-J., Zhang A.-B., Luo L.-Y., Angleby H.,
+RA   Ardalan A., Ekstrom C., Skollermo A., Lundeberg J., Matsumura S.,
+RA   Leitner T., Zhang Y.-P., Savolainen P.;
+RL   Submitted (JUN-2008) to the EMBL/GenBank/DDBJ databases.
+RN   [2] {ECO:0000313|EMBL:ACE01961.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=A51_10079 {ECO:0000313|EMBL:ACE01961.1},
+RC   A93_10083 {ECO:0000313|EMBL:ACE01974.1}, and
+RC   A9_10075 {ECO:0000313|EMBL:ACE02338.1};
+RX   PubMed=19723671; DOI=10.1093/molbev/msp195;
+RA   Pang J.F., Kluetsch C., Zou X.J., Zhang A.B., Luo L.Y., Angleby H.,
+RA   Ardalan A., Ekstrom C., Skollermo A., Lundeberg J., Matsumura S.,
+RA   Leitner T., Zhang Y.P., Savolainen P.;
+RT   "mtDNA data indicate a single origin for dogs south of Yangtze River, less
+RT   than 16,300 years ago, from numerous wolves.";
+RL   Mol. Biol. Evol. 26:2849-2864(2009).
+CC   -!- FUNCTION: Component of the cytochrome c oxidase, the last enzyme in the
+CC       mitochondrial electron transport chain which drives oxidative
+CC       phosphorylation. The respiratory chain contains 3 multisubunit
+CC       complexes succinate dehydrogenase (complex II, CII), ubiquinol-
+CC       cytochrome c oxidoreductase (cytochrome b-c1 complex, complex III,
+CC       CIII) and cytochrome c oxidase (complex IV, CIV), that cooperate to
+CC       transfer electrons derived from NADH and succinate to molecular oxygen,
+CC       creating an electrochemical gradient over the inner membrane that
+CC       drives transmembrane transport and the ATP synthase. Cytochrome c
+CC       oxidase is the component of the respiratory chain that catalyzes the
+CC       reduction of oxygen to water. Electrons originating from reduced
+CC       cytochrome c in the intermembrane space (IMS) are transferred via the
+CC       dinuclear copper A center (CU(A)) of subunit 2 and heme A of subunit 1
+CC       to the active site in subunit 1, a binuclear center (BNC) formed by
+CC       heme A3 and copper B (CU(B)). The BNC reduces molecular oxygen to 2
+CC       water molecules using 4 electrons from cytochrome c in the IMS and 4
+CC       protons from the mitochondrial matrix. {ECO:0000256|RuleBase:RU000369}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=4 [Fe(II)cytochrome c] + 4 H(+) + O2 = 4 [Fe(III)cytochrome c]
+CC         + 2 H2O; Xref=Rhea:RHEA:11436, Rhea:RHEA-COMP:10350, Rhea:RHEA-
+CC         COMP:14399, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:15379,
+CC         ChEBI:CHEBI:29033, ChEBI:CHEBI:29034;
+CC         Evidence={ECO:0000256|RuleBase:RU000369,
+CC         ECO:0000256|SAAS:SAAS01116619};
+CC   -!- COFACTOR:
+CC       Name=heme; Xref=ChEBI:CHEBI:30413;
+CC         Evidence={ECO:0000256|SAAS:SAAS01246731};
+CC   -!- PATHWAY: Energy metabolism; oxidative phosphorylation.
+CC       {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00887552}.
+CC   -!- SUBCELLULAR LOCATION: Mitochondrion inner membrane
+CC       {ECO:0000256|RuleBase:RU000369}; Multi-pass membrane protein
+CC       {ECO:0000256|RuleBase:RU000369}.
+CC   -!- SIMILARITY: Belongs to the heme-copper respiratory oxidase family.
+CC       {ECO:0000256|RuleBase:RU000369}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; EU789715; ACE01961.1; -; Genomic_DNA.
+DR   EMBL; EU789716; ACE01974.1; -; Genomic_DNA.
+DR   EMBL; EU789744; ACE02338.1; -; Genomic_DNA.
+DR   eggNOG; KOG4769; Eukaryota.
+DR   eggNOG; COG0843; LUCA.
+DR   UniPathway; UPA00705; -.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005743; C:mitochondrial inner membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0045277; C:respiratory chain complex IV; IEA:InterPro.
+DR   GO; GO:0004129; F:cytochrome-c oxidase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0020037; F:heme binding; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009060; P:aerobic respiration; IEA:InterPro.
+DR   GO; GO:0006119; P:oxidative phosphorylation; IEA:UniProtKB-UniPathway.
+DR   CDD; cd01663; Cyt_c_Oxidase_I; 1.
+DR   Gene3D; 1.20.210.10; -; 1.
+DR   InterPro; IPR023616; Cyt_c_oxase-like_su1_dom.
+DR   InterPro; IPR036927; Cyt_c_oxase-like_su1_sf.
+DR   InterPro; IPR000883; Cyt_C_Oxase_1.
+DR   InterPro; IPR023615; Cyt_c_Oxase_su1_BS.
+DR   InterPro; IPR033944; Cyt_c_oxase_su1_dom.
+DR   PANTHER; PTHR10422; PTHR10422; 1.
+DR   Pfam; PF00115; COX1; 1.
+DR   PRINTS; PR01165; CYCOXIDASEI.
+DR   SUPFAM; SSF81442; SSF81442; 1.
+DR   PROSITE; PS50855; COX1; 1.
+DR   PROSITE; PS00077; COX1_CUB; 1.
+PE   3: Inferred from homology;
+KW   Copper {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00887236};
+KW   Electron transport {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711106};
+KW   Heme {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711161};
+KW   Iron {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711161};
+KW   Membrane {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711122,
+KW   ECO:0000256|SAM:Phobius};
+KW   Metal-binding {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711161};
+KW   Mitochondrion {ECO:0000256|RuleBase:RU000369};
+KW   Mitochondrion inner membrane {ECO:0000256|RuleBase:RU000369};
+KW   Oxidoreductase {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711097};
+KW   Respiratory chain {ECO:0000256|RuleBase:RU000369,
+KW   ECO:0000256|SAAS:SAAS00711106};
+KW   Transmembrane {ECO:0000256|SAAS:SAAS00711122, ECO:0000256|SAM:Phobius};
+KW   Transmembrane helix {ECO:0000256|SAAS:SAAS00711122,
+KW   ECO:0000256|SAM:Phobius};
+KW   Transport {ECO:0000256|RuleBase:RU000369, ECO:0000256|SAAS:SAAS00711106}.
+FT   TRANSMEM        18..37
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        57..83
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        104..128
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        148..171
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        183..210
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        243..261
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        268..291
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        303..325
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        337..359
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        379..400
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        412..433
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   TRANSMEM        453..473
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|SAM:Phobius"
+FT   DOMAIN          1..514
+FT                   /note="COX1"
+FT                   /evidence="ECO:0000259|PROSITE:PS50855"
+SQ   SEQUENCE   514 AA;  57007 MW;  0FD2B3E8E73D7873 CRC64;
+     MFINRWLFST NHKDIGTLYL LFGAWAGMVG TALSLLIRAE LGQPGTLLGD DQIYNVIVTA
+     HAFVMIFFMV MPIMIGGFGN WLVPLMIGAP DMAFPRMNNM SFWLLPPSFL LLLASSMVEA
+     GAGTGWTVYP PLAGNLAHAG ASVDLTIFSL HLAGVSSILG AINFITTIIN MKPPAMSQYQ
+     TPLFVWSVLI TAVLLLLSLP VLAAGITMLL TDRNLNTTFF DPAGGGDPIL YQHLFWFFGH
+     PEVYILILPG FGMISHIVTY YSGKKEPFGY MGMVWAMVSI GFLGFIVWAH HMFTVGMDVD
+     TRAYFTSATM IIAIPTGVKV FSWLATLHGG NIKWSPAMLW ALGFIFLFTV GGLTGIVLAN
+     SSLDIVLHDT YYVVAHFHYV LSMGAVFAIM GGFAHWFPLF SGYTLNDTWA KIHFTIMFVG
+     VNMTFFPQHF LGLSGMPRRY SDYPDAYTTW NTVSSMGSFI SLTAVMLMIF MIWEAFASKR
+     EVAMVELTTT NIEWLHGCPP PYHTFEEPTY VIQK
+//
+ID   A0A172RRU7_CANLF        Unreviewed;       606 AA.
+AC   A0A172RRU7;
+DT   07-SEP-2016, integrated into UniProtKB/TrEMBL.
+DT   07-SEP-2016, sequence version 1.
+DT   26-FEB-2020, entry version 11.
+DE   RecName: Full=NADH-ubiquinone oxidoreductase chain 5 {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00061106};
+DE            EC=7.1.1.2 {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS01106874};
+GN   Name=ND5 {ECO:0000313|EMBL:ANE19323.1};
+OS   Canis lupus familiaris (Dog) (Canis familiaris).
+OG   Mitochondrion {ECO:0000313|EMBL:ANE19323.1}.
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis.
+OX   NCBI_TaxID=9615 {ECO:0000313|EMBL:ANE19323.1};
+RN   [1] {ECO:0000313|EMBL:ANE19323.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=800T {ECO:0000313|EMBL:ANE18687.1}, and
+RC   833T1 {ECO:0000313|EMBL:ANE19323.1};
+RX   PubMed=27185408;
+RA   Strakova A., Ni Leathlobhair M., Wang G.D., Yin T.T., Airikkala-Otter I.,
+RA   Allen J.L., Allum K.M., Bansse-Issa L., Bisson J.L.,
+RA   Castillo Domracheva A., de Castro K.F., Corrigan A.M., Cran H.R.,
+RA   Crawford J.T., Cutter S.M., Delgadillo Keenan L., Donelan E.M.,
+RA   Faramade I.A., Flores Reynoso E., Fotopoulou E., Fruean S.N.,
+RA   Gallardo-Arrieta F., Glebova O., Hafelin Manrique R.F., Henriques J.J.,
+RA   Ignatenko N., Koenig D., Lanza-Perea M., Lobetti R., Lopez Quintana A.M.,
+RA   Losfelt T., Marino G., Martincorena I., Martinez Castaneda S.,
+RA   Martinez-Lopez M.F., Meyer M., Nakanwagi B., De Nardi A.B., Neunzig W.,
+RA   Nixon S.J., Onsare M.M., Ortega-Pacheco A., Peleteiro M.C., Pye R.J.,
+RA   Reece J.F., Rojas Gutierrez J., Sadia H., Schmeling S.K., Shamanova O.,
+RA   Ssuna R.K., Steenland-Smit A.E., Svitich A., Thoya Ngoka I., Vitalaru B.A.,
+RA   de Vos A.P., de Vos J.P., Walkinton O., Wedge D.C., Wehrle-Martinez A.S.,
+RA   van der Wel M.G., Widdowson S.A., Murchison E.P.;
+RT   "Mitochondrial genetic diversity, selection and recombination in a canine
+RT   transmissible cancer.";
+RL   Elife 5:E14552-E14552(2016).
+CC   -!- FUNCTION: Core subunit of the mitochondrial membrane respiratory chain
+CC       NADH dehydrogenase (Complex I) that is believed to belong to the
+CC       minimal assembly required for catalysis. Complex I functions in the
+CC       transfer of electrons from NADH to the respiratory chain. The immediate
+CC       electron acceptor for the enzyme is believed to be ubiquinone.
+CC       {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00061107}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a ubiquinone + 5 H(+)(in) + NADH = a ubiquinol + 4 H(+)(out) +
+CC         NAD(+); Xref=Rhea:RHEA:29091, Rhea:RHEA-COMP:9565, Rhea:RHEA-
+CC         COMP:9566, ChEBI:CHEBI:15378, ChEBI:CHEBI:16389, ChEBI:CHEBI:17976,
+CC         ChEBI:CHEBI:57540, ChEBI:CHEBI:57945; EC=7.1.1.2;
+CC         Evidence={ECO:0000256|RuleBase:RU003404,
+CC         ECO:0000256|SAAS:SAAS01122516};
+CC   -!- SUBCELLULAR LOCATION: Mitochondrion inner membrane
+CC       {ECO:0000256|SAAS:SAAS00061113}; Multi-pass membrane protein
+CC       {ECO:0000256|SAAS:SAAS00061113}.
+CC   -!- SIMILARITY: Belongs to the complex I subunit 5 family.
+CC       {ECO:0000256|RuleBase:RU003404}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; KU290974; ANE18687.1; -; Genomic_DNA.
+DR   EMBL; KU291023; ANE19323.1; -; Genomic_DNA.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005743; C:mitochondrial inner membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0070469; C:respirasome; IEA:UniProtKB-KW.
+DR   GO; GO:0008137; F:NADH dehydrogenase (ubiquinone) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0042773; P:ATP synthesis coupled electron transport; IEA:InterPro.
+DR   InterPro; IPR010934; NADH_DH_su5_C.
+DR   InterPro; IPR003945; NADHpl_OxRdtase_5.
+DR   InterPro; IPR001750; ND/Mrp_mem.
+DR   InterPro; IPR001516; Proton_antipo_N.
+DR   Pfam; PF06455; NADH5_C; 1.
+DR   Pfam; PF00361; Proton_antipo_M; 1.
+DR   Pfam; PF00662; Proton_antipo_N; 1.
+DR   TIGRFAMs; TIGR01974; NDH_I_L; 1.
+PE   3: Inferred from homology;
+KW   Electron transport {ECO:0000256|SAAS:SAAS00448195};
+KW   Membrane {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448105,
+KW   ECO:0000256|SAAS:SAAS00464492};
+KW   Mitochondrion {ECO:0000256|SAAS:SAAS00448105};
+KW   Mitochondrion inner membrane {ECO:0000256|SAAS:SAAS00448105};
+KW   NAD {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448053};
+KW   Respiratory chain {ECO:0000256|SAAS:SAAS00448195};
+KW   Translocase {ECO:0000256|SAAS:SAAS01106877};
+KW   Transmembrane {ECO:0000256|RuleBase:RU003404,
+KW   ECO:0000256|SAAS:SAAS00464492};
+KW   Transmembrane helix {ECO:0000256|RuleBase:RU003404,
+KW   ECO:0000256|SAAS:SAAS00464492}; Transport {ECO:0000256|SAAS:SAAS00448195};
+KW   Ubiquinone {ECO:0000256|RuleBase:RU003404, ECO:0000256|SAAS:SAAS00448240}.
+FT   TRANSMEM        6..27
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        39..58
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        84..105
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        117..134
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        140..160
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        172..191
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        245..263
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        275..294
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        362..386
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        406..432
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        453..472
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        484..502
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   TRANSMEM        586..605
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000256|RuleBase:RU003404"
+FT   DOMAIN          65..121
+FT                   /note="Proton_antipo_N"
+FT                   /evidence="ECO:0000259|Pfam:PF00662"
+FT   DOMAIN          134..418
+FT                   /note="Proton_antipo_M"
+FT                   /evidence="ECO:0000259|Pfam:PF00361"
+FT   DOMAIN          422..601
+FT                   /note="NADH5_C"
+FT                   /evidence="ECO:0000259|Pfam:PF06455"
+SQ   SEQUENCE   606 AA;  68361 MW;  014A6AC2505EF506 CRC64;
+     MNMFSSCMIT ALVILTLPII MSSTKLYKNK LYPYYVKTAT SYAFMISMIP TMMFIYSGQE
+     TIISNWHWMT IQTMKLSMSF KLDYFSMIFV PVALFVTWSI MEFSMWYMHS DPYINRFFKY
+     LLLFLITMMV LVTANNMFQL FIGWEGVGIM SFLLIGWWYG RTDANTAALQ AVLYNRIGDV
+     GFIMTMAWFL LNLNTWDLQQ IFITTNDNFN LPLLGLLLAA TGKSAQFGLH PWLPSAMEGP
+     TPASALLHSS TMVVAGVFLL IRFHPLMEHN QTIQTLTLCL GAITTLFTAI CALTQNDIKK
+     IVAFSTSSQL GLMMVTIGIN QPYLAFLHIC THAFFKAMLF MCSGSVIHSL NNEQDIRKMG
+     GLFKVLPFTT TSLIIGSLAL TGMPFLTGFY SKDLIIESAN TSNTNAWALL ITLVATSLTA
+     AYNTRIMFFA LLGQPRFSPM ILINENNPLL INSIKRLLIG SVFAGYIISH SITPTTTPQM
+     TMPHYLKMTA LAVTTLGFIL ALELNLTTQG LKFNYPSNYF KFSSLLGYYP TIMHRLTPKT
+     SLTISQKSAS MLLDSIWLEN ILPKSISYFQ MKSSTLISNQ KGLIKLYFLS FMLTMILSLL
+     ILNYHG
+//

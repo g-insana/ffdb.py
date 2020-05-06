@@ -4,6 +4,8 @@ tests for ffdb
 simply run 'pytest' to run all tests
 """
 import ffdb
+import pytest
+from subprocess import Popen, PIPE, DEVNULL
 
 data = """
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -27,8 +29,15 @@ entry['position'] = 0
 entry['ids'] = ['lorem', 'ipsum', 'lorem ipsum']
 entry['iv'] = b'N\x8e\xd8\xae\x08\x0c\x18\xab\xf4_\x93\x87\x95\x01\x01X'
 
-#def test_indexing(tmpdir):
-#   tmpdir is path to temp dir that can be used for testing
+testfile = 'dogtest.dat' #8 UniProt entries of Canis lupus familiaris
+testindex_ac = 'dogtest.ac.idx'
+testlist_ac = 'dogtest.ac'
+
+
+@pytest.fixture(scope="session")
+def tmp_test_dir(tmpdir_factory):
+    temporary_test_dir = tmpdir_factory.mktemp("ffdb")
+    return temporary_test_dir
 
 
 class TestIndexFormats:
@@ -109,3 +118,36 @@ class TestEntryProcessing:
                                                                       )).decode('UTF-8')
             assert decrypted_data == data
             assert decrypted_uncompressed_data == data
+
+
+class TestFileIndexing:
+    def test_datafiles_io(self, tmp_test_dir):
+        """
+        Check test datafiles are in place and readable/writeable
+        """
+        tmpwrite = tmp_test_dir.join("tmpwrite")
+        ffdb.check_iofiles([testfile, testindex_ac], [tmpwrite])
+
+    def test_entry_indexing(self):
+        """
+        Check for correct indexing of file
+        """
+        ffdb.check_iofiles([testfile, testindex_ac], [])
+        indexer_call = ['indexer.py', '-i', '^AC   (.+?);', '-e', '^//$',
+                        '-f', testfile, '-x']
+        indexer_pipe = Popen(indexer_call, stdout=PIPE, stderr=DEVNULL)
+        with open(testindex_ac, 'rb') as fh:
+            for line1, line2 in zip(fh, indexer_pipe.stdout.readlines()):
+                assert line1 == line2
+
+    def test_entry_extraction(self):
+        """
+        Check for correct entry extraction
+        """
+        ffdb.check_iofiles([testfile, testindex_ac], [])
+        extractor_call = ['extractor.py', '-f', testfile, '-i', testindex_ac,
+                          '-l', testlist_ac, '-x']
+        extractor_pipe = Popen(extractor_call, stdout=PIPE, stderr=DEVNULL)
+        with open(testfile, 'rb') as fh:
+            for line1, line2 in zip(fh, extractor_pipe.stdout.readlines()):
+                assert line1 == line2
