@@ -44,7 +44,7 @@ for each of the utility scripts:
 
 ## Download and installation
 
-`ffdb` is pure python code. It has no platform-specific dependencies and should thus work on all platforms. It requires the packages `requests` `pycrypto` and `sortedcontainers`.
+`ffdb` is pure python code. It has no platform-specific dependencies and should thus work on all platforms. It requires the packages `requests` `pycryptodomex` and `sortedcontainers`.
 The latest version of `ffdb` can be installed by typing either:
 
 ``` bash

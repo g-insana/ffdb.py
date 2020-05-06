@@ -1,4 +1,4 @@
 requests>=2.18.4
 sortedcontainers>=2.1.0
 tqdm>=4.28.1
-pycrypto>=2.6.1
+pycryptodomex>=3.9.7

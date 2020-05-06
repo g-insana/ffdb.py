@@ -15,9 +15,9 @@ import zlib
 from math import ceil
 from heapq import merge #alternative mergesort
 from requests import get #for remote flatfiles
-from Crypto.Cipher import AES
-from Crypto.Protocol import KDF
-from Crypto import Random
+from Cryptodome.Cipher import AES
+from Cryptodome.Protocol import KDF
+from Cryptodome import Random
 
 # pylint: disable=C0103,R0912,R0915,W0603
 VERSION = 2.2

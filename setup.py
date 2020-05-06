@@ -5,7 +5,7 @@ with open("README_brief.md", "r") as fh:
 
 setuptools.setup(
     name="ffdb",
-    version="2.2.2",
+    version="2.3",
     author="Dr Giuseppe Insana",
     author_email="insana@insana.net",
     description="ffdb",
@@ -24,7 +24,7 @@ setuptools.setup(
     install_requires=[
         "sortedcontainers",
         "requests",
-        "pycrypto"
+        "pycryptodomex"
     ],
     python_requires=">=3.5",
 )
