@@ -407,8 +407,6 @@ def check_args():
                     eprint("       Use -I option to override")
             if args.verbose:
                 eprint(" |-- building hash of compressed index points..")
-        find_compressratio() #find how much data was compressed
-        build_u2c_map() #to build uncompressed to compressed index mapping
         if args.remote:
             args.dlfiles_prefix = TEMPDIR + "/tmpEXTRACTdl" + randnum
 
@@ -438,6 +436,8 @@ def check_files():
         check_iofiles([args.flatfile], [])
     if args.compressed:
         check_iofiles([args.gzindex], [])
+        find_compressratio() #find how much data was compressed
+        build_u2c_map() #to build uncompressed to compressed index mapping
     if args.list_filename is not None:
         check_iofiles([args.list_filename], [])
     if args.output_filename is not None:
