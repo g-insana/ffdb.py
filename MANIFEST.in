@@ -6,3 +6,6 @@ include LICENSE
 
 # Include the scripts
 recursive-include scripts *.py
+
+# Exclude tempdirs
+global-exclude .ropeproject/* .vimbak/*

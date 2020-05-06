@@ -48,7 +48,7 @@ for each of the utility scripts:
 The latest version of `ffdb` can be installed by typing either:
 
 ``` bash
-~~pip3 install ffdb~~ (NOT YET)
+pip3 install ffdb
 ```
   (from [Python Package Index](https://pypi.org/project/ffdb/))
 
@@ -105,8 +105,6 @@ $ merger.py -f mydb -i mydb.idx -e newentries -n newentries.idx -d #(mydb will i
 
 $ remover.py -f addressbook -i addressbook.idx -l disagreed_with_me.list
 ```
-
-## Guided example
 
 ## Copyright
 
