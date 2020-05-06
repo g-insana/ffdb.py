@@ -29,9 +29,9 @@ entry['position'] = 0
 entry['ids'] = ['lorem', 'ipsum', 'lorem ipsum']
 entry['iv'] = b'N\x8e\xd8\xae\x08\x0c\x18\xab\xf4_\x93\x87\x95\x01\x01X'
 
-testfile = 'dogtest.dat' #8 UniProt entries of Canis lupus familiaris
-testindex_ac = 'dogtest.ac.idx'
-testlist_ac = 'dogtest.ac'
+testfile = 'tests/dogtest.dat' #8 UniProt entries of Canis lupus familiaris
+testindex_ac = 'tests/dogtest.ac.idx'
+testlist_ac = 'tests/dogtest.ac'
 
 
 @pytest.fixture(scope="session")
