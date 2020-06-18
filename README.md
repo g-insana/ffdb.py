@@ -58,7 +58,8 @@ pip3 install git+git://github.com/g-insana/ffdb.py.git
 ```
   (from [GitHub](https://github.com/g-insana/ffdb.py/)).
 
-The utility scripts should get installed for you by pip.
+The utility scripts should get installed for you by pip (if installed as --user you
+may need to add e.g. ~/.local/bin/ to your $PATH).
 Alternatively, you can directly download those you need:
 
 ``` bash
