@@ -16,6 +16,7 @@ import time
 import zlib
 import getpass
 import argparse
+from requests import get #for remote flatfiles via http
 from random import randint
 #OPTIONAL IMPORTS (uncomment any of the following if never needed):
 from subprocess import run, Popen, PIPE, DEVNULL #for compressed flatfiles via gztool
@@ -26,8 +27,7 @@ from ffdb import eprint, inflate, derive_key, check_index, \
     delete_files, REES, REESIV, GZTOOL_EXE, TEMPDIR, \
     init_cipher, check_iofiles, b64_to_int, \
     calculate_chunknum, calculate_blocksize, chunk_of_lines, siprefix2num, \
-    read_from_size, retrieve_from_size, \
-    print_subfiles, close_subfiles, elapsed_time, int_to_b64, \
+    read_from_size, print_subfiles, close_subfiles, elapsed_time, int_to_b64, \
     get_position_first, get_position_last, \
     get_position_checksum_first, get_position_checksum_last, \
     get_positions, get_positions_checksums, PROGRESSBARCHARS
@@ -128,6 +128,29 @@ def retrieve_compressed_chunk(chunkstart, chunksize, temp_dl_file, gzchunk_file)
     if args.keepcache: #store the downloaded gzchunk in the cache
         #eprint(" |-- storing new gzchunk file in cache: '{}'".format(gzchunk_file)) #debug
         os.rename(temp_dl_file, gzchunk_file)
+
+
+def retrieve_from_size(url, begin, size):
+    """
+    reads from remote url a specified amount of bytes
+    """
+    end = begin + size - 1
+    headers = {'user-agent': 'ffdb/2.2.0',
+               'Accept-Encoding': 'identity',
+               'range': 'bytes={}-{}'.format(begin, end)}
+
+    if url[0:3] == "ftp":
+        eprint("   => Sorry, ftp scheme not currently supported for range retrieval")
+        sys.exit(5)
+    else: #http
+        r = get(url, headers=headers)
+    #eprint("request headers: {}".format(r.request.headers)) #debug
+    #eprint("response headers: {}".format(r.headers)) #debug
+    if r.status_code in (200, 206):
+        return r.content
+    eprint("    => ERROR: problems retrieving entry, http status code is '{}' ({})".format(
+        r.status_code, r.reason))
+    return None
 
 
 def find_compressratio():
