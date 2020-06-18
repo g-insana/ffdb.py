@@ -14,13 +14,12 @@ import time
 import zlib
 from math import ceil
 from heapq import merge #alternative mergesort
-from requests import get #for remote flatfiles
 from Cryptodome.Cipher import AES
 from Cryptodome.Protocol import KDF
 from Cryptodome import Random
 
 # pylint: disable=C0103,R0912,R0915,W0603
-VERSION = 2.2
+VERSION = 2.3.3
 
 #CUSTOMIZATIONS:
 
@@ -612,22 +611,6 @@ def read_from_size(fh, begin, size):
     """
     fh.seek(begin)
     return fh.read(size)
-
-
-def retrieve_from_size(url, begin, size):
-    """
-    reads from remote url a specified amount of bytes
-    """
-    end = begin + size - 1
-    headers = {'user-agent': 'ffdb/2.2.0', "range": "bytes={}-{}".format(begin, end)}
-    r = get(url, headers=headers)
-    #eprint("request headers: {}".format(r.request.headers)) #debug
-    #eprint("response headers: {}".format(r.headers)) #debug
-    if r.status_code in (200, 206):
-        return r.content
-    eprint("    => ERROR: problems retrieving entry, http status code is '{}' ({})".format(
-        r.status_code, r.reason))
-    return None
 
 
 def delete_files(filenames):
