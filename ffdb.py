@@ -19,7 +19,7 @@ from Cryptodome.Protocol import KDF
 from Cryptodome import Random
 
 # pylint: disable=C0103,R0912,R0915,W0603
-VERSION = '2.3.4'
+VERSION = '2.3.5'
 
 #CUSTOMIZATIONS:
 
@@ -30,8 +30,11 @@ SALT = b'5ed3a4284d6a9c1e4e4f6b4729b254be'
 #change the following if you prefer space or other delimiter for the index
 FIELDSEPARATOR = "\t"
 
-#customize the temporary directory used:
-TEMPDIR = "/tmp"
+#define temporary directory
+if 'TMPDIR' in os.environ and os.environ['TMPDIR'] != '':
+    TEMPDIR = os.environ['TMPDIR']
+else:
+    TEMPDIR = "/tmp"
 
 #customize the progress bar (for multithread verbose progress)
 #PROGRESSBARCHARS = False #use this for standard unicode smooth blocks

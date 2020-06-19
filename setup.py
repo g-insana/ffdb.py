@@ -5,7 +5,7 @@ with open("README_brief.md", "r") as fh:
 
 setuptools.setup(
     name="ffdb",
-    version="2.3.3",
+    version="2.3.5",
     author="Dr Giuseppe Insana",
     author_email="insana@insana.net",
     description="ffdb",
