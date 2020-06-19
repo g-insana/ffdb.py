@@ -16,12 +16,12 @@ import time
 import zlib
 import getpass
 import argparse
-from requests import get #for remote flatfiles via http
 from random import randint
 #OPTIONAL IMPORTS (uncomment any of the following if never needed):
 from subprocess import run, Popen, PIPE, DEVNULL #for compressed flatfiles via gztool
 from multiprocessing import Pool, Array #for multithreaded
 from tqdm import tqdm #for progress bar
+from requests import get #for remote flatfiles via http
 #NECESSARY IMPORTS
 from ffdb import eprint, inflate, derive_key, check_index, \
     delete_files, REES, REESIV, GZTOOL_EXE, TEMPDIR, \
@@ -140,7 +140,7 @@ def retrieve_from_size(url, begin, size):
                'range': 'bytes={}-{}'.format(begin, end)}
 
     if url[0:3] == "ftp":
-        eprint("   => Sorry, ftp scheme not currently supported for range retrieval")
+        eprint("    => ERROR: ftp scheme not supported for range retrieval")
         sys.exit(5)
     else: #http
         r = get(url, headers=headers)
@@ -441,7 +441,8 @@ def check_args():
         args.gzcache_dir = TEMPDIR + "/tmpEXTRACTcache/" + args.remote_name + "/"
         args.gzchunks_fprefix = args.gzcache_dir + "GZ"
         if args.verbose:
-            eprint(" |-- using cache of compressed chunks at '{}'".format(args.gzcache_dir)) #debug
+            eprint(" |-- using cache of compressed chunks at '{}'".format(args.gzcache_dir))
+            eprint(" |-- (you can use environment variable TMPDIR to change this location)")
 
 
 def check_files():
