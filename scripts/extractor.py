@@ -16,10 +16,12 @@ import time
 import zlib
 import getpass
 import argparse
+from math import ceil
 from random import randint
+from sortedcontainers import SortedList #if sorted output
 #OPTIONAL IMPORTS (uncomment any of the following if never needed):
 from subprocess import run, Popen, PIPE, DEVNULL #for compressed flatfiles via gztool
-from multiprocessing import Pool, Array #for multithreaded
+from multiprocessing import Pool, Array, current_process #for multithreaded
 from tqdm import tqdm #for progress bar
 from requests import get #for remote flatfiles via http
 #NECESSARY IMPORTS
@@ -60,9 +62,25 @@ GZCHUNKSPAN = 10485760 #10Mib
 RECOMPRESSRATIO = re.compile(r'^\tGuessed gzip.* \(([0-9.]+)%\) .*$', re.MULTILINE)
 REGZINDEX = re.compile(r'^#([0-9]+): @ ([0-9]+) / ([0-9]+) .*$')
 PROGNAME = "extractor.py"
-VERSION = "2.5"
+VERSION = "3.1"
 AUTHOR = "Giuseppe Insana"
 args = None
+
+
+def unzip(iterable):
+    """
+    reverse of zip
+    """
+    return zip(*iterable)
+
+
+def batch(iterable, batchsize=1):
+    """
+    split iterable in constant-size chunks
+    """
+    length = len(iterable)
+    for index in range(0, length, batchsize):
+        yield iterable[index:min(index + batchsize, length)]
 
 
 def find_chunkstart_size(startpos, entrysize):
@@ -135,7 +153,7 @@ def retrieve_from_size(url, begin, size):
     reads from remote url a specified amount of bytes
     """
     end = begin + size - 1
-    headers = {'user-agent': 'ffdb/2.2.0',
+    headers = {'user-agent': 'ffdb/2.3.6',
                'Accept-Encoding': 'identity',
                'range': 'bytes={}-{}'.format(begin, end)}
 
@@ -261,6 +279,10 @@ def check_args():
     parser.add_argument('-o', '--outfile', dest='output_filename',
                         help="optionally write output to file rather than to stdout",
                         required=False, type=str)
+    parser.add_argument('-m', '--mergedretrieval', dest='merged', action='store_true',
+                        help="merge and retrieve together adjacent entries (requires more memory \
+                        and processing but could prove much faster for remote extraction)",
+                        required=False)
     parser.add_argument('-v', '--verbose', dest='verbose', action='store_true',
                         help="verbose operation", required=False)
     parser.add_argument('-d', '--duplicates', dest='duplicates', action='store_true',
@@ -308,9 +330,11 @@ def check_args():
 
     if args.verbose:
         if args.zfound:
-            eprint(" |-- In case of duplicate ids, the last entry in ff will be extracted")
+            eprint(" |-- in case of duplicate ids, the last entry in ff will be extracted")
         elif args.duplicates:
-            eprint(" |-- In case of duplicate ids, all entries in ff will be extracted")
+            eprint(" |-- in case of duplicate ids, all entries in ff will be extracted")
+            if args.threads is not None and not args.merged:
+                eprint("    => NOTICE: -m recommended if many entries with same identifier requested in multithreading")
 
     if args.flatfile[-3:] == ".gz" and not args.compressed:
         eprint("    => NOTICE: -f argument has extension .gz: assuming flatfile is compressed")
@@ -335,33 +359,41 @@ def check_args():
         if args.threads is None:
             eprint("    => ERROR: specifying blocksize makes sense only for -t execution")
             sys.exit(22)
-        if args.verbose:
-            eprint(" |-- blocksize set to {} bytes".format(args.list_blocksize))
+        if args.merged:
+            eprint("    => NOTICE: ignoring blocksize in mergedretrieval mode")
+        else:
+            if args.verbose:
+                eprint(" |-- blocksize set to {} bytes".format(args.list_blocksize))
     if args.threads is not None: #multithread
-        if args.identifiers is not None:
-            eprint("    => ERROR: No sense specifying multithreading for --single extraction")
+        if args.identifiers is not None and not args.merged:
+            eprint("    => ERROR: No sense specifying multithreading for --single extraction unless --mergedretrieval is used")
             sys.exit(22)
         if args.threads < 2:
             eprint("    => ERROR: No sense specifying a number of threads lower than 2!")
             sys.exit(22)
-        if args.list_blocksize is None:
-            #if not specified, we use 1/threadnumTH of filesize up to a minimum MINBLOCKSIZE
-            args.list_blocksize = max(
-                calculate_blocksize(args.list_filename, args.threads),
-                siprefix2num(MINBLOCKSIZE))
         args.mt_subfiles_prefix = TEMPDIR + "/tmpEXTRACTmts" + randnum
-        #args.list_filesize, args.list_blocksize = calculate_blocksize(
-        #   args.list_filename, args.threads)
-        args.list_filesize, args.chunks_count = calculate_chunknum(
-            args.list_filename, args.list_blocksize)
+        if args.merged:
+            args.chunks_count = args.threads
+        else:
+            if args.list_blocksize is None:
+                #if not specified, we use 1/threadnumTH of filesize up to a minimum MINBLOCKSIZE
+                args.list_blocksize = max(
+                    calculate_blocksize(args.list_filename, args.threads),
+                    siprefix2num(MINBLOCKSIZE))
+            args.list_filesize, args.chunks_count = calculate_chunknum(
+                args.list_filename, args.list_blocksize)
+            if args.verbose:
+                eprint(" |-- parallel work in {} chunks of maximum {} bytes (-b to change)".format(
+                    args.chunks_count, args.list_blocksize))
         if args.verbose:
-            eprint(" |-- Parallel work in {} chunks of maximum {} bytes (-b to change)".format(
-                args.chunks_count, args.list_blocksize))
             eprint(" |-- using maximum {} parallel threads (-t); your OS reports {} cpus.".format(
                 args.threads, os.cpu_count()))
     else: # if unspecified, set args.threads to 1
         args.threads = 1
         args.chunks_count = 1
+
+    if args.verbose and args.merged:
+        eprint(" |-- using merged retrieval for adjacent entries")
 
     args.decrypt = False
     args.deflated = False
@@ -505,62 +537,86 @@ def check_files():
                 sys.exit(1)
 
 
-def print_entry(entry, identifier, fh, chunknum):
+def print_entry(entry, identifier, fh, chunknum, merged=None):
     """
     apply eventual post-processing and then print entry to filehandle
     """
-    entryenc = None
-    if args.decrypt:
-        iv = b''.fromhex(entry['iv']) #convert from hex to bytes
-        cipher = init_cipher(args.key, iv)
-        if args.deflated:
+    if merged is not None:
+        #eprint("got merged: {} of size {}".format(merged, len(entry['content']))) #debug
+        for collated in merged:
+            subentry = dict()
+            #unpack collated information
+            if args.xsanity:
+                if args.decrypt:
+                    position, entry_length, subentry['iv'], \
+                        subentry['checksum'], identifier = collated
+                else:
+                    position, entry_length, subentry['checksum'], identifier = collated
+            elif args.decrypt:
+                position, entry_length, subentry['iv'], identifier = collated
+                #eprint("got subentry {}: {}-{} {}".format(identifier,
+                #                                         position, entry_length,
+                #                                         subentry['iv'])) #debug
+            else:
+                position, entry_length, identifier = collated
+                #eprint("got subentry {}: {}-{}".format(identifier, position, entry_length)) #debug
+            subentry['content'] = entry['content'][position:position + entry_length]
+            #now call again print_entry for each entry making up the merged entry
+            print_entry(subentry, identifier, fh, chunknum)
+    else:
+        entryenc = None
+        #eprint("printing entry for {} of size {}".format(identifier, len(entry['content']))) #debug
+        if args.decrypt:
+            iv = b''.fromhex(entry['iv']) #convert from hex to bytes
+            cipher = init_cipher(args.key, iv)
+            if args.deflated:
+                try:
+                    entryenc = inflate(cipher.decrypt(entry['content']))
+                except IOError:
+                    entryenc = None
+                    corrupted_count[chunknum] += 1
+                    if args.verbose:
+                        eprint("    => WARNING: could not decrypt entry for identifier {}".format(
+                            identifier))
+            else:
+                try:
+                    entryenc = cipher.decrypt(entry['content'])
+                except IOError:
+                    entryenc = None
+                    corrupted_count[chunknum] += 1
+                    if args.verbose:
+                        eprint("    => WARNING: could not decrypt or inflate entry")
+                        eprint("       for identifier {}".format(identifier))
+        elif args.deflated:
             try:
-                entryenc = inflate(cipher.decrypt(entry['content']))
+                entryenc = inflate(entry['content'])
             except IOError:
                 entryenc = None
                 corrupted_count[chunknum] += 1
                 if args.verbose:
-                    eprint("    => WARNING: could not decrypt entry for identifier {}".format(
-                        identifier))
-        else:
-            try:
-                entryenc = cipher.decrypt(entry['content'])
-            except IOError:
-                entryenc = None
-                corrupted_count[chunknum] += 1
-                if args.verbose:
-                    eprint("    => WARNING: could not decrypt or inflate entry")
+                    eprint("    => WARNING: could not inflate entry")
                     eprint("       for identifier {}".format(identifier))
-    elif args.deflated:
-        try:
-            entryenc = inflate(entry['content'])
-        except IOError:
-            entryenc = None
-            corrupted_count[chunknum] += 1
-            if args.verbose:
-                eprint("    => WARNING: could not inflate entry")
-                eprint("       for identifier {}".format(identifier))
-    else:
-        entryenc = entry['content']
-
-    if entryenc:
-        if args.xsanity:
-            entry_checksum = int_to_b64(zlib.crc32(entryenc))
-            if entry_checksum != entry['checksum']:
-                if args.verbose:
-                    eprint("    => WARNING: Skipping entry due to failed checksum sanity check")
-                    eprint("                for identifier {}".format(identifier))
-                corrupted_count[chunknum] += 1
-                return
-        extracted_count[chunknum] += 1
-        if fh.mode == 'w':
-            fh.write(entryenc.decode('UTF-8'))
         else:
-            fh.write(entryenc)
-        fh.flush()
-    else:
-        if args.verbose:
-            eprint("    => WARNING: skipping empty entry for '{}'".format(identifier))
+            entryenc = entry['content']
+
+        if entryenc:
+            if args.xsanity:
+                entry_checksum = int_to_b64(zlib.crc32(entryenc))
+                if entry_checksum != entry['checksum']:
+                    if args.verbose:
+                        eprint("    => WARNING: Skipping entry due to failed checksum sanity check")
+                        eprint("                for identifier {}".format(identifier))
+                    corrupted_count[chunknum] += 1
+                    return
+            extracted_count[chunknum] += 1
+            if fh.mode == 'w':
+                fh.write(entryenc.decode('UTF-8'))
+            else:
+                fh.write(entryenc)
+            fh.flush()
+        else:
+            if args.verbose:
+                eprint("    => WARNING: skipping empty entry for '{}'".format(identifier))
     return
 
 
@@ -595,14 +651,130 @@ def fetch_compressed_entry(flatfile, position, entry_length):
         return gztool_pipe.stdout.read(entry_length)
 
 
+def collect_index(indexfh, identifier):
+    """
+    find and decode position of entries corresponding to specified identifier from index
+    return zipped arrays of decoded positions, sizes and optionally iv and checksums
+    """
+    if args.duplicates:
+        if args.xsanity:
+            positions, checksums = get_positions_checksums(indexfh, identifier)
+        else:
+            positions = get_positions(indexfh, identifier)
+    elif args.zfound:
+        if args.xsanity:
+            position, checksum = get_position_checksum_last(indexfh, identifier)
+            positions = [position]
+            checksums = [checksum]
+        else:
+            positions = [get_position_last(indexfh, identifier)]
+    else:
+        if args.xsanity:
+            position, checksum = get_position_checksum_first(indexfh, identifier)
+            positions = [position]
+            checksums = [checksum]
+        else:
+            positions = [get_position_first(indexfh, identifier)]
+
+    if not positions or positions == [None]: #empty array
+        if args.verbose:
+            eprint("    => WARNING: '{}' not found in index; skipping".format(identifier))
+        return []
+
+    found_positions = list()
+    found_lengths = list()
+    if args.decrypt:
+        found_iv = list() #to store iv
+
+    found_count[0] += len(positions)
+
+    identifiers = [identifier] * len(positions) #to identify entries failing to extract
+
+    for position in positions:
+        iv = ''
+        checksum = ''
+        #1) extract position and entry size
+        if args.decrypt: #with iv
+            posmatch = REESIV.match(position)
+            position, entry_length, iv = posmatch.groups()
+            found_iv.append(iv)
+        else: #no iv
+            posmatch = REES.match(position)
+            position, entry_length = posmatch.groups()
+
+        found_positions.append(b64_to_int(position)) #integer position
+        found_lengths.append(b64_to_int(entry_length)) #integer entry size
+
+    if args.xsanity:
+        if args.decrypt:
+            return zip(found_positions, found_lengths, found_iv, checksums, identifiers)
+        else:
+            return zip(found_positions, found_lengths, checksums, identifiers)
+    elif args.decrypt:
+        return zip(found_positions, found_lengths, found_iv, identifiers)
+    else:
+        return zip(found_positions, found_lengths, identifiers)
+
+
+def merge_adjacent(found_indexes):
+    """
+    find if adjacent entries requested and group them together before extraction
+    strategy:
+    check whether next entry follows previous.
+     if yes: add to a merged entry with same position, sum of entry_sizes,
+     collation of remaining data and keeping original entries' size and pos for
+     later unpacking by print_entry
+     otherwise: keep as normal (isolated) entry
+    """
+    merged_indexes = list()
+    prev_position = prev_length = 0.1 #bogus for first comparison
+    prev_rest = []
+    merged_length = 0
+    merged_position = None
+    merged_collated = list()
+    for position, entry_length, *rest in found_indexes:
+        if prev_position + prev_length == position:
+            #eprint('{}-{} is adjacent to {}-{}, MERGING'.format(position, entry_length,
+            #                                                   prev_position, prev_length))
+            merged_length += prev_length
+            if merged_position is None:
+                merged_position = prev_position
+            merged_collated.append((prev_position - merged_position, prev_length, *prev_rest))
+        else:
+            #eprint('{}-{} NOT adjacent to {}-{}'.format(position, entry_length,
+            #                                           prev_position, prev_length))
+            if merged_length:
+                merged_length += prev_length
+                merged_collated.append((prev_position - merged_position, prev_length, *prev_rest))
+                merged_indexes.append((merged_position, merged_length, merged_collated))
+                merged_length = 0 #reset
+                merged_position = None #reset
+                merged_collated = []
+            else:
+                merged_indexes.append((prev_position, prev_length, *prev_rest))
+        prev_position = position
+        prev_length = entry_length
+        prev_rest = rest
+    if merged_length: # if we arrive to the end with an opened merged entry
+        #eprint("Final append of merged entry for {}-{}".format(position, entry_length)) #debug
+        merged_length += entry_length
+        merged_collated.append((position - merged_position, entry_length, *prev_rest))
+        merged_indexes.append((merged_position, merged_length, merged_collated))
+    else: # last isolated entry
+        #eprint("Final append of isolated entry for {}-{}".format(position, entry_length)) #debug
+        merged_indexes.append((position, entry_length, *prev_rest))
+
+    merged_indexes.pop(0) #remove bogus first element
+
+    del found_indexes
+    return merged_indexes
+
+
 def extract_entry(flatfilefh, indexfh, identifier, chunknum):
     """
     find position of entry corresponding to specified identifier from index
-    extract the entry from the flatfile
-    call print_entry
-    Note: for remote flatfiles, flatfilefh is ignored, using instead args.flatfile (the url)
+    calls retrieve_entry (which calls print_entry)
     """
-    entry = dict()
     if args.duplicates:
         if args.xsanity:
             positions, checksums = get_positions_checksums(indexfh, identifier)
@@ -628,17 +800,19 @@ def extract_entry(flatfilefh, indexfh, identifier, chunknum):
             eprint("    => WARNING: '{}' not found in index; skipping".format(identifier))
         return
 
+    found_count[chunknum] += len(positions)
+    iv = None
+    checksum = None
     for position in positions:
-        found_count[chunknum] += 1
         #1) extract position and entry size
         if args.decrypt: #with iv
             posmatch = REESIV.match(position)
-            position, entry_length, entry['iv'] = posmatch.groups()
+            position, entry_length, iv = posmatch.groups()
         else: #no iv
             posmatch = REES.match(position)
             position, entry_length = posmatch.groups()
         if args.xsanity:
-            entry['checksum'] = checksums.pop(0)
+            checksum = checksums.pop(0)
 
         #2) decode position
         position = b64_to_int(position)
@@ -649,41 +823,151 @@ def extract_entry(flatfilefh, indexfh, identifier, chunknum):
         #      chunknum, identifier, position, entry_length)) #debug
 
         #3) retrieve entry
-        if args.compressed: #gzipped flatfile
-            if args.remote:
-                chunkstart, chunksize, gzchunk_file = find_chunkstart_size(position,
-                                                                           entrysize=entry_length)
-                if chunksize != 0: #cache file already exists, no need to retrieve
-                    retrieve_compressed_chunk(chunkstart, chunksize,
-                                              args.chunk_dl_tempfiles[chunknum], gzchunk_file)
-                #else: #debug
-                #   if args.verbose:
-                #       eprint(" |-- using cached gzchunk file: '{}'".format(gzchunk_file)) #debug
-                if args.keepcache:
+        retrieve_entry(flatfilefh, identifier, position, entry_length, chunknum, iv=iv,
+                       checksum=checksum)
 
-                    entry['content'] = fetch_compressed_entry(gzchunk_file, position, entry_length)
-                else:
-                    entry['content'] = fetch_compressed_entry(args.chunk_dl_tempfiles[chunknum],
-                                                              position, entry_length)
+
+def retrieve_entry(flatfilefh, identifier, position, entry_length, chunknum, iv=None, checksum=None,
+                   merged=None):
+    """
+    Note: for remote flatfiles, flatfilefh is ignored, using instead args.flatfile (the url)
+    retrieve the entry from the flatfile
+    calls print_entry
+    """
+    entry = dict()
+    entry['iv'] = iv #if given
+    entry['checksum'] = checksum #if given
+    #eprint("retrieving {}: {}-{}".format(identifier, position, entry_length)) #debug
+    if args.compressed: #gzipped flatfile
+        if args.remote:
+            chunkstart, chunksize, gzchunk_file = find_chunkstart_size(position,
+                                                                       entrysize=entry_length)
+            if chunksize != 0: #cache file already exists, no need to retrieve
+                retrieve_compressed_chunk(chunkstart, chunksize,
+                                          args.chunk_dl_tempfiles[chunknum], gzchunk_file)
+            #else: #debug
+            #   if args.verbose:
+            #       eprint(" |-- using cached gzchunk file: '{}'".format(gzchunk_file)) #debug
+            if args.keepcache:
+
+                entry['content'] = fetch_compressed_entry(gzchunk_file, position, entry_length)
             else:
-                entry['content'] = fetch_compressed_entry(args.flatfile,
+                entry['content'] = fetch_compressed_entry(args.chunk_dl_tempfiles[chunknum],
                                                           position, entry_length)
-        else: #not gzipped
-            if args.remote:
-                entry['content'] = retrieve_from_size(args.flatfile, #url
-                                                      position,
-                                                      entry_length)
+        else:
+            entry['content'] = fetch_compressed_entry(args.flatfile,
+                                                      position, entry_length)
+    else: #not gzipped
+        if args.remote:
+            entry['content'] = retrieve_from_size(args.flatfile, #url
+                                                  position,
+                                                  entry_length)
+        else:
+            entry['content'] = read_from_size(flatfilefh, position, entry_length)
+    if args.threads == 1: #final printout
+        print_entry(entry, identifier, args.outputfh, chunknum, merged=merged)
+    else: #print to separate temp files
+        print_entry(entry, identifier, args.chunk_tempfh[chunknum], chunknum, merged=merged)
+
+
+def collect_extract_entries():
+    """
+    identify entries to extract and collect them, merge together, then extract them
+    """
+    global requested_count
+    found_indexes = SortedList() #sorted by integer position
+    indexfh = open(args.index_filename, 'r', 1)
+
+    if args.list_filename:
+        with open(args.list_filename) as listfh:
+            for line in listfh:
+                found_indexes.update(collect_index(indexfh, line.rstrip()))
+                requested_count[0] += 1
+    else:
+        for identifier in args.identifiers:
+            found_indexes.update(collect_index(indexfh, identifier))
+            requested_count[0] += 1
+
+    indexfh.close()
+
+    #eprint(" found_indexes: {}".format(list(found_indexes))) #debug
+
+    #merge adjacent entries together for faster extraction
+    merged_indexes = merge_adjacent(found_indexes)
+
+    #eprint(" merged_indexes: {}".format(merged_indexes)) #debug
+
+    #use positional information from possibly merged indexes to retrieve and print entries
+    if merged_indexes: #if not empty
+        if args.verbose:
+            found_length = len(found_indexes)
+            merged_length = len(merged_indexes)
+            if merged_length < found_length:
+                eprint(" |-- {} retrievals for {} entries ({} merged)".format(
+                    merged_length, found_length, found_length - merged_length))
+
+        if args.threads > 1: #multithread for merged strategy
+            #submit indexes to threads in groups
+            batchsize = ceil(len(merged_indexes) / args.threads)
+            #eprint("working on batches of max {} retrievals".format(batchsize)) #debug
+            #eprint("batched merged_indexes: {}".format(list(batch(merged_indexes, batchsize)))) #debug
+            #init threads
+            pool = Pool(args.threads, initializer=init_thread_post, initargs=(
+                extracted_count, corrupted_count))
+            if args.progressbar:
+                _ = list(tqdm(pool.imap(retrieve_entries, batch(merged_indexes, batchsize)),
+                              total=len(merged_indexes), ascii=PROGRESSBARCHARS))
             else:
-                entry['content'] = read_from_size(flatfilefh, position, entry_length)
-        if args.threads == 1: #final printout
-            print_entry(entry, identifier, args.outputfh, chunknum)
-        else: #print to separate temp files
-            print_entry(entry, identifier, args.chunk_tempfh[chunknum], chunknum)
+                pool.imap(retrieve_entries, batch(merged_indexes, batchsize))
+            pool.close() #no more work to submit
+            pool.join() #wait workers to finish
+        else:
+            retrieve_entries(merged_indexes)
+
+
+def retrieve_entries(indexes):
+    """
+    use the (now merged where possible) indexes to retrieve entries from flatfile
+    """
+    if args.remote:
+        flatfilefh = None
+    else:
+        flatfilefh = open(args.flatfile, 'rb')
+
+    if current_process().name == 'MainProcess':
+        chunknum = 0
+    else: #for debug of multithreading
+        chunknum = int(format(current_process().name.split('-')[1]))-1 #-1 to start with 0
+
+    #eprint(" [{}] processing: {}".format(chunknum, indexes)) #debug
+    #found_positions, found_lengths, found_identifiers = unzip(indexes) #debug
+    #eprint(" [{}] found_positions: {}".format(chunknum, found_positions)) #debug
+    #eprint(" [{}] found_lengths: {}".format(chunknum, found_lengths)) #debug
+    for position, entry_length, *rest in indexes:
+        if isinstance(rest[0], list):
+            #eprint("{}-{} is merged entry".format(position, entry_length)) #debug
+            retrieve_entry(flatfilefh, 'merged', position, entry_length, chunknum, merged=rest[0])
+        else:
+            #eprint("{}-{} is normal entry: {}".format(position, entry_length, rest[0])) #debug
+            if args.xsanity:
+                if args.decrypt:
+                    retrieve_entry(flatfilefh, rest[0], position, entry_length, chunknum,
+                                   iv=rest[1], checksum=rest[2])
+                else:
+                    retrieve_entry(flatfilefh, rest[0], position, entry_length, chunknum,
+                                   checksum=rest[1])
+            elif args.decrypt:
+                retrieve_entry(flatfilefh, rest[0], position, entry_length, chunknum, iv=rest[1])
+            else:
+                retrieve_entry(flatfilefh, rest[0], position, entry_length, chunknum)
+
+    if flatfilefh is not None:
+        flatfilefh.close()
 
 
 def extract_entries(chunknum):
     """
-    identify entries to extract
+    identify entries to extract and extract them
     """
     global requested_count
     indexfh = open(args.index_filename, 'r', 1)
@@ -721,6 +1005,10 @@ def print_stats(start_time):
     requested_sum = 0
     extracted_sum = 0
     corrupted_sum = 0
+    #eprint("requested: {} found: {} extracted: {} corrupted: {}".format(list(requested_count),
+    #                                                                   list(found_count), #debug
+    #                                                                   list(extracted_count),
+    #                                                                   list(corrupted_count)))
     for chunknum in range(args.chunks_count):
         requested_sum += requested_count[chunknum]
         found_sum += found_count[chunknum]
@@ -757,9 +1045,19 @@ def init_thread(r, f, x, c):
     """
     to initialise multithreaded worker
     """
-    global requested_count, found_count, extracted_count, corrupted_count
+    global requested_count, found_count, extracted_count, corrupted_count, req_positions
     requested_count = r
     found_count = f
+    extracted_count = x
+    corrupted_count = c
+
+
+def init_thread_post(x, c):
+    """
+    to initialise multithreaded worker after indexes already collected
+    for merged_adjacent strategy
+    """
+    global extracted_count, corrupted_count, req_positions
     extracted_count = x
     corrupted_count = c
 
@@ -768,10 +1066,10 @@ if __name__ == '__main__':
     check_args()
     check_files()
 
-    requested_count = Array('i', [0] * args.chunks_count)
-    extracted_count = Array('i', [0] * args.chunks_count)
-    corrupted_count = Array('i', [0] * args.chunks_count)
-    found_count = Array('i', [0] * args.chunks_count)
+    requested_count = Array('i', args.chunks_count)
+    extracted_count = Array('i', args.chunks_count)
+    corrupted_count = Array('i', args.chunks_count)
+    found_count = Array('i', args.chunks_count)
 
     if args.output_filename is None:
         args.outputfh = sys.stdout
@@ -780,17 +1078,20 @@ if __name__ == '__main__':
     start_secs = time.time()
 
     if args.threads > 1: #multithread
-        #init threads
-        pool = Pool(args.threads, initializer=init_thread, initargs=(
-            requested_count, found_count, extracted_count, corrupted_count))
-        #submit chunks to threads
-        if args.progressbar:
-            _ = list(tqdm(pool.imap(extract_entries, range(args.chunks_count)),
-                          total=args.chunks_count, ascii=PROGRESSBARCHARS))
+        if args.merged:
+            collect_extract_entries()
         else:
-            pool.imap(extract_entries, range(args.chunks_count))
-        pool.close() #no more work to submit
-        pool.join() #wait workers to finish
+            #submit chunks to threads
+            #init threads
+            pool = Pool(args.threads, initializer=init_thread, initargs=(
+                requested_count, found_count, extracted_count, corrupted_count))
+            if args.progressbar:
+                _ = list(tqdm(pool.imap(extract_entries, range(args.chunks_count)),
+                              total=args.chunks_count, ascii=PROGRESSBARCHARS))
+            else:
+                pool.imap(extract_entries, range(args.chunks_count))
+            pool.close() #no more work to submit
+            pool.join() #wait workers to finish
 
         #final union of results:
         close_subfiles(args.chunk_tempfh)
@@ -801,7 +1102,10 @@ if __name__ == '__main__':
 
         delete_files(args.chunk_tempfiles) #cleanup
     else: #singlethread
-        extract_entries(0)
+        if args.merged:
+            collect_extract_entries()
+        else:
+            extract_entries(0)
     if args.output_filename is not None:
         args.outputfh.close()
     if args.remote and args.compressed:
