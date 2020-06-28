@@ -37,7 +37,7 @@ from ffdb import eprint, inflate, derive_key, check_index, \
 #CUSTOMIZATIONS:
 #you can modify the minimum default size of block (chunk) of identifiers list
 #to work on for parallel execution
-MINBLOCKSIZE = "40k" #500 kb of identifiers list per chunk
+MINBLOCKSIZE = "10k" #10 kb of identifiers list per chunk
 
 #you can specify that entries could be as big as (only used for caching files for remote extraction)
 #if an entry is requested that is bigger than this specified maximum, the cache file will be
@@ -62,7 +62,7 @@ GZCHUNKSPAN = 10485760 #10Mib
 RECOMPRESSRATIO = re.compile(r'^\tGuessed gzip.* \(([0-9.]+)%\) .*$', re.MULTILINE)
 REGZINDEX = re.compile(r'^#([0-9]+): @ ([0-9]+) / ([0-9]+) .*$')
 PROGNAME = "extractor.py"
-VERSION = "3.1"
+VERSION = "3.3"
 AUTHOR = "Giuseppe Insana"
 args = None
 
@@ -271,8 +271,8 @@ def check_args():
                         help="identifier(s) for the desired entry to be extracted",
                         required=False, type=str, nargs='+')
     parser.add_argument('-t', '--threads', dest='threads',
-                        help="use specified number of multiple threads for parallel retrieval",
-                        required=False, type=int)
+                        help="use specified number of multiple threads for parallel retrieval. \
+                        See also -b option.", required=False, type=int)
     parser.add_argument('-l', '--list', dest='list_filename',
                         help="a file containing a list of identifiers for entries to retrieve",
                         required=False, type=str)
@@ -301,8 +301,11 @@ def check_args():
                         not recommended on multiuser systems due to security concerns. By default \
                         the passphrase will be requested interactively", required=False, type=str)
     parser.add_argument('-b', '--blocksize', dest='list_blocksize',
-                        help="redefine blocksize used for parallel execution. By default \
-                        it will be adjusted automatically to the number of threads",
+                        help="define blocksize (size of LIST_FILENAME chunks) for parallel \
+                        extraction. This is fast and has lowest memory requirements, but could \
+                        be less efficient if lots of entries are mapped to same identifier when \
+                        --duplicates is used. If unspecified, it will be adjusted automatically \
+                        to number of threads. Use -b 0 to disable block extraction",
                         required=False, type=siprefix2num)
     parser.add_argument('-c', '--compressed', dest='compressed', action='store_true',
                         help="specify flatfile is gzipped; a .gzi GZINDEX file is required",
@@ -333,8 +336,8 @@ def check_args():
             eprint(" |-- in case of duplicate ids, the last entry in ff will be extracted")
         elif args.duplicates:
             eprint(" |-- in case of duplicate ids, all entries in ff will be extracted")
-            if args.threads is not None and not args.merged:
-                eprint("    => NOTICE: -m recommended if many entries with same identifier requested in multithreading")
+            if not args.merged and (args.list_blocksize is None or args.list_blocksize != 0):
+                eprint("    => NOTICE: if many entries with same identifier requested consider using -b 0 or -m")
 
     if args.flatfile[-3:] == ".gz" and not args.compressed:
         eprint("    => NOTICE: -f argument has extension .gz: assuming flatfile is compressed")
@@ -359,32 +362,37 @@ def check_args():
         if args.threads is None:
             eprint("    => ERROR: specifying blocksize makes sense only for -t execution")
             sys.exit(22)
-        if args.merged:
-            eprint("    => NOTICE: ignoring blocksize in mergedretrieval mode")
-        else:
-            if args.verbose:
-                eprint(" |-- blocksize set to {} bytes".format(args.list_blocksize))
-    if args.threads is not None: #multithread
-        if args.identifiers is not None and not args.merged:
-            eprint("    => ERROR: No sense specifying multithreading for --single extraction unless --mergedretrieval is used")
+        if args.identifiers is not None:
+            eprint("    => ERROR: No sense specifying --blockextraction with --single identifiers")
             sys.exit(22)
+        #if set to 0 it means blockextraction is disabled
+
+    if args.merged:
+        if args.list_blocksize is not None:
+            eprint("    => NOTICE: --blocksize cannot be used with --mergedretrieval, ignoring -b")
+        args.list_blocksize = 0 #disable
+
+    if args.threads is not None: #multithread
         if args.threads < 2:
             eprint("    => ERROR: No sense specifying a number of threads lower than 2!")
             sys.exit(22)
         args.mt_subfiles_prefix = TEMPDIR + "/tmpEXTRACTmts" + randnum
-        if args.merged:
-            args.chunks_count = args.threads
-        else:
-            if args.list_blocksize is None:
-                #if not specified, we use 1/threadnumTH of filesize up to a minimum MINBLOCKSIZE
-                args.list_blocksize = max(
-                    calculate_blocksize(args.list_filename, args.threads),
-                    siprefix2num(MINBLOCKSIZE))
+        if args.list_filename:
+            if args.list_blocksize is None: #if not specified, we compute it
+                args.list_blocksize = max(calculate_blocksize(args.list_filename, args.threads),
+                                          siprefix2num(MINBLOCKSIZE))
+        else: #single identifiers
+            args.list_blocksize = 0
+
+        if args.list_blocksize != 0: #if not disabled or incompatible
+            #we'll use blockextraction without prior collection
             args.list_filesize, args.chunks_count = calculate_chunknum(
                 args.list_filename, args.list_blocksize)
             if args.verbose:
-                eprint(" |-- parallel work in {} chunks of maximum {} bytes (-b to change)".format(
+                eprint(" |-- parallel work on {} chunks of maximum {} bytes (-b to change)".format(
                     args.chunks_count, args.list_blocksize))
+        else: #either mergedretrieval or parallel without blocksize (we'll first collect indexes)
+            args.chunks_count = args.threads
         if args.verbose:
             eprint(" |-- using maximum {} parallel threads (-t); your OS reports {} cpus.".format(
                 args.threads, os.cpu_count()))
@@ -548,12 +556,12 @@ def print_entry(entry, identifier, fh, chunknum, merged=None):
             #unpack collated information
             if args.xsanity:
                 if args.decrypt:
-                    position, entry_length, subentry['iv'], \
-                        subentry['checksum'], identifier = collated
+                    position, entry_length, identifier, subentry['iv'], \
+                        subentry['checksum'] = collated
                 else:
-                    position, entry_length, subentry['checksum'], identifier = collated
+                    position, entry_length, identifier, subentry['checksum'] = collated
             elif args.decrypt:
-                position, entry_length, subentry['iv'], identifier = collated
+                position, entry_length, identifier, subentry['iv'] = collated
                 #eprint("got subentry {}: {}-{} {}".format(identifier,
                 #                                         position, entry_length,
                 #                                         subentry['iv'])) #debug
@@ -707,11 +715,11 @@ def collect_index(indexfh, identifier):
 
     if args.xsanity:
         if args.decrypt:
-            return zip(found_positions, found_lengths, found_iv, checksums, identifiers)
+            return zip(found_positions, found_lengths, identifiers, found_iv, checksums)
         else:
-            return zip(found_positions, found_lengths, checksums, identifiers)
+            return zip(found_positions, found_lengths, identifiers, checksums)
     elif args.decrypt:
-        return zip(found_positions, found_lengths, found_iv, identifiers)
+        return zip(found_positions, found_lengths, identifiers, found_iv)
     else:
         return zip(found_positions, found_lengths, identifiers)
 
@@ -766,7 +774,6 @@ def merge_adjacent(found_indexes):
 
     merged_indexes.pop(0) #remove bogus first element
 
-    del found_indexes
     return merged_indexes
 
 
@@ -872,57 +879,83 @@ def retrieve_entry(flatfilefh, identifier, position, entry_length, chunknum, iv=
 
 def collect_extract_entries():
     """
-    identify entries to extract and collect them, merge together, then extract them
+    identify entries to extract and collect them, optionally merge together, then extract them
+    either single or multithreaded
     """
     global requested_count
-    found_indexes = SortedList() #sorted by integer position
     indexfh = open(args.index_filename, 'r', 1)
 
-    if args.list_filename:
-        with open(args.list_filename) as listfh:
-            for line in listfh:
-                found_indexes.update(collect_index(indexfh, line.rstrip()))
+    if args.merged:
+        found_indexes = SortedList() #sorted by integer position
+        if args.list_filename:
+            with open(args.list_filename) as listfh:
+                for line in listfh:
+                    found_indexes.update(collect_index(indexfh, line.rstrip()))
+                    requested_count[0] += 1
+        else:
+            for identifier in args.identifiers:
+                found_indexes.update(collect_index(indexfh, identifier))
                 requested_count[0] += 1
     else:
-        for identifier in args.identifiers:
-            found_indexes.update(collect_index(indexfh, identifier))
-            requested_count[0] += 1
+        found_indexes = list()
+        if args.list_filename:
+            with open(args.list_filename) as listfh:
+                for line in listfh:
+                    found_indexes.extend(collect_index(indexfh, line.rstrip()))
+                    requested_count[0] += 1
+        else:
+            for identifier in args.identifiers:
+                found_indexes.extend(collect_index(indexfh, identifier))
+                requested_count[0] += 1
 
     indexfh.close()
 
     #eprint(" found_indexes: {}".format(list(found_indexes))) #debug
 
     #merge adjacent entries together for faster extraction
-    merged_indexes = merge_adjacent(found_indexes)
+    found_length = len(found_indexes)
+    if args.merged:
+        indexes = merge_adjacent(found_indexes)
+        del found_indexes
+    else:
+        indexes = found_indexes
 
-    #eprint(" merged_indexes: {}".format(merged_indexes)) #debug
+    #eprint(" indexes: {}".format(indexes)) #debug
 
     #use positional information from possibly merged indexes to retrieve and print entries
-    if merged_indexes: #if not empty
+    if indexes: #if not empty
         if args.verbose:
-            found_length = len(found_indexes)
-            merged_length = len(merged_indexes)
-            if merged_length < found_length:
-                eprint(" |-- {} retrievals for {} entries ({} merged)".format(
-                    merged_length, found_length, found_length - merged_length))
+            if args.merged:
+                merged_length = len(indexes)
+                if merged_length < found_length:
+                    eprint(" |-- {} retrievals for {} entries ({} merged)".format(
+                        merged_length, found_length, found_length - merged_length))
+        if args.threads > 1: #multithread for merged strategy: submit indexes to threads in batches
+            indexes_length = len(indexes)
+            batchsize = ceil(indexes_length / args.threads)
+            batchesnum = ceil(indexes_length / batchsize)
 
-        if args.threads > 1: #multithread for merged strategy
-            #submit indexes to threads in groups
-            batchsize = ceil(len(merged_indexes) / args.threads)
-            #eprint("working on batches of max {} retrievals".format(batchsize)) #debug
-            #eprint("batched merged_indexes: {}".format(list(batch(merged_indexes, batchsize)))) #debug
+            if args.verbose:
+                if args.merged:
+                    eprint(" |-- parallel work on {} batches of maximum {} retrievals".format(
+                        batchesnum, batchsize))
+                else:
+                    eprint(" |-- parallel work on {} batches of maximum {} entries".format(
+                        batchesnum, batchsize))
+            #eprint("batched indexes: {}".format(list(batch(indexes, batchsize)))) #debug
+
             #init threads
-            pool = Pool(args.threads, initializer=init_thread_post, initargs=(
+            pool = Pool(args.threads, initializer=init_thread_collectmode, initargs=(
                 extracted_count, corrupted_count))
             if args.progressbar:
-                _ = list(tqdm(pool.imap(retrieve_entries, batch(merged_indexes, batchsize)),
-                              total=len(merged_indexes), ascii=PROGRESSBARCHARS))
+                _ = list(tqdm(pool.imap(retrieve_entries, batch(indexes, batchsize)),
+                              total=batchesnum, ascii=PROGRESSBARCHARS))
             else:
-                pool.imap(retrieve_entries, batch(merged_indexes, batchsize))
+                pool.imap(retrieve_entries, batch(indexes, batchsize))
             pool.close() #no more work to submit
             pool.join() #wait workers to finish
         else:
-            retrieve_entries(merged_indexes)
+            retrieve_entries(indexes)
 
 
 def retrieve_entries(indexes):
@@ -1041,7 +1074,7 @@ def print_stats(start_time):
     eprint(" '-- Elapsed: {}, {} entries/sec --'".format(*elapsed_time(start_time, extracted_sum)))
 
 
-def init_thread(r, f, x, c):
+def init_thread_blockmode(r, f, x, c):
     """
     to initialise multithreaded worker
     """
@@ -1052,7 +1085,7 @@ def init_thread(r, f, x, c):
     corrupted_count = c
 
 
-def init_thread_post(x, c):
+def init_thread_collectmode(x, c):
     """
     to initialise multithreaded worker after indexes already collected
     for merged_adjacent strategy
@@ -1078,12 +1111,12 @@ if __name__ == '__main__':
     start_secs = time.time()
 
     if args.threads > 1: #multithread
-        if args.merged:
-            collect_extract_entries()
+        if args.list_blocksize == 0: #prior collection of indexes then extraction
+            collect_extract_entries() #will start multithread after collection
         else:
             #submit chunks to threads
             #init threads
-            pool = Pool(args.threads, initializer=init_thread, initargs=(
+            pool = Pool(args.threads, initializer=init_thread_blockmode, initargs=(
                 requested_count, found_count, extracted_count, corrupted_count))
             if args.progressbar:
                 _ = list(tqdm(pool.imap(extract_entries, range(args.chunks_count)),
