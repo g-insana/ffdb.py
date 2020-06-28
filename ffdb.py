@@ -19,7 +19,7 @@ from Cryptodome.Protocol import KDF
 from Cryptodome import Random
 
 # pylint: disable=C0103,R0912,R0915,W0603
-VERSION = '2.3.7'
+VERSION = '2.4.1'
 
 ##CUSTOMIZATIONS:
 
@@ -893,6 +893,9 @@ def siprefix2num(numberstring):
     """
     Returns bytes from a metrix suffixed string
     """
+    if numberstring == '0':
+        return(0)
+
     prefix = {"k": 1024, "m": 1024**2, "g": 1024**3, "t": 1024**4, "p": 1024**5}
     numberstring = numberstring.lower()
     try:

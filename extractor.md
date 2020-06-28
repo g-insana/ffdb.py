@@ -53,6 +53,7 @@ extractor.py -f FLATFILE -i INDEXFILE -l LISTFILE
                         identifier(s) for the desired entry to be extracted
   -t THREADS, --threads THREADS
                         use specified number of multiple threads for parallel retrieval
+                        See also `-b` option.
   -l LIST_FILENAME, --list LIST_FILENAME
                         a file containing a list of identifiers for entries to retrieve
   -o OUTPUT_FILENAME, --outfile OUTPUT_FILENAME
@@ -75,8 +76,12 @@ extractor.py -f FLATFILE -i INDEXFILE -l LISTFILE
                         not recommended on multiuser systems due to security concerns.
                         By default the passphrase will be requested interactively
   -b LIST_BLOCKSIZE, --blocksize LIST_BLOCKSIZE
-                        redefine blocksize used for parallel execution. By default it
-                        will be adjusted automatically to the number of threads
+                        define blocksize (size of LIST_FILENAME chunks) for parallel
+                        extraction. This is fast and has lowest memory requirements,
+                        but could be less efficient if lots of entries are mapped to
+                        same identifier when --duplicates is used. If unspecified,
+                        it will be adjusted automatically to number of threads.
+                        Use `-b 0` to disable block extraction
   -c, --compressed      specify flatfile is gzipped; a .gzi GZINDEX file is required
   -g GZINDEX, --gzindex GZINDEX
                         filename of the compressed index .gzi
