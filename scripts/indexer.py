@@ -515,9 +515,9 @@ if __name__ == '__main__':
                 args.input_blocksize))
             eprint(" |-- flatfile will be split into {} chunks".format(args.chunks_count))
 
-        entries_count = Array('i', [0] * args.chunks_count)
-        indexes_count = Array('i', [0] * args.chunks_count)
-        skipped_count = Array('i', [0] * args.chunks_count)
+        entries_count = Array('i', args.chunks_count)
+        indexes_count = Array('i', args.chunks_count)
+        skipped_count = Array('i', args.chunks_count)
 
         args.chunk_itempfiles = args.chunk_itempfiles[0:args.chunks_count]
         if args.outff_filename is not None:
@@ -576,9 +576,9 @@ if __name__ == '__main__':
         if os.path.exists(args.mt_subfiles_dir):
             os.rmdir(args.mt_subfiles_dir) #cleanup
     else: #singlethread
-        entries_count = Array('i', [0])
-        indexes_count = Array('i', [0])
-        skipped_count = Array('i', [0])
+        entries_count = Array('i', 1)
+        indexes_count = Array('i', 1)
+        skipped_count = Array('i', 1)
 
         parse_ff_wrapper(0)
 
