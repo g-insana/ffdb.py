@@ -19,9 +19,9 @@ from Cryptodome.Protocol import KDF
 from Cryptodome import Random
 
 # pylint: disable=C0103,R0912,R0915,W0603
-VERSION = '2.3.5'
+VERSION = '2.3.6'
 
-#CUSTOMIZATIONS:
+##CUSTOMIZATIONS:
 
 #personalize this program by modifying the
 #following SALT used by the PBKDF2 routine
@@ -30,7 +30,7 @@ SALT = b'5ed3a4284d6a9c1e4e4f6b4729b254be'
 #change the following if you prefer space or other delimiter for the index
 FIELDSEPARATOR = "\t"
 
-#define temporary directory
+#define temporary directory in case no TMPDIR is specified
 if 'TMPDIR' in os.environ and os.environ['TMPDIR'] != '':
     TEMPDIR = os.environ['TMPDIR']
 else:
@@ -52,7 +52,8 @@ GZTOOL_EXE = None
 #BUFFERSIZE = 8192
 BUFFERSIZE = 1048576
 
-#CONSTANTS
+##CONSTANTS:
+
 REIV = re.compile(r'^([0-9a-zA-Z{}]+)\.([0-9a-zA-Z{}]+)\|([A-Z])(.+)$') #only encrypted
 REIVD = re.compile(r'^([0-9a-zA-Z{}]+)\+([0-9a-zA-Z{}]+)\|([A-Z])(.+)$') #deflated and encrypted
 REESIV = re.compile(r'^([0-9a-zA-Z{}]+)(?:\.|\+)([0-9a-zA-Z{}]+)\|[A-Z](.+)$') #entrysize+iv stored
@@ -193,7 +194,7 @@ def b64_to_int(string):
 
 def format_indexes(entry, index_type, cipher_type, checksums=False):
     """
-    return formatted indexes
+    return array of formatted indexes
     """
     fieldseparator = FIELDSEPARATOR
     indexes = list()
