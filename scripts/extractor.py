@@ -362,10 +362,10 @@ def check_args():
         if args.threads is None:
             eprint("    => ERROR: specifying blocksize makes sense only for -t execution")
             sys.exit(22)
-        if args.identifiers is not None:
-            eprint("    => ERROR: No sense specifying --blockextraction with --single identifiers")
+        if args.identifiers is not None and args.list_blocksize != 0:
+            #(if set to 0 it means blockextraction is disabled)
+            eprint("    => ERROR: No sense specifying a blocksize with --single identifiers")
             sys.exit(22)
-        #if set to 0 it means blockextraction is disabled
 
     if args.merged:
         if args.list_blocksize is not None:
