@@ -29,9 +29,12 @@ the user can optionally specify to encrypt (AES) or compress (ZLIB) the entries/
 Encrypted entries share a single master password but each has a unique IV ([Initialization vector](https://en.wikipedia.org/wiki/Initialization_vector)). No plaintext information is sent or received, thus allowing secure access to encrypted entries of the database over insecure channels.
 
 With an external utility ([gztool](https://github.com/circulosmeos/gztool)), the
-container file can even be compressed as a whole, while still allowing retrieval of
+container file can even be gzip-compressed as a whole, while still allowing retrieval of
 single entries. This can be useful when said file needs to also be
 distributed and employed in its entirety, without limiting its use only via `ffdb`.
+
+If the container file is compressed with [bgzip](https://www.htslib.org/doc/bgzip.html),
+then no external utility is needed.
 
 ## Documentation
 

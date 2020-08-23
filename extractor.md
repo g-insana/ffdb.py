@@ -82,7 +82,13 @@ extractor.py -f FLATFILE -i INDEXFILE -l LISTFILE
                         same identifier when --duplicates is used. If unspecified,
                         it will be adjusted automatically to number of threads.
                         Use `-b 0` to disable block extraction
-  -c, --compressed      specify flatfile is gzipped; a .gzi GZINDEX file is required
+
+  -c, --compressed_gzip
+                        specify flatfile is gzipped; a .gzi GZINDEX file is required
+  -C, --Compressed_bgzip
+                        specify flatfile is bgzipped; a .gzi GZINDEX file is required if flatfile is
+                        remote
+
   -g GZINDEX, --gzindex GZINDEX
                         filename of the compressed index .gzi
   -r, --remote          specify flatfile is remote and treat FLATFILE as an URL

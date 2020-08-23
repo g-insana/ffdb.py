@@ -30,6 +30,9 @@ container file can even be compressed as a whole, while still allowing retrieval
 single entries. This can be useful when said file needs to also be
 distributed and employed in its entirety, without limiting its use only via `ffdb`.
 
+If the container file is compressed with [bgzip](https://www.htslib.org/doc/bgzip.html),
+then no external utility is needed.
+
 ## Documentation
 
 * [GitHub page](https://github.com/g-insana/ffdb.py/)

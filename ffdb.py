@@ -19,7 +19,7 @@ from Cryptodome.Protocol import KDF
 from Cryptodome import Random
 
 # pylint: disable=C0103,R0912,R0915,W0603
-VERSION = '2.4.2'
+VERSION = '2.5.3'
 
 ##CUSTOMIZATIONS:
 
@@ -617,13 +617,30 @@ def read_from_size(fh, begin, size):
     return fh.read(size)
 
 
-def delete_files(filenames):
+def delete_files(filenames, path=None):
     """
     delete the temporary sub-files
+    optionally specify a path where to look for the files
     """
     for filename in filenames:
+        if path is not None:
+            filename = os.path.join(path, filename)
         if os.path.isfile(filename):
             os.remove(filename)
+
+
+def delete_file_if_exists(filename, path=None):
+    """
+    delete a file after confirming file exists
+    optionally specify a path where to look for the files
+    """
+    if path is not None:
+        filename = os.path.join(path, filename)
+    if os.path.exists(filename):
+        try: #just in case file disappears after the path.exists check..
+            os.remove(filename)
+        except FileNotFoundError:
+            pass
 
 
 def close_subfiles(fhlist):
@@ -634,7 +651,7 @@ def close_subfiles(fhlist):
         fh.close()
 
 
-def print_subfiles(filenames, fh=None):
+def print_subfiles(filenames, fh=None, offset=0):
     """
     read and print a series of temporary sub-files writing them sequentially
     to a given output filehandle or print them to stdout
@@ -649,6 +666,9 @@ def print_subfiles(filenames, fh=None):
             #fh.write(infile.read())
             ##buffered:
             filesize = os.path.getsize(filename)
+            if offset > 0:
+                infile.seek(offset)
+                filesize -= offset
             blockcount, remainder = divmod(filesize, BUFFERSIZE)
             for _ in range(blockcount):
                 buffered = infile.read(BUFFERSIZE)
@@ -690,6 +710,7 @@ def shift_index_file(index_filename, offset, outfile, index_type):
     with open(index_filename, 'r', 1) as indexfh: #using line buffering
         with open(outfile, 'w') as outfh:
             for line in indexfh:
+                line = line.rstrip("\n")
                 columns = line.split(FIELDSEPARATOR)
                 position = columns[1] #2nd column of index file is position
                 if index_type in ("+", "."): #entry sizes and iv stored
@@ -800,7 +821,7 @@ def compute_split_positions(filename, splitsize, delimiter=None):
     else:
         delimiter = encode_delimiter_re(delimiter)
         bufsize = max(1024, min(1024*splitsize//65536, 1024*1024))
-        with open(filename, 'rb', 1) as inputfh:
+        with open(filename, 'rb') as inputfh:
             split_file_end = find_next_delimiter(inputfh, input_filesize,
                                                  splitsize, delimiter, bufsize)
             split_file_sizes.append(split_file_end)
