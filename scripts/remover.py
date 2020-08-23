@@ -14,7 +14,7 @@ import sys
 import time
 import argparse
 from random import randint
-from multiprocessing import Pool, Array
+from multiprocessing import Pool, Array, set_start_method
 from sortedcontainers import SortedList
 from tqdm import tqdm #progress bar
 from ffdb import eprint, check_iofiles, b64_to_int, int_to_b64, \
@@ -30,7 +30,7 @@ MINBLOCKSIZE = "40k" #40 kb of index identifiers per chunk
 
 #CONSTANTS
 PROGNAME = "remover.py"
-VERSION = "1.2"
+VERSION = "1.22"
 AUTHOR = "Giuseppe Insana"
 args = None
 
@@ -477,6 +477,7 @@ if __name__ == '__main__':
 
     #4) update the index shifting positions, optionally with multithread
     if args.threads > 1: #multithread
+        set_start_method('fork') #spawn not implemented
         args.chunk_itempfiles, _ = split_file(args.index_filename,
                                               args.index_blocksize,
                                               args.mt_subfiles_iprefix)

@@ -15,7 +15,7 @@ import time
 import getpass
 import argparse
 from heapq import merge #mergesort for merging at the end of multithread
-from multiprocessing import Pool, Array #for multithreaded
+from multiprocessing import Pool, Array, set_start_method #for multithreaded
 from random import randint #for compressed flatfiles via gztool
 from tqdm import tqdm #for progress bar
 from sortedcontainers import SortedList #if sorted output
@@ -28,13 +28,13 @@ from ffdb import eprint, derive_key, \
 
 #CUSTOMIZATIONS:
 #you can modify the default size of block (chunk) of flatfile
-#to work on for parallel execution
-MAXBLOCKSIZE = "50M" #50 Mb of flatfile in each chunk
+#to work on for parallel execution (when no -b is specified)
+MAXBLOCKSIZE = "800M" #800 Mb of flatfile in each chunk
 MINBLOCKSIZE = "100k" #100k minimum each chunk
 
 #CONSTANTS
 PROGNAME = "indexer.py"
-VERSION = "4.0"
+VERSION = "4.3"
 AUTHOR = "Giuseppe Insana"
 args = None
 patterns = None
@@ -499,6 +499,7 @@ if __name__ == '__main__':
 
     start_secs = time.time()
     if args.threads > 1: #multithread
+        set_start_method('fork') #spawn not implemented
         args.chunk_ftemp_files = list()
 
         #find out where to split the input file without breaking entries
