@@ -55,7 +55,6 @@ OVERDLFACTOR = 6000
 BGZFBLOCKSIZE = 65280
 
 #CONSTANTS
-REGZCOMPRESSRATIO = re.compile(r'^\tCompression factor\s*: ([0-9.]+)%.*$', re.MULTILINE)
 REGZUNCOMPRESSSIZE = re.compile(r'^\tSize of uncompressed file: .* \(([0-9]+) Bytes\)$')
 REGZINDEX = re.compile(r'^#([0-9]+): @ ([0-9]+) / ([0-9]+) .*$')
 PROGNAME = "extractor.py"
@@ -766,26 +765,15 @@ def find_compressratio():
     """
     find how much data was compressed
     """
+    args.uncompressedsize = None
     gztool_call = [GZTOOL_EXE, '-l', args.gzindex]
-    result = run(gztool_call, check=True, stdout=PIPE, stderr=PIPE) #subprocess.run
-    if result.returncode != 0:
-        eprint("    => ERROR: problem using gztool to read compressed_index {}".format(
-            args.gzindex))
-        eprint("    => {}".format(result.stderr.decode()))
-        sys.exit(5)
-    compressratio_match = REGZCOMPRESSRATIO.search(result.stdout.decode())
-    if compressratio_match:
-        reduced_ratio = compressratio_match.group(1)
-        args.compress_ratio = int(10000 - float(reduced_ratio) * 100)
-        if args.verbose:
-            eprint(" |-- the flatfile is compressed to {}% of the original".format(
-                round(100 - float(reduced_ratio), 2)))
-    else:
-        eprint("    => ERROR: problem using gztool to find compress_ratio")
-        eprint("    => {}".format(result.stdout.decode()))
-        eprint("    => WARNING: could not deduce correct compressratio from index file,")
-        eprint("                for safety we'll download more than strictly necessary")
-        args.compress_ratio = 10000
+    gztool_pipe = Popen(gztool_call, stdout=PIPE,
+                        bufsize=1, universal_newlines=True, stderr=DEVNULL)
+    for line in gztool_pipe.stdout:
+        uncompressed_match = REGZUNCOMPRESSSIZE.match(line)
+        if uncompressed_match:
+            args.uncompressedsize = int(uncompressed_match.group(1))
+            break
 
     if args.remote:
         args.compressedsize = int(get_remote_size(args.flatfile))
@@ -794,6 +782,18 @@ def find_compressratio():
             sys.exit(2)
     else:
         args.compressedsize = os.path.getsize(args.flatfile)
+
+    if args.uncompressedsize is None:
+        eprint("    => ERROR: problem using gztool to find compress_ratio")
+        eprint("    => WARNING: could not deduce correct compressratio from index file,")
+        eprint("                for safety we'll download more than strictly necessary")
+        args.compress_ratio = 10000
+    else:
+        reduced_ratio = args.compressedsize / args.uncompressedsize
+        args.compress_ratio = int(reduced_ratio * 10000)
+        if args.verbose:
+            eprint(" |-- the flatfile is compressed to {}% of the original".format(
+                round(reduced_ratio*100, 2)))
 
 
 def print_u2c_map_gztool():
@@ -828,7 +828,6 @@ def build_u2c_map_gztool():
     gztool_pipe = Popen(gztool_call, stdout=PIPE,
                         bufsize=1, universal_newlines=True, stderr=DEVNULL)
     index_point_check = 1 #gztool indexes start from 1
-    #args.uncompressedsize = None #not needed
     for line in gztool_pipe.stdout:
         for index_string in line.split(", "):
             gzindex_match = REGZINDEX.match(index_string)
@@ -841,10 +840,6 @@ def build_u2c_map_gztool():
                 uncompressed_byte = int(uncompressed_byte)
                 u2c_index.append(uncompressed_byte)
                 b2c_map.append(int(compressed_byte))
-            #elif args.uncompressedsize is None: #not needed
-            #   uncompressed_match = REGZUNCOMPRESSSIZE.match(index_string)
-            #   if uncompressed_match:
-            #       args.uncompressedsize = uncompressed_match.group(1)
 
     args.u2c_maxindex = len(u2c_index) - 1
     args.u2c_index = u2c_index
@@ -1911,6 +1906,9 @@ def init_thread_collectmode(x, c):
 
 
 if __name__ == '__main__':
+    if sys.version_info[1] > 7: #from py3.8
+        set_start_method('fork') #spawn not implemented
+
     check_args()
     #metaprogramming: define accordingly the functions related to two the needed compression scheme
     if args.compressed_gzip: #gztool
@@ -1944,13 +1942,6 @@ if __name__ == '__main__':
 
     check_files()
 
-    set_start_method('fork') #spawn not implemented
-
-    requested_count = Array('i', args.chunks_count)
-    extracted_count = Array('i', args.chunks_count)
-    corrupted_count = Array('i', args.chunks_count)
-    found_count = Array('i', args.chunks_count)
-
     if args.output_filename is None:
         args.outputfh = sys.stdout
     else:
@@ -1958,6 +1949,11 @@ if __name__ == '__main__':
     start_secs = time.time()
 
     if args.threads > 1:
+        requested_count = Array('i', args.chunks_count)
+        extracted_count = Array('i', args.chunks_count)
+        corrupted_count = Array('i', args.chunks_count)
+        found_count = Array('i', args.chunks_count)
+
         if args.list_blocksize == 0: #prior collection of indexes then extraction
             collect_extract_entries() #will start multithread after collection
         else: #multithread for normal strategy
@@ -1982,6 +1978,10 @@ if __name__ == '__main__':
 
         delete_files(args.chunk_tempfiles) #cleanup
     else: #singlethread
+        requested_count = [0]
+        extracted_count = [0]
+        corrupted_count = [0]
+        found_count = [0]
         if args.merged:
             collect_extract_entries()
         else:

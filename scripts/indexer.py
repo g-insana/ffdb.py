@@ -499,7 +499,8 @@ if __name__ == '__main__':
 
     start_secs = time.time()
     if args.threads > 1: #multithread
-        set_start_method('fork') #spawn not implemented
+        if sys.version_info[1] > 7: #from py3.8
+            set_start_method('fork') #spawn not implemented
         args.chunk_ftemp_files = list()
 
         #find out where to split the input file without breaking entries
@@ -577,9 +578,9 @@ if __name__ == '__main__':
         if os.path.exists(args.mt_subfiles_dir):
             os.rmdir(args.mt_subfiles_dir) #cleanup
     else: #singlethread
-        entries_count = Array('i', 1)
-        indexes_count = Array('i', 1)
-        skipped_count = Array('i', 1)
+        entries_count = [0]
+        indexes_count = [0]
+        skipped_count = [0]
 
         parse_ff_wrapper(0)
 

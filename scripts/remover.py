@@ -477,7 +477,8 @@ if __name__ == '__main__':
 
     #4) update the index shifting positions, optionally with multithread
     if args.threads > 1: #multithread
-        set_start_method('fork') #spawn not implemented
+        if sys.version_info[1] > 7: #from py3.8
+            set_start_method('fork') #spawn not implemented
         args.chunk_itempfiles, _ = split_file(args.index_filename,
                                               args.index_blocksize,
                                               args.mt_subfiles_iprefix)
