@@ -22,6 +22,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
+        "tqdm",
         "sortedcontainers",
         "requests",
         "pycryptodomex"
