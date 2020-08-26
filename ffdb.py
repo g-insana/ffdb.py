@@ -19,7 +19,7 @@ from Cryptodome.Protocol import KDF
 from Cryptodome import Random
 
 # pylint: disable=C0103,R0912,R0915,W0603
-VERSION = '2.5.4'
+VERSION = '2.5.5'
 
 ##CUSTOMIZATIONS:
 
