@@ -3,6 +3,7 @@
 tests for ffdb
 simply run 'pytest' to run all tests
 """
+import os
 import ffdb
 import pytest
 from subprocess import Popen, PIPE, DEVNULL
@@ -125,7 +126,7 @@ class TestFileIndexing:
         """
         Check test datafiles are in place and readable/writeable
         """
-        tmpwrite = tmp_test_dir.join("tmpwrite")
+        tmpwrite = os.path.join(str(tmp_test_dir), "tmpwrite")
         ffdb.check_iofiles([testfile, testindex_ac], [tmpwrite])
 
     def test_entry_indexing(self):
