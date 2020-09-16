@@ -1,6 +1,6 @@
 # ffdb.py - Flat-File DB: nosql single file database and document storage
 
-[![Build Status](https://travis-ci.org/g-insana/ffdb.py.svg?branch=master)](https://travis-ci.org/g-insana/ffdb.py)
+[![Build Status](https://travis-ci.com/g-insana/ffdb.py.svg?branch=master)](https://travis-ci.com/g-insana/ffdb.py)
 [![PyPI](https://img.shields.io/pypi/v/ffdb)](https://pypi.org/project/ffdb/)
 
 The module `ffdb` and the associated set of utility scripts
