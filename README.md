@@ -42,7 +42,7 @@ A part from the present [README](README.md), please refer to the usage page
 for each of the utility scripts:
 * [indexer](indexer.md)
 * [extractor](extractor.md)
-* [remover](extractor.md)
+* [remover](remover.md)
 * [merger](merger.md)
 
 ## Download and installation
