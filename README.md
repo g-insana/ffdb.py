@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.com/g-insana/ffdb.py.svg?branch=master)](https://travis-ci.com/g-insana/ffdb.py)
 [![PyPI](https://img.shields.io/pypi/v/ffdb)](https://pypi.org/project/ffdb/)
+[![DOI](https://zenodo.org/badge/261504507.svg)](https://zenodo.org/doi/10.5281/zenodo.11113490)
 
 The module `ffdb` and the associated set of utility scripts
 (`indexer`, `extractor`, `filestorer`, `remover` and `merger`)
