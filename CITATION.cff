@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: Insana
+  given-names: Giuseppe
+orcid: https://orcid.org/0000-0002-8186-1026
+title:
+version: v2.5.6
+date-released: 2024-12-08
