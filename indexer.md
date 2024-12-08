@@ -11,7 +11,7 @@ Documentation of each utility script:
 [remover](extractor.md)
 [merger](merger.md)
 
-## Usage
+## In brief:
 ```bash
 indexer.py -f FLATFILE -i 'PATTERN' [-e ENDPATTERN] >INDEXFILE
 #   [-f] : flatfile to index
@@ -41,7 +41,7 @@ indexer.py -f FLATFILE -i 'PATTERN' [-e ENDPATTERN] >INDEXFILE
 #         the provided patterns, not just the first one)
 ```
 
-# Full Usage:
+## Full Usage:
 ```
   -f INPUT_FILENAME, --file INPUT_FILENAME
                         Filename of flatfile to be processed
@@ -80,6 +80,9 @@ indexer.py -f FLATFILE -i 'PATTERN' [-e ENDPATTERN] >INDEXFILE
                         sorted index
   -n, --nopos           do not compute positions, just print matching
                         identifiers
+  -r, --reverse         reverse mode: treat terminator as initiator: used for entries which have no
+                        natural entry delimiter, the pattern specified with -e will be used to mark the
+                        beginning of entries
 ```
 
 ## Copyright

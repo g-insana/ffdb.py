@@ -19,7 +19,7 @@ from Cryptodome.Protocol import KDF
 from Cryptodome import Random
 
 # pylint: disable=C0103,R0912,R0915,W0603
-VERSION = '2.5.5'
+VERSION = '2.5.6'
 
 ##CUSTOMIZATIONS:
 
@@ -771,7 +771,7 @@ def postprocess_entry(entry, mode):
     entry['length_b64'] = int_to_b64(entry['length'])
 
 
-def entry_generator(path, delimiter, buffersize=None):
+def entry_generator(path, delimiter, buffersize=None, final_buffer=False):
     """
     splits a file according to a delimiter, returning a generator of entries
     terminating in the delimiter
@@ -794,7 +794,8 @@ def entry_generator(path, delimiter, buffersize=None):
                     buf = buf[start:]
                     break
             data = fh.read(buffersize)
-        #yield buf #if final content after terminator is desired
+        if final_buffer and len(buf):
+            yield buf, len(buf) + splen
 
 
 def compute_split_positions(filename, splitsize, delimiter=None):

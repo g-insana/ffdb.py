@@ -67,6 +67,8 @@ def check_args():
        {0} -a -i '^AC   (\\S+?); ?(\\S+)?;? ?(\\S+)?;?' -f [...]
          (use [-a] option to find all instances and capture groups of
           the provided patterns, not just the first one)
+       {0} -e '>' -i '^(.+\\|.*)$' -f proteins.fasta -r >proteins.idx
+         (since fasta entries begin with '>' but have no end delimiter, use -r)
     """.format(PROGNAME)
     parser = argparse.ArgumentParser(description='Create a positional index for any flatfile, \
                                      optionally compressing or encrypting its entries',
@@ -118,6 +120,11 @@ def check_args():
     parser.add_argument('-n', '--nopos', dest='nopos', action='store_true',
                         help="do not compute positions, just print matching identifiers",
                         required=False)
+    parser.add_argument('-r', '--reverse', dest='reverse', action='store_true',
+                        help="reverse mode: treat terminator as initiator: used for entries \
+                        which have no natural entry delimiter, the pattern \
+                        specified with -e will be used to mark the beginning of entries",
+                        required=False, default=False)
     args = parser.parse_args()
 
     randnum = str(randint(1000, 9999))
@@ -242,6 +249,7 @@ def check_args():
             eprint("    => NOTICE: blocksize too BIG compared to flatfile size, -t not applicable!")
             sys.exit(22)
         args.mt_subfiles_dir = TEMPDIR + "/tmpINDEX" + randnum + "/"
+        eprint("subfiles location: ", args.mt_subfiles_dir)
         args.mt_subfiles_fprefix = args.mt_subfiles_dir + "F"
         args.mt_subfiles_iprefix = args.mt_subfiles_dir + "I"
         args.mt_subfiles_oprefix = args.mt_subfiles_dir + "O"
@@ -318,7 +326,7 @@ def find_patterns_in_entry(entry, allmatches=False):
     if allmatches:
         for pattern in patterns:
             identifiers = pattern.findall(entry['full'])
-            #eprint("trying {} found {}".format(pattern, identifiers))
+            #eprint("trying {} found {}".format(pattern, identifiers)) #debug
             for match in identifiers:
                 if isinstance(match, tuple):
                     for submatch in match: #uglier but faster than list comprehension
@@ -328,7 +336,7 @@ def find_patterns_in_entry(entry, allmatches=False):
                     goodidentifiers.append(match.decode())
         for pattern in joinedpatterns:
             identifiers = pattern.findall(entry['full'])
-            #eprint("trying {} found {}".format(pattern, identifiers))
+            #eprint("trying {} found {}".format(pattern, identifiers)) #debug
             for match in identifiers:
                 if isinstance(match, tuple):
                     goodidentifiers.append(b''.join(match).decode())
@@ -363,6 +371,8 @@ def parse_ff_wrapper(chunknum):
             'cipher_type': args.cipher_type,
             'compresslevel': args.compresslevel,
             'terminator': args.terminator,
+            'terminatorlen': len(args.terminator),
+            'reverse': args.reverse,
             'unsorted': args.unsorted,
             'xsanity': args.xsanity,
             'allmatches': args.allmatches,
@@ -434,15 +444,24 @@ def parse_ff_byentry(inputfile, mode, outff_filename=None,
         entryposition = mode['pos_offset']
         #eprint("applying pos_offset of {}".format(pos_offset)) #DEBUG
     bufsize = 1024 * 1024
-    for entry['full'], entry['length'] in entry_generator(inputfile, mode['terminator'], bufsize):
+    for entry['full'], entry['length'] in entry_generator(inputfile, mode['terminator'],
+                                                          buffersize=bufsize,
+                                                          final_buffer=mode['reverse']):
+        #eprint(f"got {entry['full']}, {entry['length']}") #debug
+        if mode['reverse'] and (entry['full'] == b'' or entry['full'] == mode['terminator'].encode('UTF-8')):
+            #eprint(f"skipping empty {entry['full']}, {entry['length']}") #debug
+            entryposition += entry['length'] # for next entry
+            continue
         entries_count[chunknum] += 1
         find_patterns_in_entry(entry, mode['allmatches'])
         if entry['ids']: #if identifiers found
             if not mode['nopos']:
                 #position and postprocessing
-                entry['position'] = int_to_b64(entryposition)
+                entry['position'] = int_to_b64(entryposition -
+                                               (mode['terminatorlen'] if mode['reverse'] else 0))
                 postprocess_entry(entry, mode)
 
+            #eprint(f"found {entry['ids']}") #debug
             #index formatting
             new_indexes = format_indexes(entry, mode['index_type'],
                                          mode['cipher_type'], mode['xsanity'])
@@ -453,6 +472,7 @@ def parse_ff_byentry(inputfile, mode, outff_filename=None,
                 mode['indexes'].update(new_indexes)
             entry['ids'] = set() #reset entry hash
         else: #we skip the entry since we found no identifiers
+            #eprint(f"skipping {entry['full']}, {entry['length']}") #debug
             skipped_count[chunknum] += 1
         if not mode['nopos']:
             entryposition += entry['length'] # for next entry
