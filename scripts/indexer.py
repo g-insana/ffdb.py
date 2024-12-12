@@ -183,7 +183,10 @@ def check_args():
     if args.terminator is None:
         args.terminator = "^-$" #default
     if args.verbose:
-        eprint(" |-- entry terminator pattern set as '{}'".format(args.terminator))
+        if args.reverse:
+            eprint(" |-- entry /initiator/ pattern set as '{}'".format(args.terminator))
+        else:
+            eprint(" |-- entry terminator pattern set as '{}'".format(args.terminator))
 
     if args.xsanity and args.verbose:
         eprint(" |-- entry checksums will be computed and added to index")
